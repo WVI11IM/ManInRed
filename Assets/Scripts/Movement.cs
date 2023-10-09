@@ -7,14 +7,18 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     public Camera mainCamera;
 
+    bool canMove = true;
+
+    Animator animator;
     Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -27,23 +31,24 @@ public class Movement : MonoBehaviour
 
         Vector3 movement = (camForward * verticalInput + camRight * horizontalInput).normalized;
 
-        // Check if there's no input (all inputs are zero) and stop the movement
-        if (Mathf.Approximately(horizontalInput, 0f) && Mathf.Approximately(verticalInput, 0f))
+        // Move the player with Time.deltaTime (use Update's delta time)
+        if (canMove) rb.velocity = new Vector3(movement.x * moveSpeed, rb.velocity.y, movement.z * moveSpeed);
+
+        // Rotate the player to face the movement direction
+        if (movement != Vector3.zero && canMove)
         {
-            rb.velocity = Vector3.zero;
+            Quaternion newRotation = Quaternion.LookRotation(movement, Vector3.up);
+            rb.rotation = newRotation;
+            animator.SetBool("isMoving", true);
         }
         else
         {
-            // Move the player with Time.fixedDeltaTime (use FixedUpdate's delta time)
-            rb.velocity = movement * moveSpeed * Time.fixedDeltaTime;
-
-            // Rotate the player to face the movement direction
-            if (movement != Vector3.zero)
-            {
-                Quaternion newRotation = Quaternion.LookRotation(movement, Vector3.up);
-                rb.rotation = newRotation;
-            }
+            animator.SetBool("isMoving", false);
         }
+    }
 
+    public void CanMove(bool canMove)
+    {
+        this.canMove = canMove;
     }
 }
