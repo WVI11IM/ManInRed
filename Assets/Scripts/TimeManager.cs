@@ -15,7 +15,8 @@ public class TimeManager : MonoBehaviour
 
     [Header("Visual Elements")]
     public Gradient backgroundColors;
-    public Light dayLight;
+    public Light sunLight;
+    public Light moonLight;
     public Text timeText;
     public Text dayText;
 
@@ -38,8 +39,8 @@ public class TimeManager : MonoBehaviour
 
         Clock(!timerIsPaused);
     }
-    /*
 
+    /*
     public void Acao01()
     {
         tempoAtual += tempoAcao1;
@@ -76,21 +77,33 @@ public class TimeManager : MonoBehaviour
 
         //Rotates the Directional Light
         float rotationAngle = (timer / 1440) * 360.0f + 180;
-        dayLight.transform.rotation = Quaternion.Euler(new Vector3(60, rotationAngle, 0));
+        sunLight.transform.rotation = Quaternion.Euler(new Vector3(60, rotationAngle, 0));
+        moonLight.transform.rotation = Quaternion.Euler(new Vector3(60, rotationAngle + 180, 0));
 
         //Updates the light intensity by checking the current hour
         if (hour == 6)
         {
-            dayLight.intensity = Mathf.Lerp(0f, 1f, minute / 60f);
+            sunLight.intensity = Mathf.Lerp(0f, 1f, minute / 60f);
+            moonLight.intensity = Mathf.Lerp(0.5f, 0f, minute / 60f);
         }
         else if (hour == 17)
         {
-            dayLight.intensity = Mathf.Lerp(1f, 0f, minute / 60f);
+            sunLight.intensity = Mathf.Lerp(1f, 0f, minute / 60f);
+            moonLight.intensity = Mathf.Lerp(0f, 0.5f, minute / 60f);
         }
-        else if (6 < hour && hour < 17) dayLight.intensity = 1;
-        else if (hour < 6 || hour > 17) dayLight.intensity = 0;
+        else if (6 < hour && hour < 17)
+        {
+            sunLight.intensity = 1;
+            moonLight.intensity = 0.5f;
+        }
+        else //(hour < 6 || hour > 17) 
+        {
+            sunLight.intensity = 0;
+            moonLight.intensity = 0.5f;
+        }
+
     }
-    public void Clock(bool isWorking)
+    void Clock(bool isWorking)
     {
         //This function makes time flow only if "isWorking" is true
         if (isWorking)
@@ -105,4 +118,5 @@ public class TimeManager : MonoBehaviour
         if (isRunning) timerIsPaused = false;
         else timerIsPaused = true;
     }
+
 }

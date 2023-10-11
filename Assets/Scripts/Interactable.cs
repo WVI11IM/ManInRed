@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     public GameObject canvasIcon;
     public ItemData itemData;
     bool isInteractable;
+    bool isShowingIcon;
 
     public UnityEvent eventCallback;
 
@@ -18,10 +19,12 @@ public class Interactable : MonoBehaviour
     }
     private void Update()
     {
-        if(isInteractable) canvasIcon.SetActive(true);
+        //only activates the interaction icon if the item is interactable and if isShowingIcon is true
+        if(isInteractable && isShowingIcon) canvasIcon.SetActive(true);
         else canvasIcon.SetActive(false);
 
-        if (isInteractable && Input.GetKeyDown(KeyCode.E))
+        //calls the events if player inputs E, the item is interactable and it is showing an interaction icon
+        if (isInteractable && isShowingIcon && Input.GetKeyDown(KeyCode.E))
         {
             eventCallback.Invoke();
         }
@@ -32,6 +35,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInteractable = true;
+            isShowingIcon = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -39,12 +43,20 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInteractable = false;
+            isShowingIcon = false;
         }
     }
 
     public void SkipTime(float amountToAdd)
     {
+        //Adds a certain amount of minutes to the TimeManager.timer
         TimeManager timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
         timeManager.timer += amountToAdd;
+    }
+
+    public void ShowIcon(bool isVisible)
+    {
+        //Shows or hides the interaction icon
+        isShowingIcon = isVisible;
     }
 }
