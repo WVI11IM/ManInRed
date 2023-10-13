@@ -5,9 +5,30 @@ using TMPro;
 
 public class TaskManager : MonoBehaviour
 {
+    //This script manages all existing tasks 
+
+    private static TaskManager _instance;
+
+    public static TaskManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<TaskManager>();
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject("TaskManager");
+                    _instance = singleton.AddComponent<TaskManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    [Tooltip("A list of all tasks in-game")]
     public List<Task> taskList = new List<Task>();
 
-    // Start is called before the first frame update
     void Start()
     {
         Task[] tasks = FindObjectsOfType<Task>();
@@ -17,30 +38,14 @@ public class TaskManager : MonoBehaviour
         {
             Debug.Log(obj.gameObject.name + " added to the list!");
         }
-
-        UpdateTaskList();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
 
-    // Update the task list in the UI
-    void UpdateTaskList()
-    {
-        // Loop through the task list
-        foreach (Task task in taskList)
-        {
-            // Check if the task is in the "ACTIVE" state
-            if (task.currentState == Task.States.ACTIVE)
-            {
-                // Handle task object creation and management in the Task script
-            }
-        }
-    }
-
+    //Function which changes the task's state to FINISHED. It needs the task's ID
     public void CompleteTask(int id)
     {
         Task taskToComplete = taskList.Find(task => task.taskId == id);

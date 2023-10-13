@@ -5,12 +5,33 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
+    //This script manages the in-game time and also controls the clock and lights
+
+    private static TimeManager _instance;
+
+    public static TimeManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<TimeManager>();
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject("TimeManager");
+                    _instance = singleton.AddComponent<TimeManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
     public Image clockImage;
-    [Tooltip("Minutes passed ever since midnight of day 1.")]
+    [Tooltip("In-game minutes passed ever since midnight of day 1.")]
     public float timer = 0;
-    [Tooltip("Frequency of minutes per second.")]
+    [Tooltip("Frequency of in-game minutes per second.")]
     public float timeFrequency;
-    [Tooltip("If true, stops the flow of time.")]
+    [Tooltip("If true, stops the timer.")]
     public bool timerIsPaused;
 
     [Header("Visual Elements")]
