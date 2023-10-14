@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
@@ -8,7 +9,6 @@ public class TimeManager : MonoBehaviour
     //This script manages the in-game time and also controls the clock and lights
 
     private static TimeManager _instance;
-
     public static TimeManager Instance
     {
         get
@@ -32,7 +32,10 @@ public class TimeManager : MonoBehaviour
     [Tooltip("Frequency of in-game minutes per second.")]
     public float timeFrequency;
     [Tooltip("If true, stops the timer.")]
-    public bool timerIsPaused;
+    public bool timerIsPaused = false;
+    [Tooltip("If true, time is being skipped.")]
+    public bool skippingTime = false;
+    [SerializeField] Animator timeTextAnimator;
 
     [Header("Visual Elements")]
     public Gradient backgroundColors;
@@ -49,16 +52,25 @@ public class TimeManager : MonoBehaviour
     [Range(1, 3)]
     public int day = 1;
 
+    public TimedEventData[] timedEventData;
+    public UnityEvent[] eventCallback;
+
     /*
     public float tempoAcao1;
     */
 
+    private void Awake()
+    {
+        FixTimedEvents();
+    }
 
     void Update()
     {
         ClockUpdate();
 
         Clock(!timerIsPaused);
+
+        CheckTimedEvents();
     }
 
     /*
@@ -91,7 +103,6 @@ public class TimeManager : MonoBehaviour
             clockImage.fillClockwise = false;
             clockImage.fillAmount = Mathf.Lerp(1f, 0f, (((timer / 60) - ((day - 1) * 24)) - 12) / 12);
         }
-        //clockImage.fillAmount = (timer / 1440) - (day - 1);
 
         //Changes the background color
         Camera.main.backgroundColor = backgroundColors.Evaluate(timer / 1440 - (day - 1));
@@ -134,10 +145,64 @@ public class TimeManager : MonoBehaviour
         else return;
     }
 
-    public void ClockSwitch(bool isRunning)
+
+    void FixTimedEvents()
     {
-        if (isRunning) timerIsPaused = false;
-        else timerIsPaused = true;
+        foreach (var data in timedEventData)
+        {
+            if (data.day <= day &&
+                data.hour <= hour &&
+                data.minute <= minute &&
+                !data.wasCalled)
+            {
+                data.wasCalled = true;
+            }
+            else data.wasCalled = false;
+        }
     }
 
+    void CheckTimedEvents()
+    {
+        foreach(var data in timedEventData)
+        {
+            if (data.day <= day &&
+                data.hour <= hour &&
+                data.minute <= minute &&
+                !data.wasCalled)
+            {
+                eventCallback[data.eventId].Invoke();
+                data.wasCalled = true;
+            }
+        }
+    }
+
+    public void SkipTime(int amountToAdd)
+    {
+        if (!skippingTime)
+        {
+            timerIsPaused = true;
+            StartCoroutine(SkipMinutes(amountToAdd, 0.5f));
+        }
+        else Debug.Log("Time is already being skipped!");
+    }
+
+    private IEnumerator SkipMinutes(int minutes, float duration)
+    {
+        float elapsedTime = 0.0f;
+        float startTime = timer;
+        float targetTime = timer + minutes;
+        while (elapsedTime < duration)
+        {
+            timeTextAnimator.SetBool("isSkippingTime", true);
+            skippingTime = true;
+            timer = Mathf.RoundToInt(Mathf.Lerp(startTime, targetTime, elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        skippingTime = false;
+        timerIsPaused = false;
+        timeTextAnimator.SetBool("isSkippingTime", false);
+        timer = targetTime;
+
+    }
 }

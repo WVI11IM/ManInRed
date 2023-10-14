@@ -6,7 +6,6 @@ using TMPro;
 public class TaskManager : MonoBehaviour
 {
     //This script manages all existing tasks 
-
     private static TaskManager _instance;
 
     public static TaskManager Instance

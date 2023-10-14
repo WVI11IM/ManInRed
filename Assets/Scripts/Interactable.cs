@@ -47,13 +47,6 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void SkipTime(float amountToAdd)
-    {
-        //Adds a certain amount of minutes to the TimeManager.timer
-        TimeManager timeManager = FindObjectOfType<TimeManager>().GetComponent<TimeManager>();
-        timeManager.timer += amountToAdd;
-    }
-
     public void ShowIcon(bool isVisible)
     {
         //Shows or hides the interaction icon

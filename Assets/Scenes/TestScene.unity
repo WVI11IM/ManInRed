@@ -573,6 +573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138740433}
+  - component: {fileID: 138740434}
   m_Layer: 5
   m_Name: Pressure
   m_TagString: Untagged
@@ -604,6 +605,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &138740434
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138740432}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78c27c623b110814c98f444bf8609ee1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &141069013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,7 +2937,7 @@ GameObject:
   - component: {fileID: 564504262}
   - component: {fileID: 564504261}
   m_Layer: 5
-  m_Name: PressureText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3575,7 +3596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &710539138
 Transform:
   m_ObjectHideFlags: 0
@@ -4597,14 +4618,14 @@ MonoBehaviour:
   eventCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 907239298}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+      - m_Target: {fileID: 1606452800}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
         m_MethodName: SkipTime
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 60
           m_FloatArgument: 60
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5089,6 +5110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureMeter: {fileID: 1278263973}
   suspicionMeter: {fileID: 1962793912}
+  pressureMeterAnimator: {fileID: 138740434}
+  suspicionMeterAnimator: {fileID: 1519756690}
   onPressureZone: 0
   mainPressure: 0
   pressureMultiplier: 5
@@ -6874,7 +6897,7 @@ GameObject:
   - component: {fileID: 1320510873}
   - component: {fileID: 1320510872}
   m_Layer: 0
-  m_Name: TaskManager
+  m_Name: TASKMANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7536,7 +7559,7 @@ GameObject:
   - component: {fileID: 1443529666}
   - component: {fileID: 1443529665}
   m_Layer: 5
-  m_Name: PressureText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7973,6 +7996,7 @@ GameObject:
   - component: {fileID: 1504496946}
   - component: {fileID: 1504496948}
   - component: {fileID: 1504496947}
+  - component: {fileID: 1504496949}
   m_Layer: 5
   m_Name: timeText
   m_TagString: Untagged
@@ -8043,6 +8067,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504496945}
   m_CullTransparentMesh: 1
+--- !u!95 &1504496949
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504496945}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b11017e509e10a489a7e12b2277cd27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1511648709
 GameObject:
   m_ObjectHideFlags: 0
@@ -8146,6 +8190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1519756689}
+  - component: {fileID: 1519756690}
   m_Layer: 5
   m_Name: Suspicion
   m_TagString: Untagged
@@ -8177,6 +8222,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1519756690
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519756688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d73f84bc9a86a9d4dabbb69cc05e4bda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1541181752
 GameObject:
   m_ObjectHideFlags: 0
@@ -8649,7 +8714,7 @@ GameObject:
   - component: {fileID: 1606452801}
   - component: {fileID: 1606452800}
   m_Layer: 0
-  m_Name: TimeManager
+  m_Name: TIMEMANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8671,6 +8736,8 @@ MonoBehaviour:
   timer: 0
   timeFrequency: 2.5
   timerIsPaused: 0
+  skippingTime: 0
+  timeTextAnimator: {fileID: 1504496949}
   backgroundColors:
     serializedVersion: 2
     key0: {r: 0.15294118, g: 0.15686275, b: 0.2627451, a: 1}
@@ -8707,6 +8774,23 @@ MonoBehaviour:
   minute: 0
   hour: 0
   day: 1
+  timedEventData:
+  - {fileID: 11400000, guid: 9dbf9296db5fcb549b82decca89ed40a, type: 2}
+  eventCallback:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 710539137}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1606452801
 Transform:
   m_ObjectHideFlags: 0
@@ -9857,14 +9941,14 @@ MonoBehaviour:
   eventCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893381455}
-        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+      - m_Target: {fileID: 1606452800}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
         m_MethodName: SkipTime
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 60
           m_FloatArgument: 60
           m_StringArgument: 
           m_BoolArgument: 0

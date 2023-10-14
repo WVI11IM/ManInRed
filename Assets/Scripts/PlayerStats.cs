@@ -11,6 +11,10 @@ public class PlayerStats : MonoBehaviour
     public Image pressureMeter;
     public Image suspicionMeter;
 
+    [Header("Meter Animators")]
+    [SerializeField] Animator pressureMeterAnimator;
+    [SerializeField] Animator suspicionMeterAnimator;
+
     [Header("Pressure")]
     public bool onPressureZone = false;
     public float mainPressure = 0;
@@ -20,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     public bool onSuspicionZone = false;
     public float mainSuspicion = 0;
     public float suspicionMultiplier = 0;
+
 
     void Start()
     {
@@ -38,8 +43,16 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("pressure")) onPressureZone = false;
-        if (other.CompareTag("suspicion")) onSuspicionZone = false;
+        if (other.CompareTag("pressure"))
+        {
+            onPressureZone = false;
+            pressureMeterAnimator.SetInteger("modifier", 0);
+        }
+        if (other.CompareTag("suspicion"))
+        {
+            onSuspicionZone = false;
+            suspicionMeterAnimator.SetInteger("modifier", 0);
+        }
     }
 
     void StatsUpdate()
@@ -55,24 +68,38 @@ public class PlayerStats : MonoBehaviour
             }
             if (onSuspicionZone)
             {
-                mainSuspicion += suspicionMultiplier * Time.deltaTime;
+                ModifySuspicion(suspicionMultiplier);
             }
         }
 
         if (mainPressure < 0) mainPressure = 0;
-        if (mainPressure > 100) mainPressure = 100;
+        if (mainPressure > 100)
+        {
+            mainPressure = 100;
+            Debug.Log("Max Pressure!!");
+        }
+
+        if (mainSuspicion < 0) mainSuspicion = 0;
+        if (mainSuspicion > 100)
+        {
+            mainSuspicion = 100;
+            Debug.Log("Max Suspicion!!");
+        }
     }
 
     //Continuously modifies pressure while it's being called
     void ModifyPressure(float value)
     {
-        mainPressure += value * Time.deltaTime;
+        mainPressure += pressureMultiplier * Time.deltaTime;
+        pressureMeterAnimator.SetInteger("modifier", (int)value);
     }
+
 
     //Adds/Removes fixed value of pressure through half a second
     public void ModifyPressure(int value)
     {
         StartCoroutine(ModifyPressureOverTime(value, 0.5f));
+        pressureMeterAnimator.SetInteger("modifier", value);
     }
 
     private IEnumerator ModifyPressureOverTime(int value, float duration)
@@ -88,5 +115,13 @@ public class PlayerStats : MonoBehaviour
             yield return null;
         }
         mainPressure = targetPressure;
+        pressureMeterAnimator.SetInteger("modifier", 0);
+    }
+
+    //Continuously modifies suspicion while it's being called
+    void ModifySuspicion(float value)
+    {
+        mainSuspicion += value * Time.deltaTime;
+        suspicionMeterAnimator.SetInteger("modifier", (int)value);
     }
 }
