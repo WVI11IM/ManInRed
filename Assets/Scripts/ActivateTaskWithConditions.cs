@@ -24,9 +24,9 @@ public class ActivateTaskWithConditions : MonoBehaviour
         }
     }
 
-    // Check if all the required tasks are finished and returns true if they're finished
     private bool ShouldActivateTask()
     {
+        // Check if all the required tasks are finished and returns true if they're finished
         foreach (int requiredTaskId in requiredTaskIds)
         {
             Task requiredTask = TaskManager.Instance.taskList.Find(task => task.taskId == requiredTaskId);

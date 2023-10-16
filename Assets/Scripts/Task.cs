@@ -51,9 +51,9 @@ public class Task : MonoBehaviour
         }
     }
 
-    //Changes the task's state. Must be 0, 1 or 2
     public void ChangeState(int state)
     {
+        //Changes the task's state. Must be 0, 1 or 2
         switch (state)
         {
             case (0):

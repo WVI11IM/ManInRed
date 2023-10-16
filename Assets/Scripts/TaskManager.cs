@@ -6,6 +6,7 @@ using TMPro;
 public class TaskManager : MonoBehaviour
 {
     //This script manages all existing tasks 
+
     private static TaskManager _instance;
 
     public static TaskManager Instance
@@ -44,9 +45,9 @@ public class TaskManager : MonoBehaviour
 
     }
 
-    //Function which changes the task's state to FINISHED. It needs the task's ID
     public void CompleteTask(int id)
     {
+        //Function which changes the task's state to FINISHED. It needs the task's ID
         Task taskToComplete = taskList.Find(task => task.taskId == id);
 
         if (taskToComplete != null && taskToComplete.currentState == Task.States.ACTIVE)

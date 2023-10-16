@@ -18,32 +18,42 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
+    {
+        MovementUpdate();
+    }
+
+    void MovementUpdate()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Calculate camera-relative movement
+        //Calculate camera-relative movement
         Vector3 camForward = mainCamera.transform.forward;
         Vector3 camRight = mainCamera.transform.right;
-        camForward.y = 0; // Ensure the movement stays on the XZ plane (optional)
+        camForward.y = 0; //Ensure the movement stays on the XZ plane (optional)
         camRight.y = 0;
-
         Vector3 movement = (camForward * verticalInput + camRight * horizontalInput).normalized;
 
-        // Move the player with Time.deltaTime (use Update's delta time)
-        if (canMove) rb.velocity = new Vector3(movement.x * moveSpeed, rb.velocity.y, movement.z * moveSpeed);
+        //If time is paused or is being skipped, player cannot move
+        if (TimeManager.Instance.timerIsPaused || TimeManager.Instance.skippingTime) CanMove(false);
+        else CanMove(true);
 
-        // Rotate the player to face the movement direction
-        if (movement != Vector3.zero && canMove)
+        if (canMove)
         {
-            Quaternion newRotation = Quaternion.LookRotation(movement, Vector3.up);
-            rb.rotation = newRotation;
-            animator.SetBool("isMoving", true);
-        }
-        else
-        {
-            animator.SetBool("isMoving", false);
+            rb.velocity = new Vector3(movement.x * moveSpeed, rb.velocity.y, movement.z * moveSpeed);
+
+            //Rotate the player to face the movement direction
+            if (movement != Vector3.zero)
+            {
+                Quaternion newRotation = Quaternion.LookRotation(movement, Vector3.up);
+                rb.rotation = newRotation;
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
         }
     }
 

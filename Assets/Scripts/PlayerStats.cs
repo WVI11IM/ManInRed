@@ -57,6 +57,7 @@ public class PlayerStats : MonoBehaviour
 
     void StatsUpdate()
     {
+        //Being called by Update(), it updates the player's stats every frame
         pressureMeter.fillAmount = mainPressure / 100;
         suspicionMeter.fillAmount = mainSuspicion / 100;
 
@@ -87,17 +88,17 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    //Continuously modifies pressure while it's being called
     void ModifyPressure(float value)
     {
+        //Continuously modifies pressure while it's being called
         mainPressure += pressureMultiplier * Time.deltaTime;
         pressureMeterAnimator.SetInteger("modifier", (int)value);
     }
 
 
-    //Adds/Removes fixed value of pressure through half a second
     public void ModifyPressure(int value)
     {
+        //Adds/Removes fixed value of pressure through half a second
         StartCoroutine(ModifyPressureOverTime(value, 0.5f));
         pressureMeterAnimator.SetInteger("modifier", value);
     }
@@ -118,9 +119,9 @@ public class PlayerStats : MonoBehaviour
         pressureMeterAnimator.SetInteger("modifier", 0);
     }
 
-    //Continuously modifies suspicion while it's being called
     void ModifySuspicion(float value)
     {
+        //Continuously modifies suspicion while it's being called
         mainSuspicion += value * Time.deltaTime;
         suspicionMeterAnimator.SetInteger("modifier", (int)value);
     }

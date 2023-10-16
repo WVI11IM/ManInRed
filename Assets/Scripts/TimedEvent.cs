@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "My Assets/Timed Event Data")]
-public class TimedEventData : ScriptableObject
+[System.Serializable]
+public class TimedEvent
 {
-    [Range(1, 3)]
+    //Class created for TimeManager
+
+    public UnityEvent eventCallback;
+
+    [Range(1, 4)]
     public int day;
     [Range(0, 24)]
     public int hour;
     [Range(0, 60)]
     public int minute;
-    public int eventId;
+
     public bool wasCalled;
 }

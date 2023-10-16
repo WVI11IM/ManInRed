@@ -49,15 +49,15 @@ public class TimeManager : MonoBehaviour
     public int minute = 0;
     [Range(0, 24)]
     public int hour = 0;
-    [Range(1, 3)]
+    [Range(1, 4)]
     public int day = 1;
 
-    public TimedEventData[] timedEventData;
-    public UnityEvent[] eventCallback;
-
-    /*
-    public float tempoAcao1;
-    */
+    public TimedEvent[] timedEvents;
+    public enum SkippingTime
+    {
+        SMOKING,
+        SLEEPING,
+    }
 
     private void Awake()
     {
@@ -72,13 +72,6 @@ public class TimeManager : MonoBehaviour
 
         CheckTimedEvents();
     }
-
-    /*
-    public void Acao01()
-    {
-        tempoAtual += tempoAcao1;
-    }
-    */
 
     public void ClockUpdate()
     {
@@ -137,7 +130,7 @@ public class TimeManager : MonoBehaviour
     }
     void Clock(bool isWorking)
     {
-        //This function makes time flow only if "isWorking" is true
+        //Makes time flow only if "isWorking" is true
         if (isWorking)
         {
             timer += timeFrequency * Time.deltaTime;
@@ -145,10 +138,17 @@ public class TimeManager : MonoBehaviour
         else return;
     }
 
+    public void ClockSwitch(bool isRunning)
+    {
+        //Public function to pause/resume time. Mostly used for UnityEvents in the unity inspector
+        if (isRunning) timerIsPaused = false;
+        else timerIsPaused = true;
+    }
 
     void FixTimedEvents()
     {
-        foreach (var data in timedEventData)
+        //Only used when starting the game after some in-game time has already passed. This function considers a timed event to have been called if the in-game timer went over it
+        foreach (var data in timedEvents)
         {
             if (data.day <= day &&
                 data.hour <= hour &&
@@ -163,25 +163,46 @@ public class TimeManager : MonoBehaviour
 
     void CheckTimedEvents()
     {
-        foreach(var data in timedEventData)
+        //Invokes the timed event at the right time
+        foreach(var data in timedEvents)
         {
             if (data.day <= day &&
                 data.hour <= hour &&
                 data.minute <= minute &&
                 !data.wasCalled)
             {
-                eventCallback[data.eventId].Invoke();
+                data.eventCallback.Invoke();
                 data.wasCalled = true;
             }
         }
     }
 
-    public void SkipTime(int amountToAdd)
+    public void SkipTimeForSmoking()
+    {
+        SkipTime(SkippingTime.SMOKING);
+    }
+
+    public void SkipTimeForSleeping()
+    {
+        SkipTime(SkippingTime.SLEEPING);
+    }
+
+    void SkipTime(SkippingTime action)
     {
         if (!skippingTime)
         {
             timerIsPaused = true;
-            StartCoroutine(SkipMinutes(amountToAdd, 0.5f));
+            switch (action)
+            {
+                case (SkippingTime.SMOKING):
+                    StartCoroutine(SkipMinutes(60, 0.5f));
+                    break;
+                case (SkippingTime.SLEEPING):
+                    StartCoroutine(SkipMinutes(360, 5));
+                    break;
+                default:
+                    break;
+            }
         }
         else Debug.Log("Time is already being skipped!");
     }
@@ -203,6 +224,5 @@ public class TimeManager : MonoBehaviour
         timerIsPaused = false;
         timeTextAnimator.SetBool("isSkippingTime", false);
         timer = targetTime;
-
     }
 }
