@@ -7,6 +7,7 @@ public class ActivateTaskWithConditions : MonoBehaviour
     //Link this script to a task which depends on other task's completion in order to activate by itself
 
     Task task;
+    private bool _wasActivated = false;
 
     [Tooltip("Write down all the taskIds of the required tasks.")]
     public int[] requiredTaskIds;
@@ -18,9 +19,10 @@ public class ActivateTaskWithConditions : MonoBehaviour
 
     private void Update()
     {
-        if (ShouldActivateTask())
+        if (ShouldActivateTask() && !_wasActivated)
         {
             task.currentState = Task.States.ACTIVE;
+            _wasActivated = true;
         }
     }
 

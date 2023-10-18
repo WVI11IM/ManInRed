@@ -8,7 +8,6 @@ public class RoomTrigger : MonoBehaviour
 {
     public CinemachineVirtualCamera virtualCamera;
     public UnityEvent[] eventCallback;
-    public Collider interactionArea;
 
     private void OnTriggerEnter(Collider other)
     {

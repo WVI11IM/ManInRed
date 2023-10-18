@@ -55,6 +55,10 @@ public class Movement : MonoBehaviour
                 animator.SetBool("isMoving", false);
             }
         }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
     }
 
     public void CanMove(bool canMove)
