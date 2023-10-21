@@ -8,6 +8,8 @@ public class TimedEvent
 {
     //Class created for TimeManager
 
+    [TextArea]
+    public string timedEventDescription;
     public UnityEvent eventCallback;
 
     [Range(1, 4)]

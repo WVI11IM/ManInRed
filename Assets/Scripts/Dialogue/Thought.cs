@@ -8,29 +8,31 @@ using TMPro;
 [System.Serializable]
 public class ThoughtElement
 {
+    [Tooltip("Text that will be displayed in the thought box.")]
+    [TextArea]
     public string dialogue;
+    [Tooltip("Events that will be invoked.")]
     public UnityEvent thoughtEvent;
+    [Tooltip("Duration of the thought in seconds.")]
     public float duration;
 }
 
 public class Thought : MonoBehaviour
 {
     DialogueManager dialogueManager;
+    [Tooltip("Write the thought here.")]
     public ThoughtElement thought;
-
 
     private void Awake()
     {
         dialogueManager = DialogueManager.Instance;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
@@ -49,9 +51,9 @@ public class Thought : MonoBehaviour
 
     IEnumerator ThoughtTime(float time)
     {
-        yield return new WaitForSeconds(time);
         if (dialogueManager.isActive)
         {
+            yield return new WaitForSeconds(time);
             dialogueManager.isActive = false;
             dialogueManager.isThinking = false;
         }

@@ -8,8 +8,12 @@ using TMPro;
 [System.Serializable]
 public class DialogueElements
 {
+    [Tooltip("Name of the character that is speaking.")]
     public string characterName;
+    [Tooltip("Text that will be displayed in the dialogue box.")]
+    [TextArea]
     public string dialogue;
+    [Tooltip("Events that will be invoked.")]
     public UnityEvent duringDialogue;
 }
 

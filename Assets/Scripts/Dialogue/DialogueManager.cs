@@ -25,13 +25,23 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    [Tooltip("Where the box focuses on.")]
     public GameObject dialogueTarget;
+    [Tooltip("Canvas that contains the dialogue and thought boxes.")]
     public Canvas canvas;
 
+    [Header("Dialogue")]
+    [Tooltip("Box image for the dialogue.")]
     public GameObject dialogueBox;
-    public GameObject thoughtBox;
+    [Tooltip("Name of the character that is speaking.")]
     public TextMeshProUGUI characterName;
+    [Tooltip("Text for the active dialogue element.")]
     public TextMeshProUGUI dialogueText;
+
+    [Header("Thought")]
+    [Tooltip("Box image for the thought.")]
+    public GameObject thoughtBox;
+    [Tooltip("Text for the active thought element.")]
     public TextMeshProUGUI thoughtText;
 
     public bool isActive = false;
