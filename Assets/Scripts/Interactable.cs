@@ -8,36 +8,56 @@ public class Interactable : MonoBehaviour
 {
     public GameObject iconCanvas;
     public ItemData itemData;
-    bool isInteractable;
+    public bool isInteractable;
+    bool isInteracting = false;
     bool isShowingIcon;
+    public bool isClosest;
 
     public UnityEvent eventCallback;
 
+    private PlayerInteractionManager playerInteractionManager;
+
     private void Start()
     {
+        playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
         iconCanvas.SetActive(false);
     }
     private void Update()
     {
         iconCanvas.transform.rotation = Camera.main.transform.rotation;
 
-        //only activates the interaction icon if the item is interactable and if isShowingIcon is true
-        if(isInteractable && isShowingIcon) iconCanvas.SetActive(true);
-        else iconCanvas.SetActive(false);
-
-        //calls the events if player inputs E, the item is interactable and it is showing an interaction icon
-        if (isInteractable && isShowingIcon && Input.GetKeyDown(KeyCode.E))
+        if (isInteracting)
         {
-            eventCallback.Invoke();
+            iconCanvas.SetActive(false);
         }
+        else if (isInteractable && isShowingIcon && isClosest)
+        {
+            iconCanvas.SetActive(true);
+
+            //calls the events if player inputs E, the item is interactable and it is showing an interaction icon
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                eventCallback.Invoke();
+            }
+        }
+        else iconCanvas.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            isInteractable = true;
-            isShowingIcon = true;
+            playerInteractionManager.UpdateClosestInteractable(this);
+            if (isClosest)
+            {
+                isInteractable = true;
+                isShowingIcon = true;
+            }
+            else
+            {
+                isInteractable = false;
+                isShowingIcon = false;
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -46,13 +66,14 @@ public class Interactable : MonoBehaviour
         {
             isInteractable = false;
             isShowingIcon = false;
+            isClosest = false;
         }
     }
 
     public void CanInteract(bool isVisible)
     {
         //Shows or hides the interaction icon
+        isInteracting = !isVisible;
         isShowingIcon = isVisible;
-
     }
 }

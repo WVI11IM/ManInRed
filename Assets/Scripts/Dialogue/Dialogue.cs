@@ -28,6 +28,8 @@ public class Dialogue : MonoBehaviour
 
     bool isActive = false;
 
+    private bool _canContinue = false;
+
     public int dialogueIndex = 0;
 
     private void Awake()
@@ -43,13 +45,11 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(dialogueIndex);
-
         if (dialogueIndex > dialogueElements.Length)
         {
             FinishDialogue();
         }
-        else if (dialogueManager.isActive && isActive && !dialogueManager.isThinking)
+        else if (dialogueManager.isActive && isActive && !dialogueManager.isThinking && _canContinue)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -60,12 +60,14 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        if (!dialogueManager.isActive  && !dialogueManager.isThinking)
+        dialogueManager.StopThoughtCountdown();
+        if (!dialogueManager.isActive)
         {
             playerMovement.CanMove(false);
             TimeManager.Instance.ClockSwitch(false);
             beforeDialogue.Invoke();
             isActive = true;
+            dialogueManager.isThinking = false;
             dialogueManager.isActive = true;
             dialogueIndex = 0;
             NextDialogue();
@@ -77,11 +79,24 @@ public class Dialogue : MonoBehaviour
         if (dialogueIndex < dialogueElements.Length)
         {
             dialogueManager.characterName.text = dialogueElements[dialogueIndex].characterName;
-            dialogueManager.dialogueText.text = dialogueElements[dialogueIndex].dialogue;
-            dialogueElements[dialogueIndex].duringDialogue.Invoke();
-            dialogueIndex++;
+            StartCoroutine(DisplayLine(dialogueElements[dialogueIndex].dialogue));
         }
         else FinishDialogue();
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueManager.dialogueText.text = "";
+        _canContinue = false;
+        foreach (char letter in line.ToCharArray())
+        {
+            //PlayDialogueSound(messageText.maxVisibleCharacters);
+            dialogueManager.dialogueText.maxVisibleCharacters++;
+            dialogueManager.dialogueText.text += letter;
+            yield return new WaitForSeconds(0.03f);
+        }
+        _canContinue = true;
+        dialogueIndex++;
     }
 
     void FinishDialogue()

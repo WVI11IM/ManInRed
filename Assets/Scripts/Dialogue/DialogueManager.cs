@@ -43,6 +43,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject thoughtBox;
     [Tooltip("Text for the active thought element.")]
     public TextMeshProUGUI thoughtText;
+    private Coroutine thoughtCoroutine;
+    private bool coroutineIsRunning;
 
     public bool isActive = false;
     public bool isThinking = false;
@@ -53,6 +55,7 @@ public class DialogueManager : MonoBehaviour
         thoughtBox.SetActive(false);
         isActive = false;
         isThinking = false;
+        coroutineIsRunning = false;
 }
 
     void Update()
@@ -60,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         if (isActive) 
         {
             canvas.enabled = true;
-            canvas.transform.position = new Vector3(dialogueTarget.transform.position.x, 3, dialogueTarget.transform.position.z);
+            canvas.transform.position = new Vector3(dialogueTarget.transform.position.x, 2, dialogueTarget.transform.position.z);
             canvas.transform.rotation = Camera.main.transform.rotation;
 
             if (isThinking) 
@@ -75,5 +78,33 @@ public class DialogueManager : MonoBehaviour
             }
         }
         else canvas.enabled = false;
+    }
+
+    public void StartThoughtCountdown(float duration)
+    {
+        if (!coroutineIsRunning) thoughtCoroutine = StartCoroutine(ThoughtTime(duration));
+        else Debug.Log("Character is already thinking!");
+    }
+
+    public void StopThoughtCountdown()
+    {
+        if (thoughtCoroutine != null)
+        {
+            StopCoroutine(thoughtCoroutine);
+            isActive = false;
+            isThinking = false;
+        }
+    }
+
+    IEnumerator ThoughtTime(float time)
+    {
+        coroutineIsRunning = true;
+        if (isActive)
+        {
+            yield return new WaitForSeconds(time);
+            isActive = false;
+            isThinking = false;
+        }
+        coroutineIsRunning = false;
     }
 }

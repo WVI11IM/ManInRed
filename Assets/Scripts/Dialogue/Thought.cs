@@ -46,17 +46,6 @@ public class Thought : MonoBehaviour
             dialogueManager.isThinking = true;
             dialogueManager.thoughtText.text = thought.dialogue;
         }
-        StartCoroutine(ThoughtTime(thought.duration));
+        dialogueManager.StartThoughtCountdown(thought.duration);
     }
-
-    IEnumerator ThoughtTime(float time)
-    {
-        if (dialogueManager.isActive)
-        {
-            yield return new WaitForSeconds(time);
-            dialogueManager.isActive = false;
-            dialogueManager.isThinking = false;
-        }
-    }
-
 }
