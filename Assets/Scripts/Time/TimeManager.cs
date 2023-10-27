@@ -102,8 +102,8 @@ public class TimeManager : MonoBehaviour
 
         //Rotates the Directional Light
         float rotationAngle = (timer / 1440) * 360.0f + 180;
-        sunLight.transform.rotation = Quaternion.Euler(new Vector3(60, rotationAngle, 0));
-        moonLight.transform.rotation = Quaternion.Euler(new Vector3(60, rotationAngle + 180, 0));
+        sunLight.transform.rotation = Quaternion.Euler(new Vector3(52.5f, rotationAngle, 0));
+        moonLight.transform.rotation = Quaternion.Euler(new Vector3(52.5f, rotationAngle + 180, 0));
 
         //Updates the light intensity by checking the current hour
         if (hour == 6)
