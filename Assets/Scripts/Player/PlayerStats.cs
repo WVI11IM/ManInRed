@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class PlayerStats : MonoBehaviour
     public bool onSuspicionZone = false;
     public float mainSuspicion = 0;
     public float suspicionMultiplier = 0;
+    public Volume pressurePP;
 
 
     void Start()
@@ -74,6 +77,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         if (mainPressure < 0) mainPressure = 0;
+        if (mainPressure > 60) pressurePP.weight = Mathf.Lerp(0f, 1f, (mainPressure - 60) / 40);
         if (mainPressure > 100)
         {
             mainPressure = 100;

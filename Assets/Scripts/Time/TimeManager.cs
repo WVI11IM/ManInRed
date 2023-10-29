@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class TimeManager : MonoBehaviour
 {
@@ -41,6 +43,8 @@ public class TimeManager : MonoBehaviour
     public Gradient backgroundColors;
     public Light sunLight;
     public Light moonLight;
+    public Volume dayPP;
+    public Volume nightPP;
     public Text timeText;
     public Text dayText;
 
@@ -110,21 +114,29 @@ public class TimeManager : MonoBehaviour
         {
             sunLight.intensity = Mathf.Lerp(0f, 1f, minute / 60f);
             moonLight.intensity = Mathf.Lerp(0.5f, 0f, minute / 60f);
+            dayPP.weight = Mathf.Lerp(0f, 1f, minute / 60f);
+            nightPP.weight = Mathf.Lerp(1f, 0f, minute / 60f);
         }
         else if (hour == 17)
         {
             sunLight.intensity = Mathf.Lerp(1f, 0f, minute / 60f);
             moonLight.intensity = Mathf.Lerp(0f, 0.5f, minute / 60f);
+            dayPP.weight = Mathf.Lerp(1f, 0f, minute / 60f);
+            nightPP.weight = Mathf.Lerp(0f, 1f, minute / 60f);
         }
         else if (6 < hour && hour < 17)
         {
             sunLight.intensity = 1;
             moonLight.intensity = 0.5f;
+            dayPP.weight = 1;
+            nightPP.weight = 0;
         }
         else //(hour < 6 || hour > 17) 
         {
             sunLight.intensity = 0;
             moonLight.intensity = 0.5f;
+            dayPP.weight = 0;
+            nightPP.weight = 1;
         }
 
     }
