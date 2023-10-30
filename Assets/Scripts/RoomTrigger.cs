@@ -10,12 +10,8 @@ public class RoomTrigger : MonoBehaviour
     public UnityEvent onExit;
     public LayerMask roomLayers;
 
-    private LayerMask originalCullingMask;
-
     private void Start()
     {
-        // Store the original culling mask of the camera
-        originalCullingMask = Camera.main.cullingMask;
     }
 
     private void OnTriggerEnter(Collider other)
