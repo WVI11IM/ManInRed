@@ -889,7 +889,7 @@ MonoBehaviour:
   fullScreenToggle: {fileID: 720721317}
   invertYToggle: {fileID: 0}
   comfirmationPrompt: {fileID: 1821219529}
-  _newGameLevel: Level1
+  _newGameLevel: Game
   levelToLoad: 
   noSavedGameDialog: {fileID: 2144941279}
   resolutionDropdown: {fileID: 2118967054}
