@@ -39,48 +39,43 @@ public class MenuController : MonoBehaviour
   [Header("Resolution Dropdowns")]
   public TMP_Dropdown resolutionDropdown;
   private Resolution[] resolutions;
-  
-  private void Start()
-  {
-    resolutions = Screen.resolutions;
-    resolutionDropdown.ClearOptions();
 
-    List<string> options  = new List<string>();
-    /*
-    int currentResolutionIndex = 0;
 
-    for (int i = 0; i < resolutions.Length; i++)
+
+    private void Start()
     {
-       string option = resolutions[i].width + "x" + resolutions[i].height;
-       options.Add(option);
+        // Define your list of supported resolutions.
+        List<string> options = new List<string>
+    {
+        "1280x720",
+        "1366x768",
+        "1600x900",
+        "1920x1080"
+        // Add other supported resolutions as needed
+    };
 
-       if(resolutions[i].width == Screen.width &&  resolutions[i].height == Screen.height)
-       {
-         currentResolutionIndex = i;
-       }
-    
-       resolutionDropdown.AddOptions(options);
-       resolutionDropdown.value = currentResolutionIndex;
-       resolutionDropdown.RefreshShownValue();
+        // Get the current screen resolution.
+        Resolution currentScreenResolution = Screen.currentResolution;
+        string currentResolutionString = currentScreenResolution.width + "x" + currentScreenResolution.height;
+
+        // Check if the current resolution matches any of the options.
+        int bestResolutionIndex = options.IndexOf(currentResolutionString);
+
+        if (bestResolutionIndex == -1)
+        {
+            // If the current resolution is not in the list, set a default best resolution.
+            bestResolutionIndex = 0; // For example, select the first resolution in the list.
         }
-    */
-    string option = "1920x1080";
-     options.Add(option);
-     resolutionDropdown.AddOptions("1920x1080");
-  }
-   
-  public void SetResolution(int resolutionIndex)
-{
-    if (resolutionIndex >= 0 && resolutionIndex < resolutions.Length)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-}
 
-  
-  
-  public void NewGameDialogYes()
+        // Set the best resolution in the dropdown.
+        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = bestResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+    }
+
+
+
+    public void NewGameDialogYes()
   {
      SceneManager.LoadScene(_newGameLevel);
      
