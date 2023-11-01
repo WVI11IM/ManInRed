@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
   [Header("Graphics Setting")]
   [SerializeField] private TMP_Text brightnessTextValue = null;
   [SerializeField] private Slider brightnessSlider = null;
-  [SerializeField] private float defaultBrightness= 1;
+  [SerializeField] private float defaultBrightness = 1;
 
   [Space(10)]
   [SerializeField] private TMP_Dropdown qualityDropdown;
@@ -33,65 +33,65 @@ public class MenuController : MonoBehaviour
 
   [Header("Levels To Load")]
   public string _newGameLevel;
-  public string  levelToLoad;
+  public string levelToLoad;
   [SerializeField] private GameObject noSavedGameDialog = null;
 
   [Header("Resolution Dropdowns")]
   public TMP_Dropdown resolutionDropdown;
   private Resolution[] resolutions;
 
+  private void Start()
+  {
+    resolutions = Screen.resolutions;
+    resolutionDropdown.ClearOptions();
 
+    List<string> options = new List<string>();
+    List<string> desiredResolutions = new List<string> { "1920x1080", "600x400", "1024x800" };
+    int currentResolutionIndex = 0;
 
-    private void Start()
+    foreach (var resolution in desiredResolutions)
     {
-        // Define your list of supported resolutions.
-        List<string> options = new List<string>
-    {
-        "1280x720",
-        "1366x768",
-        "1600x900",
-        "1920x1080"
-        // Add other supported resolutions as needed
-    };
+      options.Add(resolution);
 
-        // Get the current screen resolution.
-        Resolution currentScreenResolution = Screen.currentResolution;
-        string currentResolutionString = currentScreenResolution.width + "x" + currentScreenResolution.height;
-
-        // Check if the current resolution matches any of the options.
-        int bestResolutionIndex = options.IndexOf(currentResolutionString);
-
-        if (bestResolutionIndex == -1)
+      if (resolution == "1920x1080" || resolution == "600x400" || resolution == "1024x800")
+      {
+        if (resolutions[currentResolutionIndex].width == Screen.width && resolutions[currentResolutionIndex].height == Screen.height)
         {
-            // If the current resolution is not in the list, set a default best resolution.
-            bestResolutionIndex = 0; // For example, select the first resolution in the list.
+          currentResolutionIndex = options.Count - 1;
         }
-
-        // Set the best resolution in the dropdown.
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = bestResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+      }
     }
 
+    resolutionDropdown.AddOptions(options);
+    resolutionDropdown.value = currentResolutionIndex;
+    resolutionDropdown.RefreshShownValue();
+  }
 
-
-    public void NewGameDialogYes()
+  public void SetResolution(int resolutionIndex)
   {
-     SceneManager.LoadScene(_newGameLevel);
-     
+    if (resolutionIndex >= 0 && resolutionIndex < resolutions.Length)
+    {
+      Resolution resolution = resolutions[resolutionIndex];
+      Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+  }
+
+  public void NewGameDialogYes()
+  {
+    SceneManager.LoadScene(_newGameLevel);
   }
 
   public void LoadGameDialogYes()
   {
-     if(PlayerPrefs.HasKey("SavedLevel"))
-     {
-        levelToLoad = PlayerPrefs.GetString("SavedLevel");
-        SceneManager.LoadScene(levelToLoad);
-     }
-     else 
-     {
+    if (PlayerPrefs.HasKey("SavedLevel"))
+    {
+      levelToLoad = PlayerPrefs.GetString("SavedLevel");
+      SceneManager.LoadScene(levelToLoad);
+    }
+    else
+    {
       noSavedGameDialog.SetActive(true);
-     }
+    }
   }
 
   public void ExitButton()
@@ -101,8 +101,8 @@ public class MenuController : MonoBehaviour
 
   public void SetVolume(float volume)
   {
-     AudioListener.volume = volume;
-     volumeTextValue.text = volume.ToString("0.0");
+    AudioListener.volume = volume;
+    volumeTextValue.text = volume.ToString("0.0");
   }
 
   public void VolumeApply()
@@ -110,7 +110,7 @@ public class MenuController : MonoBehaviour
     PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
     StartCoroutine(ConfirmationBox());
   }
-   
+
   public void SetBrightness(float brightness)
   {
     _brightnessLevel = brightness;
@@ -121,61 +121,55 @@ public class MenuController : MonoBehaviour
   {
     _isFullScreen = isFullScreen;
   }
-  
+
   public void SetQuality(int qualityIndex)
   {
-     _qualityLevel = qualityIndex;
+    _qualityLevel = qualityIndex;
+     Debug.Log("Quality Level: " + _qualityLevel);
   }
 
   public void GraphicsApply()
   {
-     PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);
+    PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);
+    PlayerPrefs.SetFloat("masterQuality", _qualityLevel);
+    QualitySettings.SetQualityLevel(_qualityLevel);
+    PlayerPrefs.SetInt("masterFullscreen", (_isFullScreen ? 1 : 0));
+    Screen.fullScreen = _isFullScreen;
 
-     PlayerPrefs.SetFloat("masterQuality", _qualityLevel);
-     QualitySettings.SetQualityLevel(_qualityLevel);
-
-     PlayerPrefs.SetInt("masterFullscreen", (_isFullScreen ? 1 : 0));
-     Screen.fullScreen = _isFullScreen;
-
-     StartCoroutine(ConfirmationBox());
+    StartCoroutine(ConfirmationBox());
   }
 
   public void ResetButton(string MenuType)
   {
-     
-     if(MenuType == "Graphics")
-     {
-       
-       brightnessSlider.value = defaultBrightness;
-       brightnessTextValue.text = defaultBrightness.ToString("0.0");
-
-       qualityDropdown.value = 1;
-       QualitySettings.SetQualityLevel(1);
-
-       fullScreenToggle.isOn = false;
-       Screen.fullScreen = false;
-
-       Resolution currentResolution = Screen.currentResolution;
-       Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
-       resolutionDropdown.value = resolutions.Length;
-       GraphicsApply();
-     }
-
-     if(MenuType == "Audio")
+    if (MenuType == "Graphics")
     {
-        AudioListener.volume = defaultVolume;
-        volumeSlider.value = defaultVolume;
-        volumeTextValue.text = defaultVolume.ToString("0.0");
-        VolumeApply();
+      brightnessSlider.value = defaultBrightness;
+      brightnessTextValue.text = defaultBrightness.ToString("0.0");
+
+      qualityDropdown.value = 1;
+      QualitySettings.SetQualityLevel(1);
+
+      fullScreenToggle.isOn = false;
+      Screen.fullScreen = false;
+
+      Resolution currentResolution = Screen.currentResolution;
+      Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
+      resolutionDropdown.value = resolutionDropdown.options.Count - 1;
+    }
+
+    if (MenuType == "Audio")
+    {
+      AudioListener.volume = defaultVolume;
+      volumeSlider.value = defaultVolume;
+      volumeTextValue.text = defaultVolume.ToString("0.0");
+      VolumeApply();
     }
   }
 
-
   public IEnumerator ConfirmationBox()
   {
-     comfirmationPrompt.SetActive(true);
-     yield return new WaitForSeconds(2);
-     comfirmationPrompt.SetActive(false);
+    comfirmationPrompt.SetActive(true);
+    yield return new WaitForSeconds(2);
+    comfirmationPrompt.SetActive(false);
   }
 }
-
