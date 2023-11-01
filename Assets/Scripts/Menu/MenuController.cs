@@ -18,8 +18,10 @@ public class MenuController : MonoBehaviour
   [SerializeField] private float defaultBrightness= 1;
 
   [Space(10)]
+  [SerializeField] private TMP_Dropdown qualityDropdown;
   [SerializeField] private Toggle fullScreenToggle;
 
+  private int _qualityLevel;
   private bool _isFullScreen;
   private float _brightnessLevel;
 
@@ -44,10 +46,10 @@ public class MenuController : MonoBehaviour
     resolutionDropdown.ClearOptions();
 
     List<string> options  = new List<string>();
-
+    /*
     int currentResolutionIndex = 0;
 
-    for (int i = 0; i <resolutions.Length; i++)
+    for (int i = 0; i < resolutions.Length; i++)
     {
        string option = resolutions[i].width + "x" + resolutions[i].height;
        options.Add(option);
@@ -60,15 +62,22 @@ public class MenuController : MonoBehaviour
        resolutionDropdown.AddOptions(options);
        resolutionDropdown.value = currentResolutionIndex;
        resolutionDropdown.RefreshShownValue();
-    
-    }
+        }
+    */
+    string option = "1920x1080";
+     options.Add(option);
+     resolutionDropdown.AddOptions("1920x1080");
   }
    
-  public void SetResolution(int ResolutionIndex)
-  {
-    Resolution resolution = resolutions[ResolutionIndex];
-    Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-  }
+  public void SetResolution(int resolutionIndex)
+{
+    if (resolutionIndex >= 0 && resolutionIndex < resolutions.Length)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+}
+
   
   
   public void NewGameDialogYes()
@@ -117,12 +126,20 @@ public class MenuController : MonoBehaviour
   {
     _isFullScreen = isFullScreen;
   }
+  
+  public void SetQuality(int qualityIndex)
+  {
+     _qualityLevel = qualityIndex;
+  }
 
   public void GraphicsApply()
   {
      PlayerPrefs.SetFloat("masterBrightness", _brightnessLevel);
 
-     PlayerPrefs.SetInt("masterFullScreen", (_isFullScreen ? 1 : 0));
+     PlayerPrefs.SetFloat("masterQuality", _qualityLevel);
+     QualitySettings.SetQualityLevel(_qualityLevel);
+
+     PlayerPrefs.SetInt("masterFullscreen", (_isFullScreen ? 1 : 0));
      Screen.fullScreen = _isFullScreen;
 
      StartCoroutine(ConfirmationBox());
@@ -136,6 +153,9 @@ public class MenuController : MonoBehaviour
        
        brightnessSlider.value = defaultBrightness;
        brightnessTextValue.text = defaultBrightness.ToString("0.0");
+
+       qualityDropdown.value = 1;
+       QualitySettings.SetQualityLevel(1);
 
        fullScreenToggle.isOn = false;
        Screen.fullScreen = false;
