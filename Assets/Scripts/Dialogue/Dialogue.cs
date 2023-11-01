@@ -25,6 +25,7 @@ public class Dialogue : MonoBehaviour
     public UnityEvent beforeDialogue;
     public DialogueElements[] dialogueElements;
     public UnityEvent afterDialogue;
+    public bool startWithActivation = false;
 
     bool isActive = false;
 
@@ -40,7 +41,7 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-
+        if(startWithActivation) StartDialogue();
     }
 
     void Update()
@@ -79,6 +80,17 @@ public class Dialogue : MonoBehaviour
         if (dialogueIndex < dialogueElements.Length)
         {
             dialogueManager.characterName.text = dialogueElements[dialogueIndex].characterName;
+            switch(dialogueManager.characterName.text)
+            {
+                case "Thorwald":
+                    dialogueManager.boxImage.color = dialogueManager.boxColors[0];
+                    break;
+                case "Rose":
+                    dialogueManager.boxImage.color = dialogueManager.boxColors[1];
+                    break;
+                default:
+                    break;
+            }
             StartCoroutine(DisplayLine(dialogueElements[dialogueIndex].dialogue));
         }
         else FinishDialogue();

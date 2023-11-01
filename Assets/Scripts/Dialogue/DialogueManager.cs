@@ -33,6 +33,9 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue")]
     [Tooltip("Box image for the dialogue.")]
     public GameObject dialogueBox;
+    public Image boxImage;
+    [Tooltip("All colors or the character dialogue box.")]
+    public Color[] boxColors;
     [Tooltip("Name of the character that is speaking.")]
     public TextMeshProUGUI characterName;
     [Tooltip("Text for the active dialogue element.")]
