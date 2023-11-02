@@ -8,6 +8,9 @@ public class CutsceneManager : MonoBehaviour
     public Cutscene[] cutscenes;
     Movement playerMovement;
 
+    [Tooltip("All the GameObjects that must be hidden during dialogues and cutscenes")]
+    public GameObject[] objectsToHide;
+
     private void Start()
     {
         playerMovement = FindObjectOfType<Movement>().GetComponent<Movement>();
@@ -17,6 +20,15 @@ public class CutsceneManager : MonoBehaviour
     {
         for (int i = 0; i < cutscenes.Length; i++)
         {
+            if (cutscenes[i].director.state == PlayState.Playing || DialogueManager.Instance.isActive && !DialogueManager.Instance.isThinking)
+            {
+                ActivateObjects(false);
+            }
+            else
+            {
+                ActivateObjects(true);
+            }
+
             if (cutscenes[i].director.state == PlayState.Playing)
             {
                 TimeManager.Instance.ClockSwitch(false);
@@ -49,5 +61,13 @@ public class CutsceneManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void ActivateObjects(bool areActive)
+    {
+        for (int i = 0; i < objectsToHide.Length; i++)
+        {
+            objectsToHide[i].SetActive(areActive);
+        }
     }
 }

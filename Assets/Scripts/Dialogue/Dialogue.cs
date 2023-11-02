@@ -22,10 +22,10 @@ public class Dialogue : MonoBehaviour
     DialogueManager dialogueManager;
     Movement playerMovement;
 
+    public bool startImmediatelyWithActivation = false;
     public UnityEvent beforeDialogue;
     public DialogueElements[] dialogueElements;
     public UnityEvent afterDialogue;
-    public bool startWithActivation = false;
 
     bool isActive = false;
 
@@ -41,7 +41,7 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        if(startWithActivation) StartDialogue();
+        if(startImmediatelyWithActivation) StartDialogue();
     }
 
     void Update()
