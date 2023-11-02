@@ -29,6 +29,8 @@ public class AudioManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        AudioListener.volume = 1.0f;
     }
 
     private void Update()

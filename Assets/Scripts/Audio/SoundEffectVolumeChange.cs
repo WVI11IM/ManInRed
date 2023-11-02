@@ -10,6 +10,7 @@ public class SoundEffectVolumeChange : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.volume = AudioManager.Instance.soundEffectVolume * volume;
     }
 
     // Update is called once per frame

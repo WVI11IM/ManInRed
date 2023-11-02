@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public Camera mainCamera;
 
     bool canMove = true;
+    bool onSolid = true;
 
     Animator animator;
     Rigidbody rb;
@@ -17,6 +18,22 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
+    private void Update()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit))
+        {
+            if (hit.collider.tag == "solid")
+            {
+                onSolid = true;
+            }
+            else if (hit.collider.tag == "grass")
+            {
+                onSolid = false;
+            }
+        }
+    }
+
 
     void FixedUpdate()
     {
@@ -64,5 +81,11 @@ public class Movement : MonoBehaviour
     public void CanMove(bool canMove)
     {
         this.canMove = canMove;
+    }
+
+    public void StepSound()
+    {
+        if(onSolid) AudioManager.Instance.PlaySoundEffect("stepInside");
+        else AudioManager.Instance.PlaySoundEffect("stepGrass");
     }
 }
