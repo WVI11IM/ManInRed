@@ -30,6 +30,12 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("Canvas that contains the dialogue and thought boxes.")]
     public Canvas canvas;
 
+    [Header("Locations")]
+    [Tooltip("Character positions for the dialogue.")]
+    public GameObject thorwaldLocation;
+    public GameObject roseLocation;
+    public GameObject defaultLocation;
+
     [Header("Dialogue")]
     [Tooltip("Box image for the dialogue.")]
     public GameObject dialogueBox;

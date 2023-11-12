@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - pressure
+  - suspicion
+  - solid
+  - grass
+  - ItemPequeno
+  - ItemGrande
   layers:
   - Default
   - TransparentFX
@@ -11,13 +17,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Courtyard
+  - Street
+  - Hallway
+  - Kitchen
+  - LivingRoom
+  - Bedroom
+  - Bathroom
   - 
   - 
   - 

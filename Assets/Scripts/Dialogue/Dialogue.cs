@@ -84,11 +84,14 @@ public class Dialogue : MonoBehaviour
             {
                 case "Thorwald":
                     dialogueManager.boxImage.color = dialogueManager.boxColors[0];
+                    dialogueManager.dialogueTarget = dialogueManager.thorwaldLocation;
                     break;
                 case "Rose":
                     dialogueManager.boxImage.color = dialogueManager.boxColors[1];
+                    dialogueManager.dialogueTarget = dialogueManager.roseLocation;
                     break;
                 default:
+                    dialogueManager.dialogueTarget = dialogueManager.defaultLocation;
                     break;
             }
             StartCoroutine(DisplayLine(dialogueElements[dialogueIndex].dialogue));
