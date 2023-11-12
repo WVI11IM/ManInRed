@@ -41,6 +41,7 @@ public class PlayerStats : MonoBehaviour
         StatsUpdate();
     }
 
+    /*
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("pressure")) onPressureZone = true;
@@ -64,20 +65,35 @@ public class PlayerStats : MonoBehaviour
             isPlayingSuspicionSound = false;
         }
     }
+    */
 
     void StatsUpdate()
     {
+        if (pressureMultiplier <= 0)
+        {
+            pressureMeterAnimator.SetInteger("modifier", 0);
+            AudioManager.Instance.StopSoundEffectLoop("pressureIncrease");
+            isPlayingPressureSound = false;
+        }
+
+        if (suspicionMultiplier <= 0)
+        {
+            suspicionMeterAnimator.SetInteger("modifier", 0);
+            AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
+            isPlayingSuspicionSound = false;
+        }
+
         //Being called by Update(), it updates the player's stats every frame
         pressureMeter.fillAmount = mainPressure / 100;
         suspicionMeter.fillAmount = mainSuspicion / 100;
 
         if (!TimeManager.Instance.timerIsPaused)
         {
-            if (onPressureZone)
+            if (pressureMultiplier > 0)
             {
                 ModifyPressure(pressureMultiplier);
             }
-            if (onSuspicionZone)
+            if (suspicionMultiplier > 0)
             {
                 ModifySuspicion(suspicionMultiplier);
             }
@@ -131,6 +147,8 @@ public class PlayerStats : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        suspicionMeterAnimator.SetInteger("modifier", 0);
+        AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
         mainPressure = targetPressure;
         isPlayingPressureSound = false;
     }

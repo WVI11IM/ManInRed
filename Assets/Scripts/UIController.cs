@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIController : MonoBehaviour
 {
@@ -8,12 +9,15 @@ public class UIController : MonoBehaviour
 
     public bool taskListActive, clockActive, tutorialBoxActive, metersActive, inventoryActive = false;
 
+    public TextMeshProUGUI tutorialBoxText;
+
     private void Update()
     {
         clock.SetBool("isActive", clockActive);
         taskList.SetBool("isActive", taskListActive);
         meters.SetBool("isActive", metersActive);
         inventory.SetBool("isActive", inventoryActive);
+        tutorialBox.SetBool("isActive", tutorialBoxActive);
     }
 
     public void AllUI(bool isActive)
@@ -39,5 +43,22 @@ public class UIController : MonoBehaviour
     public void Inventory(bool isActive)
     {
         inventoryActive = isActive;
+    }
+    void TutorialBox(bool isActive)
+    {
+        tutorialBoxActive = isActive;
+    }
+
+    public void TutorialBoxText(string text)
+    {
+        TutorialBox(true);
+        tutorialBoxText.text = text;
+        StartCoroutine(TutorialBoxCountdown());
+    }
+
+    IEnumerator TutorialBoxCountdown()
+    {
+        yield return new WaitForSecondsRealtime(8);
+        TutorialBox(false);
     }
 }
