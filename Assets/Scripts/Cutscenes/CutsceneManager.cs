@@ -5,11 +5,31 @@ using UnityEngine.Playables;
 
 public class CutsceneManager : MonoBehaviour
 {
+    private static CutsceneManager _instance;
+    public static CutsceneManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<CutsceneManager>();
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject("CutsceneManager");
+                    _instance = singleton.AddComponent<CutsceneManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
     public Cutscene[] cutscenes;
     Movement playerMovement;
+    public GameObject phoneCanvas;
 
     [Tooltip("All the GameObjects that must be hidden during dialogues and cutscenes")]
     public GameObject[] objectsToHide;
+
 
     private void Start()
     {
@@ -35,13 +55,10 @@ public class CutsceneManager : MonoBehaviour
                 playerMovement.CanMove(false);
                 break;
             }
-            else
+            else if (!DialogueManager.Instance.isActive && !phoneCanvas)
             {
-                if (!DialogueManager.Instance.isActive)
-                {
-                    TimeManager.Instance.ClockSwitch(true);
-                    playerMovement.CanMove(true);
-                }
+                TimeManager.Instance.ClockSwitch(true);
+                playerMovement.CanMove(true);
             }
         }
     }

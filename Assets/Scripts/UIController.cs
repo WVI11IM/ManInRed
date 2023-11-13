@@ -51,9 +51,12 @@ public class UIController : MonoBehaviour
 
     public void TutorialBoxText(string text)
     {
-        TutorialBox(true);
-        tutorialBoxText.text = text;
-        StartCoroutine(TutorialBoxCountdown());
+        if (!tutorialBoxActive)
+        {
+            TutorialBox(true);
+            tutorialBoxText.text = text;
+            StartCoroutine(TutorialBoxCountdown());
+        }
     }
 
     IEnumerator TutorialBoxCountdown()

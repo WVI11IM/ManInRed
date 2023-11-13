@@ -237,4 +237,9 @@ public class TimeManager : MonoBehaviour
         timeTextAnimator.SetBool("isSkippingTime", false);
         timer = targetTime;
     }
+
+    public void ChangeFrequency(float value)
+    {
+        timeFrequency = value;
+    }
 }

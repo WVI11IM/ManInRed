@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
         Vector3 movement = (camForward * verticalInput + camRight * horizontalInput).normalized;
 
         //If time is paused or is being skipped, player cannot move
-        if (TimeManager.Instance.timerIsPaused || TimeManager.Instance.skippingTime) CanMove(false);
+        if (TimeManager.Instance.timerIsPaused || TimeManager.Instance.skippingTime || PlayerStats.Instance.onMinigame) CanMove(false);
         else CanMove(true);
 
         if (canMove)
