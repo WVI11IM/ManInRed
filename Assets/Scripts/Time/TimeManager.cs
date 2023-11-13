@@ -112,21 +112,21 @@ public class TimeManager : MonoBehaviour
         //Updates the light intensity by checking the current hour
         if (hour == 6)
         {
-            sunLight.intensity = Mathf.Lerp(0f, 1f, minute / 60f);
+            sunLight.intensity = Mathf.Lerp(0f, 1.5f, minute / 60f);
             moonLight.intensity = Mathf.Lerp(0.5f, 0f, minute / 60f);
             dayPP.weight = Mathf.Lerp(0f, 1f, minute / 60f);
             nightPP.weight = Mathf.Lerp(1f, 0f, minute / 60f);
         }
         else if (hour == 17)
         {
-            sunLight.intensity = Mathf.Lerp(1f, 0f, minute / 60f);
+            sunLight.intensity = Mathf.Lerp(1.5f, 0f, minute / 60f);
             moonLight.intensity = Mathf.Lerp(0f, 0.5f, minute / 60f);
             dayPP.weight = Mathf.Lerp(1f, 0f, minute / 60f);
             nightPP.weight = Mathf.Lerp(0f, 1f, minute / 60f);
         }
         else if (6 < hour && hour < 17)
         {
-            sunLight.intensity = 1;
+            sunLight.intensity = 1.5f;
             moonLight.intensity = 0.5f;
             dayPP.weight = 1;
             nightPP.weight = 0;
