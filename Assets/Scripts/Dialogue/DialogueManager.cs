@@ -46,8 +46,6 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI characterName;
     [Tooltip("Text for the active dialogue element.")]
     public TextMeshProUGUI dialogueText;
-    [Tooltip("All the GameObjects that must be hidden during dialogues")]
-    public GameObject[] objectsToHide;
 
     [Header("Thought")]
     [Tooltip("Box image for the thought.")]

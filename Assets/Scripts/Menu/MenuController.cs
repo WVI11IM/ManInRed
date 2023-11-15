@@ -46,7 +46,7 @@ public class MenuController : MonoBehaviour
     resolutionDropdown.ClearOptions();
 
     List<string> options = new List<string>();
-    List<string> desiredResolutions = new List<string> { "1920x1080", "600x400", "1024x800" };
+    List<string> desiredResolutions = new List<string> { "1920x1080"/*, "600x400", "1024x800" */};
     int currentResolutionIndex = 0;
 
     foreach (var resolution in desiredResolutions)

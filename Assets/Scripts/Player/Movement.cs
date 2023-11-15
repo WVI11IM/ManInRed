@@ -10,13 +10,12 @@ public class Movement : MonoBehaviour
     bool canMove = true;
     bool onSolid = true;
 
-    Animator animator;
+    public Animator animator;
     Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
     }
     private void Update()
     {
