@@ -7,12 +7,11 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     public GameObject iconCanvas;
-    public ItemData itemData;
+    //public ItemData itemData;
     public bool isInteractable;
     bool isInteracting = false;
     bool isShowingIcon;
     public bool isClosest;
-
     public UnityEvent eventCallback;
 
     private PlayerInteractionManager playerInteractionManager;

@@ -46,16 +46,14 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U) || bigInventoryItem.Count > 1)
         {
-            GameObject itemClone = Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
-            itemClone.SetActive(true);
-            bigInventoryItem.Remove(bigInventoryItem[0]);            
+            bigInventoryItem[0].transform.position = gameObject.transform.position;
+            bigInventoryItem[0].SetActive(true);
+            bigInventoryItem.Remove(bigInventoryItem[0]);
         }
     }
 
     public void AddItem(GameObject item)
     {
-        //inventoryItems.Add(item);
-
         ListItems(item);
     }
 
@@ -75,7 +73,7 @@ public class Inventory : MonoBehaviour
                 Image img = Instantiate(inventoryItem, itemContent);
                 var itemIcon = img.transform.GetComponent<Image>();
 
-                itemIcon.sprite = item.GetComponent<ItemData>().sprite;
+                //itemIcon.sprite = item.GetComponent<ItemData>().sprite;
             }
         }
         else if (ItemG)
@@ -83,7 +81,7 @@ public class Inventory : MonoBehaviour
             bigInventoryItem.Add(item);
             Image img = Instantiate(bigInventory, inventoryItemBig);
 
-            img.sprite = item.GetComponent<ItemData>().sprite;   
+            //img.sprite = item.GetComponent<ItemData>().sprite;
         }       
     }
 
