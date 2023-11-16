@@ -21,7 +21,14 @@ public class MenuController : MonoBehaviour
   [SerializeField] private GameObject noSavedGameDialog = null;
 
 
-  public void NewGameDialogYes()
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+        QualitySettings.SetQualityLevel(QualitySettings.names.Length - 1);
+        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreen);
+    }
+
+    public void NewGameDialogYes()
   {
     SceneManager.LoadScene(_newGameLevel);
   }

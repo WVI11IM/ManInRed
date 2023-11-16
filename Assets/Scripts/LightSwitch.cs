@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-    public Light roomLight;
+    public GameObject[] roomLight;
     public bool isOn = true;
 
     // Start is called before the first frame update
@@ -20,8 +20,11 @@ public class LightSwitch : MonoBehaviour
 
     void LightUpdate()
     {
-        if (isOn) roomLight.enabled = true;
-        else roomLight.enabled = false;
+        for (int i = 0; i < roomLight.Length; i++)
+        {
+            if (isOn) roomLight[i].SetActive(true);
+            else roomLight[i].SetActive(false);
+        }
     }
 
     public void Switch()
