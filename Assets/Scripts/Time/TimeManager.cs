@@ -57,15 +57,19 @@ public class TimeManager : MonoBehaviour
     public int day = 1;
 
     public TimedEvent[] timedEvents;
+
+    Animator playerAnimator;
     public enum SkippingTime
     {
         SMOKING,
+        DRINKING,
         SLEEPING,
     }
 
     private void Awake()
     {
         FixTimedEvents();
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     void Update()
@@ -162,15 +166,7 @@ public class TimeManager : MonoBehaviour
         //Only used when starting the game after some in-game time has already passed. This function considers a timed event to have been called if the in-game timer went over it
         foreach (var data in timedEvents)
         {
-            if (
-                data.minute + data.hour * 60 + (data.day - 1) * 1440 <= timer && !data.wasCalled
-                /*
-                data.day <= day &&
-                data.hour <= hour &&
-                data.minute <= minute &&
-                !data.wasCalled
-                */
-                )
+            if (data.minute + data.hour * 60 + (data.day - 1) * 1440 <= timer && !data.wasCalled)
             {
                 data.wasCalled = true;
             }
@@ -183,15 +179,7 @@ public class TimeManager : MonoBehaviour
         //Invokes the timed event at the right time
         foreach(var data in timedEvents)
         {
-            if (
-                data.minute + data.hour * 60 + (data.day - 1) * 1440 <= timer && !data.wasCalled
-                /*
-                data.day <= day &&
-                data.hour <= hour &&
-                data.minute <= minute &&
-                !data.wasCalled
-                */
-                )
+            if (data.minute + data.hour * 60 + (data.day - 1) * 1440 <= timer && !data.wasCalled)
             {
                 data.eventCallback.Invoke();
                 Debug.Log("Invoking: " + data.timedEventDescription);
@@ -203,11 +191,19 @@ public class TimeManager : MonoBehaviour
     public void SkipTimeForSmoking()
     {
         SkipTime(SkippingTime.SMOKING);
+        playerAnimator.SetTrigger("smoked");
+    }
+
+    public void SkipTimeForDrinking()
+    {
+        SkipTime(SkippingTime.DRINKING);
+        playerAnimator.SetTrigger("drank");
     }
 
     public void SkipTimeForSleeping()
     {
         SkipTime(SkippingTime.SLEEPING);
+        playerAnimator.SetTrigger("slept");
     }
 
     void SkipTime(SkippingTime action)
@@ -218,7 +214,10 @@ public class TimeManager : MonoBehaviour
             switch (action)
             {
                 case (SkippingTime.SMOKING):
-                    StartCoroutine(SkipMinutes(60, 0.5f));
+                    StartCoroutine(SkipMinutes(60, 1f));
+                    break;
+                case (SkippingTime.DRINKING):
+                    StartCoroutine(SkipMinutes(60, 1f));
                     break;
                 case (SkippingTime.SLEEPING):
                     StartCoroutine(SkipMinutes(360, 5));
