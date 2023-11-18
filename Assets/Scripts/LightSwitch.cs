@@ -5,11 +5,15 @@ using UnityEngine;
 public class LightSwitch : MonoBehaviour
 {
     public GameObject[] roomLight;
+    public GameObject darkVolume;
     public bool isOn = true;
+
+    public Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,13 +26,22 @@ public class LightSwitch : MonoBehaviour
     {
         for (int i = 0; i < roomLight.Length; i++)
         {
-            if (isOn) roomLight[i].SetActive(true);
-            else roomLight[i].SetActive(false);
+            if (isOn)
+            {
+                roomLight[i].SetActive(true);
+                darkVolume.SetActive(false);
+            }
+            else
+            {
+                roomLight[i].SetActive(false);
+                darkVolume.SetActive(true);
+            }
         }
     }
 
     public void Switch()
     {
+        playerAnimator.SetTrigger("interacted");
         if (!isOn)
         {
             isOn = true;

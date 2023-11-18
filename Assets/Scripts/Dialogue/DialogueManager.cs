@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         if (isActive) 
         {
             canvas.enabled = true;
-            canvas.transform.position = new Vector3(dialogueTarget.transform.position.x, dialogueTarget.transform.position.y + 1.2f, dialogueTarget.transform.position.z);
+            canvas.transform.position = new Vector3(dialogueTarget.transform.position.x, dialogueTarget.transform.position.y + 2f, dialogueTarget.transform.position.z);
             canvas.transform.rotation = Camera.main.transform.rotation;
             canvas.transform.localScale = new Vector3(Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4);
 
