@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class OnHandItem
+{
+    public string name;
+    public int id;
+    public GameObject onHandItemToActivate;
+}
+
 public class Inventory : MonoBehaviour
 {
     private static Inventory _instance;
@@ -31,6 +39,8 @@ public class Inventory : MonoBehaviour
     public Transform inventoryItemBig;
     public Image bigInventory;
 
+    public OnHandItem[] onHandItems;
+
     public bool ItemP = false, ItemG = false;
 
     // Start is called before the first frame update
@@ -52,6 +62,37 @@ public class Inventory : MonoBehaviour
             Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
+        }
+
+        for (int i = 0; i < onHandItems.Length; i++)
+        {
+            onHandItems[i].onHandItemToActivate.SetActive(false);
+        }
+
+        if (bigInventoryItem.Count >= 1)
+        {
+            ItemData itemData = bigInventoryItem[0].GetComponent<ItemData>();
+
+            switch (itemData.id)
+            {
+                case 1:
+                    for (int i = 0; i < onHandItems.Length; i++)
+                    {
+                        if (onHandItems[i].id == 1)
+                            onHandItems[i].onHandItemToActivate.SetActive(true);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < onHandItems.Length; i++)
+                    {
+                        if (onHandItems[i].id == 2)
+                            onHandItems[i].onHandItemToActivate.SetActive(true);
+                    }
+                    break;
+                default:
+                    break;
+
+            }
         }
     }
 

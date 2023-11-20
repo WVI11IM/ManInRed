@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1559418573038510372}
   - component: {fileID: 1559418573038510373}
   - component: {fileID: 1559418573038510374}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1559418573441182806}
   - component: {fileID: 1559418573441182804}
   - component: {fileID: 1559418573441182805}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 1559418573571358479}
   - component: {fileID: 1559418573571358472}
   - component: {fileID: 7522947717736238499}
+  - component: {fileID: 5602697536605626750}
   m_Layer: 0
   m_Name: DirtySaw
   m_TagString: ItemGrande
@@ -263,7 +264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559418573571358474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2804217, y: 6.2791095, z: 1.500123}
+  m_LocalPosition: {x: 7.2236304, y: 6.2791095, z: 2.3507013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -343,6 +344,24 @@ MonoBehaviour:
   id: 1
   displayName: Saw
   sprite: {fileID: 21300000, guid: d98fbe17966d8ef449b25b99024bf36f, type: 3}
+--- !u!114 &5602697536605626750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559418573571358474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 1
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2761227310923066752
 PrefabInstance:
   m_ObjectHideFlags: 0

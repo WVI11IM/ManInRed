@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit))
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.down, out hit))
         {
             if (hit.collider.tag == "solid")
             {

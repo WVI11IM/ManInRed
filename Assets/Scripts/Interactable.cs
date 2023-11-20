@@ -16,16 +16,24 @@ public class Interactable : MonoBehaviour
 
     private PlayerInteractionManager playerInteractionManager;
     private Inventory inventory;
+    private Outline outline;
 
     private void Start()
     {
         playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
         inventory = Inventory.Instance;
+        outline = GetComponent<Outline>();
         iconCanvas.SetActive(false);
     }
     private void Update()
     {
         iconCanvas.transform.rotation = Camera.main.transform.rotation;
+
+        if (isInteracting || !isInteractable)
+        {
+            outline.enabled = false;
+        }
+        else outline.enabled = true;
 
         if (isInteracting)
         {
