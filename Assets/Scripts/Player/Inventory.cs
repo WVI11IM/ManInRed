@@ -33,20 +33,23 @@ public class Inventory : MonoBehaviour
 
     public bool ItemP = false, ItemG = false;
 
-    private Interactable interagivel;
-
     // Start is called before the first frame update
     void Start()
     {
-        interagivel = FindObjectOfType<Interactable>();
+
     }
 
     //Teste para ver se remove da lista e do inventário da UI... /funciona
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U) || bigInventoryItem.Count > 1)
+        if (Input.GetKeyDown(KeyCode.Q) || bigInventoryItem.Count > 1)
         {
-            bigInventoryItem[0].transform.position = gameObject.transform.position;
+            //bigInventoryItem[0].transform.position = gameObject.transform.position;
+            //bigInventoryItem[0].SetActive(true);
+
+            GameObject itemToDrop = bigInventoryItem[0];
+            itemToDrop.transform.position = gameObject.transform.position;
+            Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
         }
@@ -66,6 +69,11 @@ public class Inventory : MonoBehaviour
     {
         if (ItemP)
         {
+            foreach (Transform child in itemContent)
+            {
+                Destroy(child.gameObject);
+            }
+
             smallInventoryItems.Add(item);
 
             foreach (var ItemData in smallInventoryItems)
@@ -73,15 +81,20 @@ public class Inventory : MonoBehaviour
                 Image img = Instantiate(inventoryItem, itemContent);
                 var itemIcon = img.transform.GetComponent<Image>();
 
-                //itemIcon.sprite = item.GetComponent<ItemData>().sprite;
+                itemIcon.sprite = item.GetComponent<ItemData>().sprite;
             }
         }
         else if (ItemG)
         {
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+
             bigInventoryItem.Add(item);
             Image img = Instantiate(bigInventory, inventoryItemBig);
 
-            //img.sprite = item.GetComponent<ItemData>().sprite;
+            img.sprite = item.GetComponent<ItemData>().sprite;
         }       
     }
 

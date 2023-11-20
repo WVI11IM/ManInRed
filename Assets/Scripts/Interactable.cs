@@ -7,7 +7,7 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     public GameObject iconCanvas;
-    //public ItemData itemData;
+    public ItemData itemData;
     public bool isInteractable;
     bool isInteracting = false;
     bool isShowingIcon;
@@ -15,10 +15,12 @@ public class Interactable : MonoBehaviour
     public UnityEvent eventCallback;
 
     private PlayerInteractionManager playerInteractionManager;
+    private Inventory inventory;
 
     private void Start()
     {
         playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
+        inventory = Inventory.Instance;
         iconCanvas.SetActive(false);
     }
     private void Update()
@@ -74,5 +76,15 @@ public class Interactable : MonoBehaviour
         //Shows or hides the interaction icon
         isInteracting = !isVisible;
         isShowingIcon = isVisible;
+    }
+
+    public void AddItem(GameObject item)
+    {
+        inventory.AddItem(item);
+    }
+
+    public void RemoveItem(GameObject item)
+    {
+        inventory.RemoveItem(item);
     }
 }
