@@ -21,4 +21,13 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         playerAnimator.SetBool("isSitting", isActive);
     }
+
+    public void isCrouching(bool isActive)
+    {
+        playerAnimator.SetBool("isCrouching", isActive);
+    }
+    public void isCutting(bool isActive)
+    {
+        playerAnimator.SetBool("isCutting", isActive);
+    }
 }
