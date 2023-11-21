@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class OnHandItem
+{
+    public string name;
+    public int id;
+    public GameObject onHandItemToActivate;
+}
+
 public class Inventory : MonoBehaviour
 {
     private static Inventory _instance;
@@ -31,31 +39,65 @@ public class Inventory : MonoBehaviour
     public Transform inventoryItemBig;
     public Image bigInventory;
 
-    public bool ItemP = false, ItemG = false;
+    public OnHandItem[] onHandItems;
 
-    private Interactable interagivel;
+    public bool ItemP = false, ItemG = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        interagivel = FindObjectOfType<Interactable>();
+
     }
 
     //Teste para ver se remove da lista e do inventário da UI... /funciona
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U) || bigInventoryItem.Count > 1)
+        if (Input.GetKeyDown(KeyCode.Q) || bigInventoryItem.Count > 1)
         {
-            GameObject itemClone = Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
-            itemClone.SetActive(true);
-            bigInventoryItem.Remove(bigInventoryItem[0]);            
+            //bigInventoryItem[0].transform.position = gameObject.transform.position;
+            //bigInventoryItem[0].SetActive(true);
+
+            GameObject itemToDrop = bigInventoryItem[0];
+            itemToDrop.transform.position = gameObject.transform.position;
+            Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
+            bigInventoryItem[0].SetActive(true);
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+        }
+
+        for (int i = 0; i < onHandItems.Length; i++)
+        {
+            onHandItems[i].onHandItemToActivate.SetActive(false);
+        }
+
+        if (bigInventoryItem.Count >= 1)
+        {
+            ItemData itemData = bigInventoryItem[0].GetComponent<ItemData>();
+
+            switch (itemData.id)
+            {
+                case 1:
+                    for (int i = 0; i < onHandItems.Length; i++)
+                    {
+                        if (onHandItems[i].id == 1)
+                            onHandItems[i].onHandItemToActivate.SetActive(true);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < onHandItems.Length; i++)
+                    {
+                        if (onHandItems[i].id == 2)
+                            onHandItems[i].onHandItemToActivate.SetActive(true);
+                    }
+                    break;
+                default:
+                    break;
+
+            }
         }
     }
 
     public void AddItem(GameObject item)
     {
-        //inventoryItems.Add(item);
-
         ListItems(item);
     }
 
@@ -68,6 +110,11 @@ public class Inventory : MonoBehaviour
     {
         if (ItemP)
         {
+            foreach (Transform child in itemContent)
+            {
+                Destroy(child.gameObject);
+            }
+
             smallInventoryItems.Add(item);
 
             foreach (var ItemData in smallInventoryItems)
@@ -80,10 +127,15 @@ public class Inventory : MonoBehaviour
         }
         else if (ItemG)
         {
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+
             bigInventoryItem.Add(item);
             Image img = Instantiate(bigInventory, inventoryItemBig);
 
-            img.sprite = item.GetComponent<ItemData>().sprite;   
+            img.sprite = item.GetComponent<ItemData>().sprite;
         }       
     }
 

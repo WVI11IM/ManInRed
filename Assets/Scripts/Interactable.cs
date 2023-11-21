@@ -12,19 +12,28 @@ public class Interactable : MonoBehaviour
     bool isInteracting = false;
     bool isShowingIcon;
     public bool isClosest;
-
     public UnityEvent eventCallback;
 
     private PlayerInteractionManager playerInteractionManager;
+    private Inventory inventory;
+    private Outline outline;
 
     private void Start()
     {
         playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
+        inventory = Inventory.Instance;
+        outline = GetComponent<Outline>();
         iconCanvas.SetActive(false);
     }
     private void Update()
     {
         iconCanvas.transform.rotation = Camera.main.transform.rotation;
+
+        if (isInteracting || !isInteractable)
+        {
+            outline.enabled = false;
+        }
+        else outline.enabled = true;
 
         if (isInteracting)
         {
@@ -75,5 +84,15 @@ public class Interactable : MonoBehaviour
         //Shows or hides the interaction icon
         isInteracting = !isVisible;
         isShowingIcon = isVisible;
+    }
+
+    public void AddItem(GameObject item)
+    {
+        inventory.AddItem(item);
+    }
+
+    public void RemoveItem(GameObject item)
+    {
+        inventory.RemoveItem(item);
     }
 }

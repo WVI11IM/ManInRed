@@ -143,6 +143,11 @@ public class PlayerStats : MonoBehaviour
         float startPressure = mainPressure;
         float targetPressure = mainPressure + value;
 
+        if (value > 0)
+        {
+            AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
+        }
+
         while (elapsedTime < duration)
         {
             mainPressure = Mathf.RoundToInt(Mathf.Lerp(startPressure, targetPressure, elapsedTime / duration));
@@ -150,9 +155,8 @@ public class PlayerStats : MonoBehaviour
             yield return null;
         }
         pressureMeterAnimator.SetInteger("modifier", 0);
-        AudioManager.Instance.StopSoundEffectLoop("PressureIncrease");
         mainPressure = targetPressure;
-        isPlayingPressureSound = false;
+        AudioManager.Instance.StopSoundEffectLoop("PressureIncrease");
     }
 
     public void ModifyPressureMultiplier(float valueToAdd)
@@ -168,7 +172,6 @@ public class PlayerStats : MonoBehaviour
         if (!isPlayingSuspicionSound)
         {
             AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
-            isPlayingSuspicionSound = true;
         }
     }
     public void ModifySuspicion(int value)
@@ -184,6 +187,11 @@ public class PlayerStats : MonoBehaviour
         float startSuspicion = mainSuspicion;
         float targetSuspicion = mainSuspicion + value;
 
+        if (value > 0)
+        {
+            AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
+        }
+
         while (elapsedTime < duration)
         {
             mainPressure = Mathf.RoundToInt(Mathf.Lerp(startSuspicion, targetSuspicion, elapsedTime / duration));
@@ -191,9 +199,8 @@ public class PlayerStats : MonoBehaviour
             yield return null;
         }
         suspicionMeterAnimator.SetInteger("modifier", 0);
-        AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
         mainSuspicion = targetSuspicion;
-        isPlayingSuspicionSound = false;
+        AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
     }
 
     public void ModifySuspicionMultiplier(float valueToAdd)
