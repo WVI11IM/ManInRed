@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     public Camera mainCamera;
 
-    bool canMove = true;
+    public bool canMove = true;
     bool onSolid = true;
 
     public Animator animator;

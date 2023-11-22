@@ -59,6 +59,7 @@ public class TimeManager : MonoBehaviour
     public TimedEvent[] timedEvents;
 
     Animator playerAnimator;
+    public UIController uiController;
     public enum SkippingTime
     {
         SMOKING,
@@ -203,7 +204,7 @@ public class TimeManager : MonoBehaviour
     public void SkipTimeForSleeping()
     {
         SkipTime(SkippingTime.SLEEPING);
-        playerAnimator.SetTrigger("slept");
+        playerAnimator.SetBool("isSitting", true);
     }
 
     void SkipTime(SkippingTime action)
@@ -241,6 +242,14 @@ public class TimeManager : MonoBehaviour
             timer = Mathf.RoundToInt(Mathf.Lerp(startTime, targetTime, elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
+        }
+
+        if(minutes >= 360)
+        {
+            playerAnimator.SetBool("isSitting", false);
+            uiController.Black(false);
+            uiController.AllUI(true);
+            PlayerStats.Instance.hasFainted = false;
         }
         skippingTime = false;
         timerIsPaused = false;

@@ -121,6 +121,8 @@ public class Dialogue : MonoBehaviour
             dialogueManager.isActive = false;
             isActive = false;
             dialogueIndex = 0;
+            dialogueManager.boxImage.color = dialogueManager.boxColors[0];
+            dialogueManager.dialogueTarget = dialogueManager.thorwaldLocation;
             afterDialogue.Invoke();
             TimeManager.Instance.ClockSwitch(true);
             playerMovement.CanMove(true);

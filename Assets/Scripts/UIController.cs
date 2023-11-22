@@ -5,9 +5,9 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
-    public Animator taskList, clock, tutorialBox, meters, inventory;
+    public Animator taskList, clock, tutorialBox, meters, inventory, black;
 
-    public bool taskListActive, clockActive, tutorialBoxActive, metersActive, inventoryActive = false;
+    public bool taskListActive, clockActive, tutorialBoxActive, metersActive, inventoryActive, blackActive = false;
 
     public TextMeshProUGUI tutorialBoxText;
 
@@ -18,6 +18,7 @@ public class UIController : MonoBehaviour
         meters.SetBool("isActive", metersActive);
         inventory.SetBool("isActive", inventoryActive);
         tutorialBox.SetBool("isActive", tutorialBoxActive);
+        black.SetBool("isActive", blackActive);
     }
 
     public void AllUI(bool isActive)
@@ -44,6 +45,11 @@ public class UIController : MonoBehaviour
     {
         inventoryActive = isActive;
     }
+    public void Black(bool isActive)
+    {
+        blackActive = isActive;
+    }
+
     void TutorialBox(bool isActive)
     {
         tutorialBoxActive = isActive;

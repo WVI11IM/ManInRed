@@ -52,6 +52,11 @@ public class PlayerStats : MonoBehaviour
     [Header("States")]
     public bool onMinigame = false;
 
+    [Header("Cutscene assets")]
+    public Dialogue faintDialogue;
+    public Cutscene maxSuspicionCutscene;
+    public bool hasFainted = false;
+
 
     void Start()
     {
@@ -108,6 +113,12 @@ public class PlayerStats : MonoBehaviour
         {
             mainPressure = 100;
             Debug.Log("Max Pressure!!");
+            if (!hasFainted)
+            {
+                faintDialogue.StartDialogue();
+                hasFainted = true;
+            }
+
         }
 
         if (mainSuspicion < 0) mainSuspicion = 0;
@@ -115,6 +126,7 @@ public class PlayerStats : MonoBehaviour
         {
             mainSuspicion = 100;
             Debug.Log("Max Suspicion!!");
+            maxSuspicionCutscene.director.Play();
         }
     }
 
@@ -123,7 +135,7 @@ public class PlayerStats : MonoBehaviour
         //Continuously modifies pressure while it's being called
         mainPressure += pressureMultiplier * Time.deltaTime;
         pressureMeterAnimator.SetInteger("modifier", (int)value);
-        if (!isPlayingPressureSound)
+        if (!isPlayingPressureSound && value > 0)
         {
             AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
             isPlayingPressureSound = true;
@@ -169,7 +181,7 @@ public class PlayerStats : MonoBehaviour
         //Continuously modifies suspicion while it's being called
         mainSuspicion += value * Time.deltaTime;
         suspicionMeterAnimator.SetInteger("modifier", (int)value);
-        if (!isPlayingSuspicionSound)
+        if (!isPlayingSuspicionSound && value > 0)
         {
             AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
         }
