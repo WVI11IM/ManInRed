@@ -64,6 +64,11 @@ public class Inventory : MonoBehaviour
             Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
+
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         for (int i = 0; i < onHandItems.Length; i++)
