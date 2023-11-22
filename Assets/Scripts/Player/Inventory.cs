@@ -43,10 +43,12 @@ public class Inventory : MonoBehaviour
 
     public bool ItemP = false, ItemG = false;
 
+    Animator playerAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        playerAnimator = GetComponent<Animator>();
     }
 
     //Teste para ver se remove da lista e do inventário da UI... /funciona
@@ -99,6 +101,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(GameObject item)
     {
         ListItems(item);
+        playerAnimator.SetTrigger("interacted");
     }
 
     public void RemoveItem(GameObject item)
