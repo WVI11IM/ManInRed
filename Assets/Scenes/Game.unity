@@ -1058,6 +1058,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneTake
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &82452613
 Transform:
   m_ObjectHideFlags: 0
@@ -8181,6 +8193,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneTake
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!135 &500634489
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8335,25 +8359,67 @@ MonoBehaviour:
   soundEffectsList:
   - name: stepInside
     clip: {fileID: 8300000, guid: 0cbacec8b91682f439722dbfdf3308bf, type: 3}
+    volume: 0.125
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: stepInside2
+    clip: {fileID: 8300000, guid: cf9d9f06eb5fe3c43bd63209b0eb779d, type: 3}
     volume: 0.1
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: stepGrass
     clip: {fileID: 8300000, guid: 89edace076dba3f42aa92b49c3d38f08, type: 3}
-    volume: 0.075
+    volume: 0.035
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: stepGrass2
+    clip: {fileID: 8300000, guid: b7d0af53ca765e648a653c2d02051e3b, type: 3}
+    volume: 0.05
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: pressureIncrease
     clip: {fileID: 8300000, guid: 7e6b4110da0ff1c4abfac3616329c89b, type: 3}
-    volume: 0.1
+    volume: 0.2
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: suspicionIncrease
     clip: {fileID: 8300000, guid: 7985da0c3bd819f418b89dac4abf0ed0, type: 3}
-    volume: 0.05
+    volume: 0.1
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: takeItem
+    clip: {fileID: 8300000, guid: 1729000680408ed49b2e5e451da00389, type: 3}
+    volume: 0.5
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: lightOff
+    clip: {fileID: 8300000, guid: dec30ee5694279a4190d879e456d1a57, type: 3}
+    volume: 0.5
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: lightOn
+    clip: {fileID: 8300000, guid: 69d9a2d975abde34cb0c63f7ee985c83, type: 3}
+    volume: 0.4
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: phoneTake
+    clip: {fileID: 8300000, guid: 820b018c953d098488a897c6b932679c, type: 3}
+    volume: 0.45
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: phoneLeave
+    clip: {fileID: 8300000, guid: 02afdf3958ea193469109afb8c5af935, type: 3}
+    volume: 0.35
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -9735,7 +9801,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &589221982
 MonoBehaviour:
@@ -18530,6 +18596,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
   dialogueIndex: 0
 --- !u!4 &949900624
 Transform:
@@ -26616,7 +26694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Light\n\u25BC"
+  m_text: "Luz\n\u25BC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28377,7 +28455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Light\n\u25BC"
+  m_text: "Luz\n\u25BC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30488,7 +30566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Light\n\u25BC"
+  m_text: "Luz\n\u25BC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30930,6 +31008,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1670579184
@@ -34343,7 +34433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Light\n\u25BC"
+  m_text: "Luz\n\u25BC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

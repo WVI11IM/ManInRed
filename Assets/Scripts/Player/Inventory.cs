@@ -103,6 +103,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(GameObject item)
     {
         ListItems(item);
+        AudioManager.Instance.PlaySoundEffect("takeItem");
         playerAnimator.SetTrigger("interacted");
     }
 

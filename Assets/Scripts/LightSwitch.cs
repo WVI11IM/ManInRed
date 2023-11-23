@@ -45,10 +45,12 @@ public class LightSwitch : MonoBehaviour
         if (!isOn)
         {
             isOn = true;
+            AudioManager.Instance.PlaySoundEffect("lightOn");
         }
         else
         {
             isOn = false;
+            AudioManager.Instance.PlaySoundEffect("lightOff");
         }
     }
 

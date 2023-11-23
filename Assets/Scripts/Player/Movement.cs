@@ -84,7 +84,17 @@ public class Movement : MonoBehaviour
 
     public void StepSound()
     {
-        if(onSolid) AudioManager.Instance.PlaySoundEffect("stepInside");
-        else AudioManager.Instance.PlaySoundEffect("stepGrass");
+        float r = Random.Range(0f, 1f);
+        if (onSolid)
+        {
+            if (r > 0.5f) AudioManager.Instance.PlaySoundEffect("stepInside");
+            else AudioManager.Instance.PlaySoundEffect("stepInside2");
+        }
+
+        else
+        {
+            if (r > 0.5f) AudioManager.Instance.PlaySoundEffect("stepGrass");
+            else AudioManager.Instance.PlaySoundEffect("stepGrass2");
+        }
     }
 }
