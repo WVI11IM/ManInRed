@@ -53,12 +53,14 @@ public class CutsceneManager : MonoBehaviour
             {
                 TimeManager.Instance.ClockSwitch(false);
                 playerMovement.CanMove(false);
+                Debug.Log("CannotMove");
                 break;
             }
             else if (!DialogueManager.Instance.isActive && !phoneCanvas)
             {
                 TimeManager.Instance.ClockSwitch(true);
                 playerMovement.CanMove(true);
+                Debug.Log("CanMove");
             }
         }
     }

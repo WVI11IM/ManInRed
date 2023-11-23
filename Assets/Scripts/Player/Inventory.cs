@@ -56,9 +56,6 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) || bigInventoryItem.Count > 1)
         {
-            //bigInventoryItem[0].transform.position = gameObject.transform.position;
-            //bigInventoryItem[0].SetActive(true);
-
             GameObject itemToDrop = bigInventoryItem[0];
             itemToDrop.transform.position = gameObject.transform.position;
             Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
