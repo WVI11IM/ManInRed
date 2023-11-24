@@ -51,10 +51,9 @@ public class Inventory : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
     }
 
-    //Teste para ver se remove da lista e do inventário da UI... /funciona
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) || bigInventoryItem.Count > 1)
+        if (Input.GetKeyDown(KeyCode.Q)/* || bigInventoryItem.Count > 1*/)
         {
             GameObject itemToDrop = bigInventoryItem[0];
             itemToDrop.transform.position = gameObject.transform.position;
@@ -66,6 +65,14 @@ public class Inventory : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
+        }
+        else if (bigInventoryItem.Count > 1)
+        {
+            GameObject itemToDrop = bigInventoryItem[0];
+            itemToDrop.transform.position = gameObject.transform.position;
+            Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
+            bigInventoryItem[0].SetActive(true);
+            bigInventoryItem.Remove(bigInventoryItem[0]);
         }
 
         for (int i = 0; i < onHandItems.Length; i++)
@@ -151,6 +158,14 @@ public class Inventory : MonoBehaviour
         foreach (GameObject item in smallInventoryItems)
         {
             // Check if the item's itemID matches the specified itemID
+            if (item.GetComponent<ItemData>().id == id)
+            {
+                return true; // The item was found in the inventory
+            }
+        }
+
+        foreach (GameObject item in bigInventoryItem)
+        {
             if (item.GetComponent<ItemData>().id == id)
             {
                 return true; // The item was found in the inventory
