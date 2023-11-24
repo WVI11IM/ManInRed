@@ -11,7 +11,7 @@ public class ItemData : MonoBehaviour
 
     private GameObject sangue;
     private float contaGotas;   //Contador
-    private float gotejar = 5;  //De quanto em quanto tempo vai cair o sangue
+    private float gotejar = 8;  //De quanto em quanto tempo vai cair o sangue
 
     private void Start()
     {
@@ -29,10 +29,16 @@ public class ItemData : MonoBehaviour
 
     private void Update()
     {
+        if (inventario.HasItem(0))
+        {
+            Debug.Log("Tem jornal");
+            Jornal();
+        }
+
         if (inventario.HasItem(1))
         {
             Debug.Log("Tem serra suja");
-            Serra();
+            SerraSuja();
         }
 
         if (inventario.HasItem(2))
@@ -40,22 +46,64 @@ public class ItemData : MonoBehaviour
             Debug.Log("Tem Maleta");
             Maleta();
         }
+
+        if (inventario.HasItem(3))
+        {
+            Debug.Log("Tem Maleta com Parte");
+            MaletaCorpo();
+        }
+
+        if (inventario.HasItem(4))
+        {
+            Debug.Log("Tem Maleta com Parte Embrulhada");
+            MaletaCorpoJornal();
+        }
+
+        if (inventario.HasItem(5))
+        {
+            Debug.Log("Tem serra suja");
+            SerraLimpa();
+        }
+    }
+
+    void Jornal()
+    {
+
+    }
+
+    void SerraSuja()
+    {
+
     }
 
     void Maleta()
     {
-        contaGotas += 1 * Time.deltaTime;
+
+    }
+
+    void MaletaCorpo()
+    {
+        if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+        {
+            contaGotas += 1 * Time.deltaTime;
+        }
+
         if (contaGotas >= gotejar)
         {
+            sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
             Debug.Log("Caiu sangue");
-            sangue = Resources.Load<GameObject>("Sangue");
             Instantiate(sangue, inventario.transform.position, Quaternion.identity);
 
             contaGotas = 0;
         }
     }
 
-    void Serra()
+    void MaletaCorpoJornal()
+    {
+
+    }
+
+    void SerraLimpa()
     {
 
     }

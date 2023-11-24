@@ -84,25 +84,10 @@ public class Inventory : MonoBehaviour
         {
             ItemData itemData = bigInventoryItem[0].GetComponent<ItemData>();
 
-            switch (itemData.id)
+            for (int i = 0; i < onHandItems.Length; i++)
             {
-                case 1:
-                    for (int i = 0; i < onHandItems.Length; i++)
-                    {
-                        if (onHandItems[i].id == 1)
-                            onHandItems[i].onHandItemToActivate.SetActive(true);
-                    }
-                    break;
-                case 2:
-                    for (int i = 0; i < onHandItems.Length; i++)
-                    {
-                        if (onHandItems[i].id == 2)
-                            onHandItems[i].onHandItemToActivate.SetActive(true);
-                    }
-                    break;
-                default:
-                    break;
-
+                if (onHandItems[i].id == itemData.id)
+                    onHandItems[i].onHandItemToActivate.SetActive(true);
             }
         }
     }
