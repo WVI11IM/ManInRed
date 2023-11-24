@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1445606729808930769}
   - component: {fileID: 6808166462602483183}
   - component: {fileID: 9033673541692980268}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 4179947973712190780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.025, z: 0}
-  m_LocalScale: {x: 0.1, y: 1, z: 0.1}
+  m_LocalScale: {x: 0.05, y: 1, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7839640918394868002}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 7691096644100544449}
   - component: {fileID: 5651065135647017421}
   - component: {fileID: 6087741357437203475}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &621713017505300418
 MonoBehaviour:
