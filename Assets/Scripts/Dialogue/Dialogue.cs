@@ -61,7 +61,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        dialogueManager.StopThoughtCountdown();
+        //dialogueManager.StopThoughtCountdown();
         if (!dialogueManager.isActive)
         {
             playerMovement.CanMove(false);

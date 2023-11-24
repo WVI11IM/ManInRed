@@ -76,15 +76,17 @@ public class DialogueManager : MonoBehaviour
             canvas.transform.rotation = Camera.main.transform.rotation;
             canvas.transform.localScale = new Vector3(Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4);
 
-            if (isThinking) 
+            if (!isThinking) 
             {
-                dialogueBox.SetActive(false);
-                thoughtBox.SetActive(true);
+                isThinking = false;
+                thoughtBox.SetActive(false);
+                dialogueBox.SetActive(true);
             }
             else
             {
-                thoughtBox.SetActive(false);
-                dialogueBox.SetActive(true);
+                isThinking = true;
+                dialogueBox.SetActive(false);
+                thoughtBox.SetActive(true);
             }
         }
         else canvas.enabled = false;

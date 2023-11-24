@@ -436,8 +436,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 483
-        width: 1045
+        y: 485
+        width: 1041
         height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -456,9 +456,9 @@ TextureImporter:
       name: suspicionBar2
       rect:
         serializedVersion: 2
-        x: 1045
+        x: 1051
         y: 483
-        width: 1045
+        width: 1041
         height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

@@ -9072,25 +9072,25 @@ MonoBehaviour:
     maxDist3D: 0
   - name: takeItem
     clip: {fileID: 8300000, guid: 1729000680408ed49b2e5e451da00389, type: 3}
-    volume: 0.5
+    volume: 0.75
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: lightOff
     clip: {fileID: 8300000, guid: dec30ee5694279a4190d879e456d1a57, type: 3}
-    volume: 0.5
+    volume: 0.65
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: lightOn
     clip: {fileID: 8300000, guid: 69d9a2d975abde34cb0c63f7ee985c83, type: 3}
-    volume: 0.4
+    volume: 0.5
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: phoneTake
     clip: {fileID: 8300000, guid: 820b018c953d098488a897c6b932679c, type: 3}
-    volume: 0.45
+    volume: 0.55
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -9102,13 +9102,31 @@ MonoBehaviour:
     maxDist3D: 0
   - name: phoneLeave
     clip: {fileID: 8300000, guid: 02afdf3958ea193469109afb8c5af935, type: 3}
-    volume: 0.35
+    volume: 0.4
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: bodySaw
     clip: {fileID: 8300000, guid: 361df984193f6de46b58d305c0755aea, type: 3}
     volume: 0.35
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: timeSkip
+    clip: {fileID: 8300000, guid: b0c85fd930877f043aad7ab4743417fe, type: 3}
+    volume: 0.15
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: smoking
+    clip: {fileID: 8300000, guid: a0e53f1853ba0ca42bf94c5180b13573, type: 3}
+    volume: 0.55
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: drinking
+    clip: {fileID: 8300000, guid: 86fc73c35bda3c14496ab3b3747d802d, type: 3}
+    volume: 0.45
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0

@@ -216,9 +216,11 @@ public class TimeManager : MonoBehaviour
             {
                 case (SkippingTime.SMOKING):
                     StartCoroutine(SkipMinutes(60, 1f));
+                    AudioManager.Instance.PlaySoundEffect("smoking");
                     break;
                 case (SkippingTime.DRINKING):
                     StartCoroutine(SkipMinutes(60, 1f));
+                    AudioManager.Instance.PlaySoundEffect("drinking");
                     break;
                 case (SkippingTime.SLEEPING):
                     StartCoroutine(SkipMinutes(360, 5));
@@ -235,6 +237,13 @@ public class TimeManager : MonoBehaviour
         float elapsedTime = 0.0f;
         float startTime = timer;
         float targetTime = timer + minutes;
+
+        if (minutes >= 360)
+        {
+            AudioManager.Instance.PlaySoundEffectLoop("timeSkip");
+        }
+
+
         while (elapsedTime < duration)
         {
             timeTextAnimator.SetBool("isSkippingTime", true);
@@ -249,6 +258,7 @@ public class TimeManager : MonoBehaviour
             playerAnimator.SetBool("isSitting", false);
             uiController.Black(false);
             uiController.AllUI(true);
+            AudioManager.Instance.StopSoundEffectLoop("timeSkip");
             PlayerStats.Instance.hasFainted = false;
         }
         skippingTime = false;
