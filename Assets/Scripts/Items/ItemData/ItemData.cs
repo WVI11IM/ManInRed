@@ -58,12 +58,6 @@ public class ItemData : MonoBehaviour
             Debug.Log("Tem Maleta com Parte Embrulhada");
             MaletaCorpoJornal();
         }
-
-        if (inventario.HasItem(5))
-        {
-            Debug.Log("Tem serra suja");
-            SerraLimpa();
-        }
     }
 
     void Jornal()
@@ -99,11 +93,6 @@ public class ItemData : MonoBehaviour
     }
 
     void MaletaCorpoJornal()
-    {
-
-    }
-
-    void SerraLimpa()
     {
 
     }

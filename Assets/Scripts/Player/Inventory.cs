@@ -43,6 +43,8 @@ public class Inventory : MonoBehaviour
 
     public bool ItemP = false, ItemG = false;
 
+    private GameObject serraLimpa;
+
     Animator playerAnimator;
 
     // Start is called before the first frame update
@@ -53,7 +55,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)/* || bigInventoryItem.Count > 1*/)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject itemToDrop = bigInventoryItem[0];
             itemToDrop.transform.position = gameObject.transform.position;
@@ -180,6 +182,23 @@ public class Inventory : MonoBehaviour
         {
             ItemP = false;
             ItemG = false;
+        }
+    }
+
+    //Chamado nos eventos do gameobject da pia da cozinha, usado somente uma vez
+    public void Serra()
+    {
+        if (HasItem(1))
+        {
+            Debug.Log("Serra agora está limpa");
+            serraLimpa = Resources.Load<GameObject>("CleanSaw");
+            Instantiate(serraLimpa, gameObject.transform.position, Quaternion.identity);
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
         }
     }
 }
