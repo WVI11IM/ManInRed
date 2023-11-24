@@ -92,7 +92,7 @@ public class TimeManager : MonoBehaviour
         //Displays the text of the current time
         string clockTime = string.Format("{0:D2}h{1:D2}", hour, minute);
         timeText.text = clockTime;
-        dayText.text = "DAY " + day;
+        dayText.text = "DIA " + day;
 
         //Fills the amount for the clock image
         if (hour < 12)
