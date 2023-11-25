@@ -11719,13 +11719,13 @@ MonoBehaviour:
     maxDist3D: 0
   - name: stepGrass
     clip: {fileID: 8300000, guid: 89edace076dba3f42aa92b49c3d38f08, type: 3}
-    volume: 0.1
+    volume: 0.075
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: stepGrass2
     clip: {fileID: 8300000, guid: b7d0af53ca765e648a653c2d02051e3b, type: 3}
-    volume: 0.15
+    volume: 0.05
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
