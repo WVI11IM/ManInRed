@@ -44,8 +44,6 @@ public class Inventory : MonoBehaviour
     public bool ItemP = false, ItemG = false;
 
     //private GameObject serraLimpa;
-    public GameObject[] allBigItems;
-    public GameObject[] allSmallItems;
 
 
     Animator playerAnimator;
@@ -66,8 +64,7 @@ public class Inventory : MonoBehaviour
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
 
-            AudioManager.Instance.PlaySoundEffect("takeItem");
-            //DROP SOUND
+            AudioManager.Instance.PlaySoundEffect("dropItem");
 
             foreach (Transform child in inventoryItemBig)
             {
@@ -82,8 +79,7 @@ public class Inventory : MonoBehaviour
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
 
-            AudioManager.Instance.PlaySoundEffect("takeItem");
-            //DROP SOUND
+            AudioManager.Instance.PlaySoundEffect("dropItem");
         }
 
         for (int i = 0; i < onHandItems.Length; i++)

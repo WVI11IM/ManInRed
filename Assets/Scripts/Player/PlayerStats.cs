@@ -5,6 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+[System.Serializable]
+public class ProgressIds
+{
+    public string progressDescription;
+    public int progressId;
+    public bool progressIsMade = false;
+}
+
 public class PlayerStats : MonoBehaviour
 {
     //This script contains both pressure and suspicion stats
@@ -56,6 +64,9 @@ public class PlayerStats : MonoBehaviour
     public Dialogue faintDialogue;
     public Cutscene maxSuspicionCutscene;
     public bool hasFainted = false;
+
+    [Header("Progress")]
+    public ProgressIds[] progressIds;
 
 
     void Start()
@@ -218,5 +229,33 @@ public class PlayerStats : MonoBehaviour
     public void ModifySuspicionMultiplier(float valueToAdd)
     {
         suspicionMultiplier += valueToAdd;
+    }
+
+    public bool CheckProgressId(int id)
+    {
+        if (progressIds[id].progressIsMade) return true;
+        else return false;
+    }
+
+    public void DoProgress(int id)
+    {
+        for (int i = 0; i < progressIds.Length; i++)
+        {
+            if (progressIds[i].progressId == id)
+            {
+                progressIds[i].progressIsMade = true;
+            }
+        }
+    }
+
+    public void UndoProgress(int id)
+    {
+        for (int i = 0; i < progressIds.Length; i++)
+        {
+            if (progressIds[i].progressId == id)
+            {
+                progressIds[i].progressIsMade = false;
+            }
+        }
     }
 }

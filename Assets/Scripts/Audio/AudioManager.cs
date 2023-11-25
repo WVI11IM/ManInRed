@@ -33,6 +33,17 @@ public class AudioManager : MonoBehaviour
         AudioListener.volume = 1.0f;
     }
 
+    /// <summary>
+    /// /
+    /// </summary>
+    private void Start()
+    {
+        PlaySoundEffectLoop("radio");
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+
     private void Update()
     {
         ambientSource.volume = ambientVolume * currentAmbientSoundVolume;

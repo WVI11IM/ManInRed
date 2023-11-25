@@ -16,7 +16,7 @@ public class ActivateWithConditions : MonoBehaviour
     public bool activateOrDeactivateInteractable = true;
 
     public int[] requiredItemIds;
-
+    public int[] requiredProgressIds;
     /*
     [Header("Progress requirements")]
     public bool cortouCorpo, escondeuEmLixo, escondeuEmGeladeira, escondeuEmArmario, escondeuEmCanteiro, escondeuTudo;
@@ -26,6 +26,7 @@ public class ActivateWithConditions : MonoBehaviour
     void Start()
     {
         inventory = Inventory.Instance;
+        playerStats = PlayerStats.Instance;
         interactable = GetComponent<Interactable>();
     }
 
@@ -37,7 +38,7 @@ public class ActivateWithConditions : MonoBehaviour
 
     public void ConditionsMeet()
     {
-        if (CheckItems())
+        if (CheckItems() && CheckProgress())
         {
             interactable.enabled = activateOrDeactivateInteractable;
         }
@@ -66,5 +67,24 @@ public class ActivateWithConditions : MonoBehaviour
             return true;
         }
 
+    }
+
+    public bool CheckProgress()
+    {
+        if (requiredProgressIds.Length > 0)
+        {
+            for (int i = 0; i < requiredProgressIds.Length; i++)
+            {
+                if (!playerStats.CheckProgressId(requiredProgressIds[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
