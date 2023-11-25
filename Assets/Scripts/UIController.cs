@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
 
     public TextMeshProUGUI tutorialBoxText;
 
+    private Coroutine tutorialBoxCoroutine;
+
     private void Update()
     {
         clock.SetBool("isActive", clockActive);
@@ -61,7 +63,13 @@ public class UIController : MonoBehaviour
         {
             TutorialBox(true);
             tutorialBoxText.text = text;
-            StartCoroutine(TutorialBoxCountdown());
+
+            if (tutorialBoxCoroutine != null)
+            {
+                StopCoroutine(tutorialBoxCoroutine);
+            }
+
+            tutorialBoxCoroutine = StartCoroutine(TutorialBoxCountdown());
         }
     }
 
@@ -69,5 +77,6 @@ public class UIController : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(8);
         TutorialBox(false);
+        tutorialBoxCoroutine = null;
     }
 }

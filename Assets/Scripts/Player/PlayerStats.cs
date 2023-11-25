@@ -88,7 +88,7 @@ public class PlayerStats : MonoBehaviour
                 AudioManager.Instance.StopSoundEffectLoop("pressureIncrease");
                 isPlayingPressureSound = false;
             }
-            pressureMultiplier = 0;
+            //pressureMultiplier = 0;
         }
 
         if (suspicionMultiplier <= 0)
@@ -108,7 +108,7 @@ public class PlayerStats : MonoBehaviour
 
         if (!TimeManager.Instance.timerIsPaused)
         {
-            if (pressureMultiplier > 0)
+            if (pressureMultiplier != 0)
             {
                 ModifyPressure(pressureMultiplier);
             }
@@ -141,7 +141,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    void ModifyPressure(float value)
+    public void ModifyPressure(float value)
     {
         //Continuously modifies pressure while it's being called
         mainPressure += pressureMultiplier * Time.deltaTime;
@@ -187,7 +187,7 @@ public class PlayerStats : MonoBehaviour
         pressureMultiplier += valueToAdd;
     }
 
-    void ModifySuspicion(float value)
+    public void ModifySuspicion(float value)
     {
         //Continuously modifies suspicion while it's being called
         mainSuspicion += value * Time.deltaTime;
@@ -195,6 +195,7 @@ public class PlayerStats : MonoBehaviour
         if (!isPlayingSuspicionSound && value > 0)
         {
             AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
+            isPlayingSuspicionSound = true;
         }
     }
     public void ModifySuspicion(int value)
