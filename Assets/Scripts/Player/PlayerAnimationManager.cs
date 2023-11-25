@@ -30,4 +30,9 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         playerAnimator.SetBool("isCutting", isActive);
     }
+
+    public void Anna(int index)
+    {
+        playerAnimator.SetInteger("state", index);
+    }
 }

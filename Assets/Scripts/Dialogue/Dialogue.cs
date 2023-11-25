@@ -61,18 +61,15 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        //dialogueManager.StopThoughtCountdown();
-        if (!dialogueManager.isActive)
-        {
-            playerMovement.CanMove(false);
-            TimeManager.Instance.ClockSwitch(false);
-            beforeDialogue.Invoke();
-            isActive = true;
-            dialogueManager.isThinking = false;
-            dialogueManager.isActive = true;
-            dialogueIndex = 0;
-            NextDialogue();
-        }
+        dialogueManager.StopThoughtCountdown();
+        playerMovement.CanMove(false);
+        TimeManager.Instance.ClockSwitch(false);
+        beforeDialogue.Invoke();
+        isActive = true;
+        dialogueManager.isThinking = false;
+        dialogueManager.isActive = true;
+        dialogueIndex = 0;
+        NextDialogue();
     }
 
     void NextDialogue()
@@ -108,7 +105,7 @@ public class Dialogue : MonoBehaviour
             //PlayDialogueSound(messageText.maxVisibleCharacters);
             dialogueManager.dialogueText.maxVisibleCharacters++;
             dialogueManager.dialogueText.text += letter;
-            yield return new WaitForSeconds(0.03f);
+            yield return new WaitForSeconds(0.01f);
         }
         _canContinue = true;
         dialogueIndex++;

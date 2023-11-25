@@ -43,7 +43,10 @@ public class Inventory : MonoBehaviour
 
     public bool ItemP = false, ItemG = false;
 
-    private GameObject serraLimpa;
+    //private GameObject serraLimpa;
+    public GameObject[] allBigItems;
+    public GameObject[] allSmallItems;
+
 
     Animator playerAnimator;
 
@@ -63,6 +66,9 @@ public class Inventory : MonoBehaviour
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
 
+            AudioManager.Instance.PlaySoundEffect("takeItem");
+            //DROP SOUND
+
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
@@ -75,6 +81,9 @@ public class Inventory : MonoBehaviour
             Instantiate(bigInventoryItem[0], gameObject.transform.position, Quaternion.identity);
             bigInventoryItem[0].SetActive(true);
             bigInventoryItem.Remove(bigInventoryItem[0]);
+
+            AudioManager.Instance.PlaySoundEffect("takeItem");
+            //DROP SOUND
         }
 
         for (int i = 0; i < onHandItems.Length; i++)
@@ -99,6 +108,7 @@ public class Inventory : MonoBehaviour
         ListItems(item);
         AudioManager.Instance.PlaySoundEffect("takeItem");
         playerAnimator.SetTrigger("interacted");
+        Debug.Log("Added item " + item);
     }
 
     public void RemoveItem(GameObject item)
@@ -125,7 +135,7 @@ public class Inventory : MonoBehaviour
                 itemIcon.sprite = item.GetComponent<ItemData>().sprite;
             }
         }
-        else if (ItemG)
+        else /*if (ItemG)*/
         {
             foreach (Transform child in inventoryItemBig)
             {
@@ -186,10 +196,11 @@ public class Inventory : MonoBehaviour
     }
 
     //Chamado nos eventos do gameobject da pia da cozinha, usado somente uma vez
-    public void Serra()
+    public void LimparSerra(GameObject serra)
     {
         if (HasItem(1))
         {
+            /*
             Debug.Log("Serra agora está limpa");
             serraLimpa = Resources.Load<GameObject>("CleanSaw");
             Instantiate(serraLimpa, gameObject.transform.position, Quaternion.identity);
@@ -199,6 +210,15 @@ public class Inventory : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
+            */
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+            AudioManager.Instance.PlaySoundEffect("sink");
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+            AddItem(serra);
+
         }
     }
 }

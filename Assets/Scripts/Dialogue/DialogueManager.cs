@@ -76,17 +76,17 @@ public class DialogueManager : MonoBehaviour
             canvas.transform.rotation = Camera.main.transform.rotation;
             canvas.transform.localScale = new Vector3(Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4, Camera.main.orthographicSize / 4);
 
-            if (!isThinking) 
-            {
-                isThinking = false;
-                thoughtBox.SetActive(false);
-                dialogueBox.SetActive(true);
-            }
-            else
+            if (isThinking) 
             {
                 isThinking = true;
                 dialogueBox.SetActive(false);
                 thoughtBox.SetActive(true);
+            }
+            else
+            {
+                isThinking = false;
+                thoughtBox.SetActive(false);
+                dialogueBox.SetActive(true);
             }
         }
         else canvas.enabled = false;
@@ -98,25 +98,25 @@ public class DialogueManager : MonoBehaviour
         else Debug.Log("Character is already thinking!");
     }
 
+    
     public void StopThoughtCountdown()
     {
         if (thoughtCoroutine != null)
         {
             StopCoroutine(thoughtCoroutine);
+            Debug.Log("Cancelled thought");
             isActive = false;
             isThinking = false;
         }
     }
+    
 
     IEnumerator ThoughtTime(float time)
     {
         coroutineIsRunning = true;
-        if (isActive)
-        {
-            yield return new WaitForSeconds(time);
-            isActive = false;
-            isThinking = false;
-        }
+        yield return new WaitForSeconds(time);
+        isThinking = false;
+        isActive = false;
         coroutineIsRunning = false;
     }
 }

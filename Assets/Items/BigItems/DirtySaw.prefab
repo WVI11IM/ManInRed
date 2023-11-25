@@ -264,7 +264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559418573571358474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.055743, y: 6.2791104, z: 4.8857627}
+  m_LocalPosition: {x: 3.3294854, y: 6.279109, z: 1.0753645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: serra
       objectReference: {fileID: 0}
+    - target: {fileID: 1308867020514489147, guid: 12266297912fcaf409d65ad57b962b75, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 494e67cef3f6914409a472a35c343303, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12266297912fcaf409d65ad57b962b75, type: 3}
 --- !u!4 &2736358218356519485 stripped

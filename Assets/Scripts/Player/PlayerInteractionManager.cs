@@ -22,7 +22,7 @@ public class PlayerInteractionManager : MonoBehaviour
         {
             float distanceToNew = Vector3.Distance(transform.position, interactable.transform.position);
             float distanceToCurrent = Vector3.Distance(transform.position, closestInteractable.transform.position);
-            if (distanceToNew <= distanceToCurrent)
+            if (distanceToNew <= distanceToCurrent && interactable.enabled)
             {
                 closestInteractable.isClosest = false;
                 interactable.isClosest = true;

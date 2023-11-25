@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
         {
             iconCanvas.SetActive(false);
         }
-        else if (isInteractable && isShowingIcon && isClosest)
+        else if (isInteractable && isShowingIcon && isClosest && enabled)
         {
             iconCanvas.SetActive(true);
 

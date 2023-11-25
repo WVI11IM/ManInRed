@@ -1,0 +1,895 @@
+fileFormatVersion: 2
+guid: 5dc3a174cb30b4146a4aade5825efac3
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: vestido:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vestido:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: anna_tpose(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:low2
+      parentName: anna_tpose(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:cilios_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:sob_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:unhas_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:vestido_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:cabelo1_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:cabelo2_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:corpo_low
+      parentName: vestido:low2
+      position: {x: -0, y: 0.053134367, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Hips
+      parentName: anna_tpose(Clone)
+      position: {x: 0.0000061831133, y: 0.060839348, z: -0.00059465977}
+      rotation: {x: 0.0000226948, y: 0.000030547624, z: -0.00091995, w: 0.9999996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Spine
+      parentName: vestido:Hips
+      position: {x: -0, y: 0.006101594, z: 0.0002916014}
+      rotation: {x: 0.023852367, y: -0.000008575708, z: 0.0009204172, w: 0.9997151}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Spine1
+      parentName: vestido:Spine
+      position: {x: -0, y: 0.0071266447, z: 3.11136e-12}
+      rotation: {x: 6.848913e-27, y: -1.0022034e-14, z: 6.833855e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Spine2
+      parentName: vestido:Spine1
+      position: {x: -0, y: 0.008144737, z: 1.2618811e-11}
+      rotation: {x: 0, y: -0, z: -5.7807727e-27, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Neck
+      parentName: vestido:Spine2
+      position: {x: -0, y: 0.009162839, z: -5.8989746e-10}
+      rotation: {x: -0.023875117, y: 2.6789035e-19, z: -6.94727e-18, w: 0.999715}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:Head
+      parentName: vestido:Neck
+      position: {x: -0, y: 0.005209751, z: 0.00036312072}
+      rotation: {x: 0, y: -0, z: -1.8393785e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:HeadTop_End
+      parentName: vestido:Head
+      position: {x: -0, y: 0.012961616, z: 0.0009034276}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightShoulder
+      parentName: vestido:Spine2
+      position: {x: 0.0024137115, y: 0.007979875, z: 0.00004768241}
+      rotation: {x: 0.56222755, y: 0.43191215, z: -0.5555305, w: 0.43443978}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightArm
+      parentName: vestido:RightShoulder
+      position: {x: 4.5871883e-12, y: 0.005375146, z: -8.953194e-11}
+      rotation: {x: -0.12557249, y: -0.0966852, z: 0.0073966547, w: 0.98733425}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightForeArm
+      parentName: vestido:RightArm
+      position: {x: 2.0136028e-11, y: 0.014612085, z: 1.6399512e-11}
+      rotation: {x: 0.00000019704561, y: 0.00057750836, z: -0.000000061482574, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHand
+      parentName: vestido:RightForeArm
+      position: {x: 1.121583e-10, y: 0.014240184, z: 2.2949224e-11}
+      rotation: {x: 0.021007242, y: 0.06528414, z: -0.06200405, w: 0.9957169}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandRing1
+      parentName: vestido:RightHand
+      position: {x: 0.0006545832, y: 0.0059341067, z: -0.00016103504}
+      rotation: {x: -0.022878468, y: -0.040532924, z: 0.07004986, w: 0.99645704}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandRing2
+      parentName: vestido:RightHandRing1
+      position: {x: 0.000029306637, y: 0.0016841351, z: 2.4069151e-11}
+      rotation: {x: 0.0000012288743, y: 0.00066987943, z: -0.014749524, w: 0.99989104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandRing3
+      parentName: vestido:RightHandRing2
+      position: {x: -0.00001878761, y: 0.001546633, z: 2.7180458e-11}
+      rotation: {x: -0.0000011517105, y: 0.0001286532, z: 0.0019130532, w: 0.99999815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandRing4
+      parentName: vestido:RightHandRing3
+      position: {x: -0.00001051911, y: 0.0013008758, z: 4.752386e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandPinky1
+      parentName: vestido:RightHand
+      position: {x: 0.001894338, y: 0.00442499, z: -0.00006066612}
+      rotation: {x: -0.024746379, y: -0.0059032105, z: 0.07917622, w: 0.99653596}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandPinky2
+      parentName: vestido:RightHandPinky1
+      position: {x: 0.00006634525, y: 0.0017761488, z: 7.474625e-12}
+      rotation: {x: 0.00003323808, y: 0.0035971757, z: -0.027913384, w: 0.99960387}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandPinky3
+      parentName: vestido:RightHandPinky2
+      position: {x: -0.00002369679, y: 0.0012842827, z: -5.7245675e-12}
+      rotation: {x: 0.00008332453, y: -0.0030943304, z: -0.008343154, w: 0.9999604}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandPinky4
+      parentName: vestido:RightHandPinky3
+      position: {x: -0.000042648444, y: 0.0012151878, z: 1.718083e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandMiddle1
+      parentName: vestido:RightHand
+      position: {x: -0.00072269444, y: 0.0059365826, z: -0.00029857614}
+      rotation: {x: -0.024820179, y: -0.0048838365, z: 0.086884394, w: 0.99589723}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandMiddle2
+      parentName: vestido:RightHandMiddle1
+      position: {x: 0.00010684357, y: 0.0020299354, z: 1.2303973e-10}
+      rotation: {x: 0.00006657515, y: 0.004375947, z: -0.037363146, w: 0.9992922}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandMiddle3
+      parentName: vestido:RightHandMiddle2
+      position: {x: -0.000040419647, y: 0.0018113839, z: 2.54464e-12}
+      rotation: {x: 0.0000799462, y: -0.0024749127, z: -0.010167088, w: 0.9999453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandMiddle4
+      parentName: vestido:RightHandMiddle3
+      position: {x: -0.00006642394, y: 0.0015554064, z: 2.6332025e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandIndex1
+      parentName: vestido:RightHand
+      position: {x: -0.0018262271, y: 0.005635254, z: 0.000006031739}
+      rotation: {x: -0.024954494, y: -0.0010021697, z: 0.093391664, w: 0.9953162}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandIndex2
+      parentName: vestido:RightHandIndex1
+      position: {x: 0.00012140293, y: 0.0018331247, z: -1.2651551e-11}
+      rotation: {x: 0.000030750114, y: 0.0027489814, z: -0.054681268, w: 0.9985001}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandIndex3
+      parentName: vestido:RightHandIndex2
+      position: {x: -0.00007524544, y: 0.0017234778, z: 1.42321085e-11}
+      rotation: {x: -0.000037362846, y: 0.0010103016, z: 0.0067420015, w: 0.99997675}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandIndex4
+      parentName: vestido:RightHandIndex3
+      position: {x: -0.000046157493, y: 0.0015318374, z: -2.7395862e-13}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandThumb1
+      parentName: vestido:RightHand
+      position: {x: -0.0013972488, y: 0.0018025761, z: 0.0006255804}
+      rotation: {x: 0.061502974, y: -0.008348092, z: 0.3578136, w: 0.93172807}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandThumb2
+      parentName: vestido:RightHandThumb1
+      position: {x: -0.00018120762, y: 0.0018832535, z: -5.4688606e-12}
+      rotation: {x: -0.00011068384, y: 0.0029343062, z: 0.05805691, w: 0.99830896}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandThumb3
+      parentName: vestido:RightHandThumb2
+      position: {x: 0.000039187136, y: 0.001916326, z: 3.1501343e-11}
+      rotation: {x: -0.00017926368, y: -0.0033559715, z: 0.03310778, w: 0.99944615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightHandThumb4
+      parentName: vestido:RightHandThumb3
+      position: {x: 0.00014202081, y: 0.0016359283, z: 3.4189628e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftShoulder
+      parentName: vestido:Spine2
+      position: {x: -0.0024137115, y: 0.007980719, z: 0.00006534636}
+      rotation: {x: 0.5644572, y: -0.4308375, z: 0.5531397, w: 0.43566453}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftArm
+      parentName: vestido:LeftShoulder
+      position: {x: -4.9339664e-12, y: 0.005375146, z: -8.951348e-11}
+      rotation: {x: -0.12577051, y: 0.09115345, z: -0.0030860433, w: 0.98785794}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftForeArm
+      parentName: vestido:LeftArm
+      position: {x: -6.4659895e-11, y: 0.014611274, z: 4.4429616e-10}
+      rotation: {x: -0.00000024962324, y: -0.00046182444, z: -0.0000001788952, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHand
+      parentName: vestido:LeftForeArm
+      position: {x: -1.7017807e-10, y: 0.014227467, z: -7.453593e-13}
+      rotation: {x: 0.022222426, y: -0.058011714, z: 0.059320413, w: 0.99630415}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandRing1
+      parentName: vestido:LeftHand
+      position: {x: -0.0005808924, y: 0.005450883, z: -0.00007693038}
+      rotation: {x: -0.025050338, y: 0.015810445, z: -0.08133082, w: 0.9962469}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandRing2
+      parentName: vestido:LeftHandRing1
+      position: {x: -0.0000854394, y: 0.0018424687, z: -1.01018525e-11}
+      rotation: {x: 0.000030306504, y: -0.0031197087, z: 0.036322054, w: 0.9993353}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandRing3
+      parentName: vestido:LeftHandRing2
+      position: {x: 0.000044043718, y: 0.0016565674, z: -6.063399e-11}
+      rotation: {x: 0.0000024867422, y: 0.0000904286, z: 0.00045344105, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandRing4
+      parentName: vestido:LeftHandRing3
+      position: {x: 0.000041395568, y: 0.0014930246, z: 3.0420094e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandPinky1
+      parentName: vestido:LeftHand
+      position: {x: -0.0018956489, y: 0.0044722627, z: -0.00014650897}
+      rotation: {x: -0.024982622, y: 0.017020455, z: -0.079825245, w: 0.9963504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandPinky2
+      parentName: vestido:LeftHandPinky1
+      position: {x: -0.000076117976, y: 0.0017648686, z: -2.0766113e-11}
+      rotation: {x: 0.000055203982, y: -0.0043165693, z: 0.030275809, w: 0.9995323}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandPinky3
+      parentName: vestido:LeftHandPinky2
+      position: {x: 0.000023065204, y: 0.0013115142, z: 6.6490605e-11}
+      rotation: {x: 0.00011640436, y: 0.0038781278, z: 0.012524742, w: 0.99991405}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandPinky4
+      parentName: vestido:LeftHandPinky3
+      position: {x: 0.00005305285, y: 0.0012440117, z: 2.411513e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandMiddle1
+      parentName: vestido:LeftHand
+      position: {x: 0.0006865875, y: 0.005894099, z: -0.00030386413}
+      rotation: {x: -0.025455806, y: 0.005382301, z: -0.089465216, w: 0.99565005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandMiddle2
+      parentName: vestido:LeftHandMiddle1
+      position: {x: -0.00013247092, y: 0.0020942586, z: 3.819771e-12}
+      rotation: {x: 0.000097645825, y: -0.0051911725, z: 0.044171154, w: 0.9990105}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandMiddle3
+      parentName: vestido:LeftHandMiddle2
+      position: {x: 0.000044574022, y: 0.0017701782, z: -6.388258e-11}
+      rotation: {x: 0.00015362148, y: 0.0037930673, z: 0.0150394235, w: 0.9998797}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandMiddle4
+      parentName: vestido:LeftHandMiddle3
+      position: {x: 0.00008789687, y: 0.0015840684, z: 4.8131825e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandIndex1
+      parentName: vestido:LeftHand
+      position: {x: 0.0017899543, y: 0.005752151, z: -0.000061899176}
+      rotation: {x: -0.025512848, y: 0.0033782288, z: -0.090699136, w: 0.9955458}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandIndex2
+      parentName: vestido:LeftHandIndex1
+      position: {x: -0.00012226704, y: 0.0018594527, z: -3.847145e-12}
+      rotation: {x: 0.000052893054, y: -0.0031911088, z: 0.0490353, w: 0.998792}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandIndex3
+      parentName: vestido:LeftHandIndex2
+      position: {x: 0.000053502874, y: 0.0016574801, z: 9.78475e-12}
+      rotation: {x: 0.00004443799, y: 0.0011200233, z: 0.007068104, w: 0.9999744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandIndex4
+      parentName: vestido:LeftHandIndex3
+      position: {x: 0.000068764, y: 0.0014755273, z: -6.6513947e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandThumb1
+      parentName: vestido:LeftHand
+      position: {x: 0.0014893074, y: 0.0019551269, z: 0.00062317046}
+      rotation: {x: 0.06382653, y: 0.011605386, z: -0.33573812, w: 0.93971884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandThumb2
+      parentName: vestido:LeftHandThumb1
+      position: {x: 0.00027714818, y: 0.0020094006, z: 5.7603512e-11}
+      rotation: {x: -0.0003164595, y: -0.004551091, z: -0.067632355, w: 0.9976999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandThumb3
+      parentName: vestido:LeftHandThumb2
+      position: {x: 0.0000030188905, y: 0.0018238106, z: 5.4542555e-11}
+      rotation: {x: -0.0007134487, y: 0.006612845, z: -0.10893841, w: 0.99402624}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftHandThumb4
+      parentName: vestido:LeftHandThumb3
+      position: {x: -0.00028016715, y: 0.0012715244, z: 1.1476535e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftUpLeg
+      parentName: vestido:Hips
+      position: {x: -0.006221754, y: -0.003387141, z: 0.0003608185}
+      rotation: {x: -0.0004102637, y: 0.006057508, z: 0.999936, w: 0.009550344}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftLeg
+      parentName: vestido:LeftUpLeg
+      position: {x: 1.0072342e-12, y: 0.025933668, z: -2.3435553e-12}
+      rotation: {x: -0.04029643, y: -0.00025559918, z: 0.021065671, w: 0.9989657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftFoot
+      parentName: vestido:LeftLeg
+      position: {x: -2.6747883e-11, y: 0.02547002, z: -1.5209433e-12}
+      rotation: {x: 0.49910265, y: -0.07315272, z: 0.04398076, w: 0.86232877}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftToeBase
+      parentName: vestido:LeftFoot
+      position: {x: 5.1689705e-11, y: 0.010335686, z: -3.5133247e-11}
+      rotation: {x: 0.26786566, y: -0.037417285, z: 0.010411312, w: 0.9626731}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:LeftToe_End
+      parentName: vestido:LeftToeBase
+      position: {x: -1.4758817e-11, y: 0.0041322815, z: 4.6469703e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightUpLeg
+      parentName: vestido:Hips
+      position: {x: 0.006221754, y: -0.003387141, z: 0.0006679046}
+      rotation: {x: 0.00045808847, y: 0.009703213, z: 0.9998885, w: -0.011345403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightLeg
+      parentName: vestido:RightUpLeg
+      position: {x: -3.6320324e-12, y: 0.025952522, z: 8.1491515e-12}
+      rotation: {x: -0.05371425, y: 0.00029396516, z: -0.020962864, w: 0.99833626}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightFoot
+      parentName: vestido:RightLeg
+      position: {x: 6.220743e-11, y: 0.02546992, z: 1.3434953e-12}
+      rotation: {x: 0.50584984, y: 0.074820355, z: -0.043393105, w: 0.8582744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightToeBase
+      parentName: vestido:RightFoot
+      position: {x: -5.980943e-11, y: 0.010276953, z: 1.3312484e-10}
+      rotation: {x: 0.26909348, y: 0.041629657, z: -0.011642969, w: 0.96214354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vestido:RightToe_End
+      parentName: vestido:RightToeBase
+      position: {x: 4.0837656e-11, y: 0.004009073, z: -4.591932e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
