@@ -263,6 +263,35 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void EsconderEmMovel()
+    {
+        if (HasItem(3))
+        {
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+            //AudioManager.Instance.PlaySoundEffect("sink");
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+            //REMOVER ITEM 3
+            AddItem(allItems[2]);
+            //SPAWNAR BASTANTE SANGUE
+            //ATUALIZAR ICONES
+        }
+        else if (HasItem(4))
+        {
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+            //AudioManager.Instance.PlaySoundEffect("sink");
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+            //REMOVER ITEM 4
+            AddItem(allItems[2]);
+            //ATUALIZAR ICONES
+        }
+    }
+
     void LimparSangue()
     {
         if (HasItem(6))
@@ -272,6 +301,7 @@ public class Inventory : MonoBehaviour
                 if (podeLimpar)
                 {
                     Destroy(paraLimpar);
+                    AudioManager.Instance.PlaySoundEffect("cleaningBlood");
                 }
             }
         }

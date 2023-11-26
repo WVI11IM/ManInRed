@@ -55,13 +55,24 @@ public class ActivateWithConditions : MonoBehaviour
         {
             for (int i = 0; i < requiredItemIds.Length; i++)
             {
-                if (!inventory.HasItem(requiredItemIds[i]))
+                if (requiredItemIds[i] == 3 || requiredItemIds[i] == 4)
                 {
-                    return false;
+                    if (!inventory.HasItem(3) && !inventory.HasItem(4))
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (!inventory.HasItem(requiredItemIds[i]))
+                    {
+                        return false;
+                    }
                 }
             }
             return true;
         }
+
         else
         {
             return true;

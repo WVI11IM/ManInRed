@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826346634595784416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.835448, y: 6.27911, z: 4.0101333}
+  m_LocalPosition: {x: 9.184004, y: 6.279109, z: 1.3990494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   displayName: Suitcase
-  sprite: {fileID: 21300000, guid: f8c9467a892580344bb697526dac0d13, type: 3}
+  sprite: {fileID: -62479615, guid: e25cc07c118a6444f80d77eb4708aca8, type: 3}
 --- !u!114 &5496100097361293686
 MonoBehaviour:
   m_ObjectHideFlags: 0

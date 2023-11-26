@@ -49,6 +49,7 @@ public class AudioManager : MonoBehaviour
 
             float randomTime = Random.Range(0f, ambientSource.clip.length);
             ambientSource.time = randomTime;
+            ambientSource.loop = true;
             ambientSource.Play();
         }
     }

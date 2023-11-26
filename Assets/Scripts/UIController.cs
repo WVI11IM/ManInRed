@@ -70,6 +70,7 @@ public class UIController : MonoBehaviour
             }
 
             tutorialBoxCoroutine = StartCoroutine(TutorialBoxCountdown());
+            AudioManager.Instance.PlaySoundEffect("tutorial");
         }
     }
 
