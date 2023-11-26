@@ -44,6 +44,7 @@ public class Inventory : MonoBehaviour
     public bool ItemP = false, ItemG = false;
 
     //private GameObject serraLimpa;
+    public GameObject[] allItems;
 
 
     Animator playerAnimator;
@@ -192,7 +193,7 @@ public class Inventory : MonoBehaviour
     }
 
     //Chamado nos eventos do gameobject da pia da cozinha, usado somente uma vez
-    public void LimparSerra(GameObject serra)
+    public void LimparSerra()
     {
         if (HasItem(1))
         {
@@ -208,13 +209,40 @@ public class Inventory : MonoBehaviour
             }
             */
             bigInventoryItem.Remove(bigInventoryItem[0]);
+            playerAnimator.SetTrigger("interacted");
             AudioManager.Instance.PlaySoundEffect("sink");
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
             }
-            AddItem(serra);
+            AddItem(allItems[5]);
 
+        }
+    }
+
+    public void GuardarParteMaleta()
+    {
+        if (HasItem(2) && HasItem(0))
+        {
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+            smallInventoryItems.Remove(allItems[0]);
+            //AudioManager.Instance.PlaySoundEffect("sink");
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+            AddItem(allItems[4]);
+            RemoveItem(allItems[0]);
+        }
+        else if (HasItem(2))
+        {
+            bigInventoryItem.Remove(bigInventoryItem[0]);
+            //AudioManager.Instance.PlaySoundEffect("sink");
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+            AddItem(allItems[3]);
         }
     }
 }
