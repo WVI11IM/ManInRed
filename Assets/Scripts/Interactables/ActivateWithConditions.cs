@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -46,7 +47,6 @@ public class ActivateWithConditions : MonoBehaviour
         {
             interactable.enabled = !activateOrDeactivateInteractable;
         }
-        Debug.Log("Interactable of " + gameObject.name + " is now " + interactable.enabled);
     }
 
     public bool CheckItems()

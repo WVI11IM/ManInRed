@@ -115,12 +115,46 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(GameObject item)
     {
-        smallInventoryItems.Remove(item);
+        ItemData itemData = item.GetComponent<ItemData>();
+        int itemId = itemData.id;
+
+        if (itemId == 0 || itemId == 7)
+        {
+            foreach (Transform child in itemContent)
+            {
+                Destroy(child.gameObject);
+            }
+
+            smallInventoryItems.Remove(item);
+
+            foreach (var ItemData in smallInventoryItems)
+            {
+                Image img = Instantiate(inventoryItem, itemContent);
+                var itemIcon = img.transform.GetComponent<Image>();
+                var itemImage = ItemData.GetComponent<ItemData>().sprite;
+                itemIcon.sprite = itemImage;
+            }
+        }
+        else
+        {
+            foreach (Transform child in inventoryItemBig)
+            {
+                Destroy(child.gameObject);
+            }
+
+            bigInventoryItem.Remove(item);
+            Image img = Instantiate(bigInventory, inventoryItemBig);
+
+            img.sprite = item.GetComponent<ItemData>().sprite;
+        }
     }
 
     public void ListItems(GameObject item)
     {
-        if (ItemP)
+        ItemData itemData = item.GetComponent<ItemData>();
+        int itemId = itemData.id;
+
+        if(itemId == 0 || itemId == 7)
         {
             foreach (Transform child in itemContent)
             {
@@ -133,11 +167,12 @@ public class Inventory : MonoBehaviour
             {
                 Image img = Instantiate(inventoryItem, itemContent);
                 var itemIcon = img.transform.GetComponent<Image>();
-
-                itemIcon.sprite = item.GetComponent<ItemData>().sprite;
+                var itemImage = ItemData.GetComponent<ItemData>().sprite;
+                itemIcon.sprite = itemImage;
             }
         }
-        else /*if (ItemG)*/
+
+        else
         {
             foreach (Transform child in inventoryItemBig)
             {
@@ -148,7 +183,7 @@ public class Inventory : MonoBehaviour
             Image img = Instantiate(bigInventory, inventoryItemBig);
 
             img.sprite = item.GetComponent<ItemData>().sprite;
-        }       
+        }
     }
 
     public bool HasItem(int id)
@@ -214,17 +249,6 @@ public class Inventory : MonoBehaviour
     {
         if (HasItem(1))
         {
-            /*
-            Debug.Log("Serra agora está limpa");
-            serraLimpa = Resources.Load<GameObject>("CleanSaw");
-            Instantiate(serraLimpa, gameObject.transform.position, Quaternion.identity);
-            bigInventoryItem.Remove(bigInventoryItem[0]);
-
-            foreach (Transform child in inventoryItemBig)
-            {
-                Destroy(child.gameObject);
-            }
-            */
             bigInventoryItem.Remove(bigInventoryItem[0]);
             playerAnimator.SetTrigger("interacted");
             AudioManager.Instance.PlaySoundEffect("sink");
@@ -242,7 +266,8 @@ public class Inventory : MonoBehaviour
         if (HasItem(2) && HasItem(0))
         {
             bigInventoryItem.Remove(bigInventoryItem[0]);
-            smallInventoryItems.Remove(allItems[0]);
+
+            //smallInventoryItems.Remove(allItems[0]);
             //AudioManager.Instance.PlaySoundEffect("sink");
             foreach (Transform child in inventoryItemBig)
             {
@@ -273,10 +298,8 @@ public class Inventory : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            //REMOVER ITEM 3
             AddItem(allItems[2]);
             //SPAWNAR BASTANTE SANGUE
-            //ATUALIZAR ICONES
         }
         else if (HasItem(4))
         {
@@ -286,9 +309,17 @@ public class Inventory : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            //REMOVER ITEM 4
             AddItem(allItems[2]);
-            //ATUALIZAR ICONES
+        }
+    }
+
+    public void AmarrarCorda()
+    {
+        if (HasItem(7))
+        {
+            //smallInventoryItems.Remove(allItems[7]);
+            //AudioManager.Instance.PlaySoundEffect("sink");
+            RemoveItem(allItems[7]);
         }
     }
 

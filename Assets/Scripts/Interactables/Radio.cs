@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Radio : MonoBehaviour
 {
     public bool isOn = false;
     bool isPlaying = false;
     bool isSuspicious = false;
+
+    public TextMeshProUGUI radioText;
 
     public Animator playerAnimator;
 
@@ -29,6 +32,7 @@ public class Radio : MonoBehaviour
                     PlayerStats.Instance.ModifySuspicionMultiplier(1);
                     isSuspicious = true;
                 }
+                radioText.text = "Desligar rádio";
                 isPlaying = true;
             }
             
@@ -43,6 +47,7 @@ public class Radio : MonoBehaviour
                     PlayerStats.Instance.ModifySuspicionMultiplier(-1);
                     isSuspicious = false;
                 }
+                radioText.text = "Rádio";
                 isPlaying = false;
             }
         }
@@ -59,8 +64,12 @@ public class Radio : MonoBehaviour
 
     public void RadioSwitch(bool isActive)
     {
+        if (isOn)
+        {
+            AudioManager.Instance.StopSoundEffectLoop("radio");
+        }
+
         isOn = isActive;
         if (isActive) AudioManager.Instance.PlaySoundEffectLoop("radio");
-        else AudioManager.Instance.StopSoundEffectLoop("radio");
     }
 }

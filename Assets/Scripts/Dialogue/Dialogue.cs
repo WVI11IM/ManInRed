@@ -105,7 +105,7 @@ public class Dialogue : MonoBehaviour
             //PlayDialogueSound(messageText.maxVisibleCharacters);
             dialogueManager.dialogueText.maxVisibleCharacters++;
             dialogueManager.dialogueText.text += letter;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.02f);
         }
         _canContinue = true;
         dialogueIndex++;
