@@ -10,6 +10,7 @@ TagManager:
   - grass
   - ItemPequeno
   - ItemGrande
+  - sangue
   layers:
   - Default
   - TransparentFX

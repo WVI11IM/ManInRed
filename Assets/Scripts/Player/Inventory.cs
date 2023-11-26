@@ -49,6 +49,9 @@ public class Inventory : MonoBehaviour
 
     Animator playerAnimator;
 
+    private bool podeLimpar;
+    private GameObject paraLimpar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +101,8 @@ public class Inventory : MonoBehaviour
                     onHandItems[i].onHandItemToActivate.SetActive(true);
             }
         }
+
+        LimparSangue();
     }
 
     public void AddItem(GameObject item)
@@ -181,6 +186,12 @@ public class Inventory : MonoBehaviour
             ItemP = false;
             ItemG = true;
         }
+
+        if (other.CompareTag("sangue"))
+        {
+            podeLimpar = true;
+            paraLimpar = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -189,6 +200,12 @@ public class Inventory : MonoBehaviour
         {
             ItemP = false;
             ItemG = false;
+        }
+
+        if (other.CompareTag("sangue"))
+        {
+            podeLimpar = false;
+            paraLimpar = null;
         }
     }
 
@@ -245,4 +262,19 @@ public class Inventory : MonoBehaviour
             AddItem(allItems[3]);
         }
     }
+
+    void LimparSangue()
+    {
+        if (HasItem(6))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (podeLimpar)
+                {
+                    Destroy(paraLimpar);
+                }
+            }
+        }
+    }
+
 }
