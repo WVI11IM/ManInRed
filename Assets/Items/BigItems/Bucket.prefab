@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TESTE\nBalde e pano\n\u25BC"
+  m_text: "Balde e pano\n\u25BC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -163,7 +163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4200977315196487333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1984038, y: 2.2660637, z: -2.338005}
+  m_LocalPosition: {x: 8.269397, y: 6.27911, z: 2.0578187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   displayName: Bucket
-  sprite: {fileID: 1138594099, guid: e25cc07c118a6444f80d77eb4708aca8, type: 3}
+  sprite: {fileID: 1780307952, guid: f2feb67303ee32b4db43146f8b76d540, type: 3}
 --- !u!114 &6283568653685488400
 MonoBehaviour:
   m_ObjectHideFlags: 0

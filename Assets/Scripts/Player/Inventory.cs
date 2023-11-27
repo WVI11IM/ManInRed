@@ -285,6 +285,7 @@ public class Inventory : MonoBehaviour
                 Destroy(child.gameObject);
             }
             AddItem(allItems[3]);
+            PlayerStats.Instance.isDirty = true;
         }
     }
 

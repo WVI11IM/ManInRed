@@ -11,7 +11,8 @@ public class ItemData : MonoBehaviour
 
     private GameObject sangue;
     private float contaGotas;   //Contador
-    private float gotejar = 8;  //De quanto em quanto tempo vai cair o sangue
+    private float gotejar = 7;  //De quanto em quanto tempo vai cair o sangue
+    private float timeSinceLastInstantiation = 0f;
 
     private void Start()
     {
@@ -79,16 +80,18 @@ public class ItemData : MonoBehaviour
     {
         if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
-            contaGotas += 1 * Time.deltaTime;
+            timeSinceLastInstantiation += Time.deltaTime;
+            contaGotas += Time.deltaTime;
         }
 
-        if (contaGotas >= gotejar)
+        if (contaGotas >= gotejar && timeSinceLastInstantiation >= gotejar)
         {
             sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
             Debug.Log("Caiu sangue");
             Instantiate(sangue, inventario.transform.position, Quaternion.identity);
 
             contaGotas = 0;
+            timeSinceLastInstantiation = 0f;
         }
     }
 

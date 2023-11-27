@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,12 +17,7 @@ public class ActivateWithConditions : MonoBehaviour
 
     public int[] requiredItemIds;
     public int[] requiredProgressIds;
-    /*
-    [Header("Progress requirements")]
-    public bool cortouCorpo, escondeuEmLixo, escondeuEmGeladeira, escondeuEmArmario, escondeuEmCanteiro, escondeuTudo;
-    */
 
-    // Start is called before the first frame update
     void Start()
     {
         inventory = Inventory.Instance;

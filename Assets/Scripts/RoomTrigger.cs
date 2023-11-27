@@ -10,6 +10,7 @@ public class RoomTrigger : MonoBehaviour
     public UnityEvent onStay;
     public UnityEvent onExit;
     public LayerMask roomLayers;
+    public bool playerIsInside = false;
 
     private void Start()
     {
@@ -30,7 +31,9 @@ public class RoomTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             onStay.Invoke();
+            playerIsInside = true;
         }
+        else playerIsInside = false;
     }
 
     private void OnTriggerExit(Collider other)
@@ -38,6 +41,8 @@ public class RoomTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             onExit.Invoke();
+            playerIsInside = false;
         }
     }
+
 }

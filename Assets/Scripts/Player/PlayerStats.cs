@@ -59,6 +59,10 @@ public class PlayerStats : MonoBehaviour
 
     [Header("States")]
     public bool onMinigame = false;
+    public bool isDirty = false;
+    public SkinnedMeshRenderer playerSkinnedMeshRenderer;
+    public Material cleanMaterial;
+    public Material dirtyMaterial;
 
     [Header("Cutscene assets")]
     public Dialogue faintDialogue;
@@ -71,6 +75,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        cleanMaterial = playerSkinnedMeshRenderer.materials[1];
+        dirtyMaterial = playerSkinnedMeshRenderer.materials[0];
     }
 
     void Update()
@@ -138,6 +144,15 @@ public class PlayerStats : MonoBehaviour
             mainSuspicion = 100;
             Debug.Log("Max Suspicion!!");
             maxSuspicionCutscene.director.Play();
+        }
+
+        if (!isDirty)
+        {
+            playerSkinnedMeshRenderer.material = cleanMaterial;
+        }
+        else
+        {
+            playerSkinnedMeshRenderer.material = dirtyMaterial;
         }
     }
 
@@ -230,6 +245,17 @@ public class PlayerStats : MonoBehaviour
     public void ModifySuspicionMultiplier(float valueToAdd)
     {
         suspicionMultiplier += valueToAdd;
+    }
+
+    public void ResetMultipliers()
+    {
+        pressureMultiplier = 0;
+        //suspicionMultiplier = 0;
+    }
+
+    public void BloodyClothes(bool isBloody)
+    {
+        isDirty = isBloody;
     }
 
     public bool CheckProgressId(int id)

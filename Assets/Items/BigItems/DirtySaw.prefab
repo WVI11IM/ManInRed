@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   displayName: Saw
-  sprite: {fileID: -1320804884, guid: e25cc07c118a6444f80d77eb4708aca8, type: 3}
+  sprite: {fileID: -1665483908, guid: f2feb67303ee32b4db43146f8b76d540, type: 3}
 --- !u!114 &5602697536605626750
 MonoBehaviour:
   m_ObjectHideFlags: 0
