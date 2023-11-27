@@ -11,8 +11,8 @@ public class ItemData : MonoBehaviour
 
     private GameObject sangue;
     private float contaGotas;   //Contador
-    private float gotejar = 7;  //De quanto em quanto tempo vai cair o sangue
-    private float timeSinceLastInstantiation = 0f;
+    private float gotejar = 6;  //De quanto em quanto tempo vai cair o sangue
+    private bool areBloodPuddlesInstantiated = false;
 
     private void Start()
     {
@@ -68,7 +68,10 @@ public class ItemData : MonoBehaviour
 
     void SerraSuja()
     {
-
+        if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+        {
+            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+        }
     }
 
     void Maleta()
@@ -80,24 +83,44 @@ public class ItemData : MonoBehaviour
     {
         if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
-            timeSinceLastInstantiation += Time.deltaTime;
             contaGotas += Time.deltaTime;
         }
 
-        if (contaGotas >= gotejar && timeSinceLastInstantiation >= gotejar)
+        if (contaGotas >= gotejar)
         {
-            sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
-            Debug.Log("Caiu sangue");
-            Instantiate(sangue, inventario.transform.position, Quaternion.identity);
+            // Instantiate two sangue objects only once
+            if (!areBloodPuddlesInstantiated)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
+                    Debug.Log("Caiu sangue");
+                    Instantiate(sangue, inventario.transform.position, Quaternion.identity);
+                }
+
+                // Set the flag to prevent multiple instantiations in the same frame
+                areBloodPuddlesInstantiated = true;
+            }
 
             contaGotas = 0;
-            timeSinceLastInstantiation = 0f;
+        }
+        else
+        {
+            areBloodPuddlesInstantiated = false;
+        }
+
+        if(!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+        {
+            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
         }
     }
 
     void MaletaCorpoJornal()
     {
-
+        if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+        {
+            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+        }
     }
 
     private void OnTriggerStay(Collider other)

@@ -18,9 +18,14 @@ public class Interactable : MonoBehaviour
     private Inventory inventory;
     private Outline outline;
 
-    private void Start()
+    private void Awake()
     {
         playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
+    }
+
+    private void Start()
+    {
+        //playerInteractionManager = FindObjectOfType<PlayerInteractionManager>().GetComponent<PlayerInteractionManager>();
         inventory = Inventory.Instance;
         outline = GetComponent<Outline>();
         iconCanvas.SetActive(false);

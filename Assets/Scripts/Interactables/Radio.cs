@@ -7,7 +7,9 @@ public class Radio : MonoBehaviour
 {
     public bool isOn = false;
     bool isPlaying = false;
-    bool isSuspicious = false;
+
+    public float pressureToDecrease;
+    public float suspicionToIncreaseAtMidnight;
 
     public TextMeshProUGUI radioText;
 
@@ -24,29 +26,21 @@ public class Radio : MonoBehaviour
     {
         if (isOn)
         {
+            PlayerStats.Instance.ModifyPressurePerFrame(pressureToDecrease);
             if (!isPlaying)
             {
-                PlayerStats.Instance.ModifyPressureMultiplier(-1);
-                if (TimeManager.Instance.hour < 6)
-                {
-                    PlayerStats.Instance.ModifySuspicionMultiplier(1);
-                    isSuspicious = true;
-                }
                 radioText.text = "Desligar rádio";
                 isPlaying = true;
             }
-            
+            if (TimeManager.Instance.hour < 6)
+            {
+                PlayerStats.Instance.ModifySuspicionPerFrame(suspicionToIncreaseAtMidnight);
+            }
         }
         else
         {
             if (isPlaying)
             {
-                PlayerStats.Instance.ModifyPressureMultiplier(1);
-                if (isSuspicious)
-                {
-                    PlayerStats.Instance.ModifySuspicionMultiplier(-1);
-                    isSuspicious = false;
-                }
                 radioText.text = "Rádio";
                 isPlaying = false;
             }
