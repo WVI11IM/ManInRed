@@ -14489,7 +14489,7 @@ PrefabInstance:
     - target: {fileID: -5109926138271503513, guid: 973aa9782e7678b47b2ae77fec881106, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dc5291ccf077cdc4fb9bca9b942230c8, type: 2}
+      objectReference: {fileID: 2100000, guid: bde52373b99d2d54d83aff2aacbe12c9, type: 2}
     - target: {fileID: 919132149155446097, guid: 973aa9782e7678b47b2ae77fec881106, type: 3}
       propertyPath: m_Name
       value: maleta
@@ -17270,8 +17270,8 @@ MonoBehaviour:
   ambientVolume: 0.7
   ambientList:
   - name: inDay
-    clip: {fileID: 8300000, guid: d55b0d9b960d6d949a469c35d7dd7bd8, type: 3}
-    volume: 0.6
+    clip: {fileID: 8300000, guid: ce8f683de51b60e429e33445f9a85146, type: 3}
+    volume: 0.45
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -17283,13 +17283,13 @@ MonoBehaviour:
     maxDist3D: 0
   - name: outDay
     clip: {fileID: 8300000, guid: 895a436351673a241b7436182fa8e9ad, type: 3}
-    volume: 0.75
+    volume: 0.5
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: outNight
     clip: {fileID: 8300000, guid: 6513907c8577ca7499bc2dd960c5f572, type: 3}
-    volume: 0.75
+    volume: 0.7
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -17350,19 +17350,19 @@ MonoBehaviour:
     maxDist3D: 0
   - name: phoneTake
     clip: {fileID: 8300000, guid: 820b018c953d098488a897c6b932679c, type: 3}
-    volume: 0.55
+    volume: 0.35
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: phoneDial
     clip: {fileID: 8300000, guid: 20f44a3d335d7f3439ed6ab9aaa89322, type: 3}
-    volume: 0.15
+    volume: 0.1
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: phoneLeave
     clip: {fileID: 8300000, guid: 02afdf3958ea193469109afb8c5af935, type: 3}
-    volume: 0.4
+    volume: 0.25
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
