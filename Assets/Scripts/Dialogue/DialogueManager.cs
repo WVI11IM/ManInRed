@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
     [Tooltip("Character positions for the dialogue.")]
     public GameObject thorwaldLocation;
     public GameObject roseLocation;
+    public GameObject policeLocation;
     public GameObject defaultLocation;
 
     [Header("Dialogue")]

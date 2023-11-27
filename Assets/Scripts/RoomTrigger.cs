@@ -29,7 +29,6 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // Set the culling mask of the camera to the layers of the current room
         Camera.main.cullingMask = roomLayers;
         if (other.CompareTag("Player"))
         {
@@ -59,20 +58,12 @@ public class RoomTrigger : MonoBehaviour
 
         while (elapsedTime < 0.01f)
         {
-            // Calculate the new center with an elevated Y value
             Vector3 newCenter = originalCenter + new Vector3(0f, liftAmount * (elapsedTime / 0.01f), 0f);
-
-            // Apply the new center to the collider
             triggerCollider.center = newCenter;
-
-            // Increment the elapsed time
             elapsedTime += Time.deltaTime;
-
-            // Wait for the next frame
             yield return null;
         }
 
-        // Ensure that the collider has the final lifted position
         triggerCollider.center = originalCenter + new Vector3(0f, liftAmount, 0f);
     }
 }

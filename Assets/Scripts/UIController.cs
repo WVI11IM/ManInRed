@@ -76,8 +76,11 @@ public class UIController : MonoBehaviour
 
     IEnumerator TutorialBoxCountdown()
     {
-        yield return new WaitForSecondsRealtime(8);
-        TutorialBox(false);
-        tutorialBoxCoroutine = null;
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(8);
+            TutorialBox(false);
+            yield return null; // Give a frame for the state to settle before starting again
+        }
     }
 }

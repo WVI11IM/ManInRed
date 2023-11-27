@@ -352,6 +352,307 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1.4}
   m_SizeDelta: {x: 5, y: 2.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &12583094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 12583095}
+  - component: {fileID: 12583096}
+  m_Layer: 0
+  m_Name: Rose4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &12583095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12583094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326297640}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &12583096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12583094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1207909674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSoundEffectLoop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneDial
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: Thorwald
+    dialogue: "Amor, Estamos feitos! Todas as partes j\xE1 est\xE3o escondidas! Eu
+      consegui!\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Tudo mesmo? N\xE3o deixou nenhum rastro?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Tenho certeza de que ningu\xE9m aqui est\xE1 suspeitando.\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Querida\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Thorwald, querido\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Agora \xE9 a nossa chance de come\xE7armos uma nova vida! Voc\xEA
+      sabe o que isso significa para mim, para voc\xEA?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Caf\xE9 da manh\xE3 na cama, um quintal tranquilo, longe de Greenwich.
+      E muuuita divers\xE3o! Nada como aquela megera fazia por voc\xEA, meu lindo!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Oh! Hehehe\r..."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Bom, voc\xEA sabe que eu fa\xE7o de tudo por ti!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: Como o mais perfeito parceiro!
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Ali\xE1s, querido, uma coisa que deixaria tudo isso melhor ainda seria
+      se eu ficasse com os pertences da Anna."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "S\xE3o lindas roupas e acess\xF3rios. Seria uma pena se eles fossem
+      desperdi\xE7ados\u2026\r\n"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Querida, voc\xEA ficaria linda nelas!\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Excelente! Agora s\xF3 falta um cavalheiro pra me acompanhar at\xE9
+      a esta\xE7\xE3o de trem!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Hehehe\u2026 Seria meu prazer!\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Sei que meu anjo ainda precisa resolver algumas coisinhas, ent\xE3o
+      irei partir para Monticello primeiro."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: Mas e a minha ida?
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eu te encaminho uma carta depois que minhas roupas novas vierem. Ela
+      ser\xE1 o seu sinal."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Querida\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: Eu te amo.
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: ...
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eu tamb\xE9m te amo."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: '*desliga*'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 755436440}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2099827120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419852812}
+        m_TargetAssemblyTypeName: PlayerAnimationManager, Assembly-CSharp
+        m_MethodName: isSitting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 484019935}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 500634488}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CanInteract
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &12717330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8669,7 +8970,7 @@ Transform:
   - {fileID: 90667789}
   - {fileID: 150559199}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246937098
 GameObject:
@@ -10713,7 +11014,7 @@ Transform:
   - {fileID: 728188401}
   - {fileID: 1438737888}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319486952
 GameObject:
@@ -11029,6 +11330,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325837773}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &326297638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326297640}
+  - component: {fileID: 326297641}
+  m_Layer: 0
+  m_Name: PhoneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &326297640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326297638}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1217086538}
+  - {fileID: 2019493881}
+  - {fileID: 752967952}
+  - {fileID: 12583095}
+  - {fileID: 905243967}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326297641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326297638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62538a1cd57d7a4595b67fafd2d966e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roseDialogues:
+  - {fileID: 1217086539}
+  - {fileID: 2019493882}
+  - {fileID: 752967953}
+  - {fileID: 12583096}
+  - {fileID: 905243968}
 --- !u!1 &326628791
 GameObject:
   m_ObjectHideFlags: 0
@@ -14239,7 +14595,7 @@ MonoBehaviour:
   - progressDescription: Escondeu em geladeira
     progressId: 2
     progressIsMade: 0
-  - progressDescription: Enrolou geladeira
+  - progressDescription: Amarrou geladeira
     progressId: 3
     progressIsMade: 0
   - progressDescription: Levou geladeira
@@ -14248,7 +14604,7 @@ MonoBehaviour:
   - progressDescription: Escondeu em armario
     progressId: 5
     progressIsMade: 0
-  - progressDescription: Enrolou armario
+  - progressDescription: Amarrou armario
     progressId: 6
     progressIsMade: 0
   - progressDescription: Levou armario
@@ -17440,7 +17796,7 @@ Transform:
   m_Children:
   - {fileID: 496636027}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506893999
 GameObject:
@@ -20838,7 +21194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627812231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20917,14 +21273,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.61226416, b: 0.3537736, a: 1}
+  m_Color: {r: 0.31132078, g: 0.274864, b: 0.26579747, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1929189402, guid: 5451949fec164cf4d9efcc4839e518b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 415f43fc23c9bfc4faa1c33725347b8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25673,6 +26029,222 @@ Transform:
   m_Father: {fileID: 272538990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &752967951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752967952}
+  - component: {fileID: 752967953}
+  m_Layer: 0
+  m_Name: Rose3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752967952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752967951}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326297640}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752967953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752967951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1207909674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSoundEffectLoop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneDial
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: Thorwald
+    dialogue: "Al\xF4, Rose?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Diga, queridinho? \r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Ser\xE1 que voc\xEA me poderia dar uma dica sobre como uhh\u2026 como\u2026\r\n"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Pelo amor de Deus, Thorwald! Eu n\xE3o sou sua m\xE3e! Seja criativo,
+      o apartamento \xE9 seu\u2026 S\xF3 seu agora."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Tudo \xE9 jogo, descartar, esconder, mandar pra longe\u2026 S\xF3
+      n\xE3o deixe rastros de sangue fora do seu apartamento."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "At\xE9 cachorros sabem esconder os seus ossos, e voc\xEA n\xE3o \xE9
+      t\xE3o distante deles."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Haha\u2026 hehehe\u2026 Ok querida!\r\n"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: '*desliga*'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 755436440}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2099827120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419852812}
+        m_TargetAssemblyTypeName: PlayerAnimationManager, Assembly-CSharp
+        m_MethodName: isSitting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 484019935}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 500634488}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CanInteract
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &753546153
 GameObject:
   m_ObjectHideFlags: 0
@@ -32201,6 +32773,289 @@ Transform:
   m_Father: {fileID: 1993200548}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -170.058, z: 0}
+--- !u!1 &905243966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905243967}
+  - component: {fileID: 905243968}
+  m_Layer: 0
+  m_Name: Rose5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905243967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905243966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326297640}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905243968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905243966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1207909674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSoundEffectLoop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneDial
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: Thorwald
+    dialogue: "Amor, todas as partes j\xE1 est\xE3o escondidas\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Tudo mesmo? N\xE3o deixou nenhum rastro?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Bom, eu n\xE3o sei se nenhum escapou\u2026 Veja bem\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Thorwald, querido\u2026 docinho\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "VOC\xCA TEM IDEIA DOS RISCOS??"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: '!!!'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eu estou botando a m\xE3o na fogueira por ti!! E \xE9 assim que voc\xEA
+      est\xE1 resolvendo seus \"probleminhas\"??"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "EU N\xC3O POSSO VOLTAR PARA A PRIS\xC3O!!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Q-querida, voc\xEA est\xE1 entendendo errado! Tudo foi escondido da
+      melhor forma que eu consegui!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Humpf! SEU TONTO! Se eu estivesse a\xED.. Bom."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Agora \xE9 mais importante do que nunca voc\xEA fazer o que eu mandar."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Voc\xEA quer compensar por sua\u2026 Impot\xEAncia, n\xE3o?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Claro! \xC9 Claro! "
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Voc\xEA vai me levar at\xE9 a esta\xE7\xE3o de trem, agora mesmo."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: ...vamos.
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eu irei partir para Monticello primeiro, j\xE1 que voc\xEA ainda precisa
+      resolver seus estragos."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Ah, e os pertences da Anna\u2026 s\xE3o meus a partir de agora. Vou
+      chegar em Monticello uma nova mulher!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: Mas e a minha ida?
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eu te encaminho uma carta depois que minhas roupas novas vierem. Ela
+      ser\xE1 o seu sinal."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: '*desliga*'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 755436440}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2099827120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419852812}
+        m_TargetAssemblyTypeName: PlayerAnimationManager, Assembly-CSharp
+        m_MethodName: isSitting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 484019935}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 500634488}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CanInteract
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &906069790
 GameObject:
   m_ObjectHideFlags: 0
@@ -34932,7 +35787,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959386178
 GameObject:
@@ -42453,7 +43308,7 @@ Transform:
   - {fileID: 1128231823}
   - {fileID: 1824287538}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187835907
 GameObject:
@@ -43421,6 +44276,204 @@ Transform:
   m_Father: {fileID: 22170588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1217086537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217086538}
+  - component: {fileID: 1217086539}
+  m_Layer: 0
+  m_Name: Rose1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217086538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217086537}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326297640}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217086539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217086537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1207909674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSoundEffectLoop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneDial
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: Rose
+    dialogue: "E ai, conseguiu?\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Eu\u2026 ainda estou trabalhando nisso."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Ai Thorwald, sei que voc\xEA gosta de ouvir a minha voz\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Mas eu preciso que voc\xEA ande logo com isso."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: '*desliga*'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 755436440}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2099827120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419852812}
+        m_TargetAssemblyTypeName: PlayerAnimationManager, Assembly-CSharp
+        m_MethodName: isSitting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 484019935}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 500634488}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CanInteract
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &1220072275
 GameObject:
   m_ObjectHideFlags: 0
@@ -46685,7 +47738,7 @@ Transform:
   - {fileID: 1100007978}
   - {fileID: 258109151}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1321171003
 GameObject:
@@ -58387,7 +59440,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1608789104
 GameObject:
@@ -60461,14 +61514,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.61226416, b: 0.3537736, a: 1}
+  m_Color: {r: 0.30980393, g: 0.27450982, b: 0.26666668, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1929189402, guid: 5451949fec164cf4d9efcc4839e518b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 415f43fc23c9bfc4faa1c33725347b8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -61652,12 +62705,15 @@ MonoBehaviour:
   canvas: {fileID: 906069791}
   thorwaldLocation: {fileID: 1540575619}
   roseLocation: {fileID: 1085853606}
+  policeLocation: {fileID: 0}
   defaultLocation: {fileID: 1540575619}
   dialogueBox: {fileID: 1388666310}
   boxImage: {fileID: 1850245443}
   boxColors:
-  - {r: 0, g: 0.14166665, b: 1, a: 0.7058824}
+  - {r: 0.066278934, g: 0, b: 1, a: 0.7058824}
   - {r: 1, g: 0.011560694, b: 0, a: 0.7058824}
+  - {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.7058824}
+  - {r: 0, g: 0.54116, b: 0.6313726, a: 0.7058824}
   characterName: {fileID: 819224140}
   dialogueText: {fileID: 278608744}
   thoughtBox: {fileID: 1756808654}
@@ -61677,7 +62733,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701497173
 GameObject:
@@ -62835,7 +63891,7 @@ Transform:
   - {fileID: 36354768}
   - {fileID: 1992297330}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736385899
 GameObject:
@@ -67996,7 +69052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1857829833}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 326297641}
+        m_TargetAssemblyTypeName: PhoneManager, Assembly-CSharp
+        m_MethodName: CallRose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1857829833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68010,14 +69078,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.61226416, b: 0.3537736, a: 1}
+  m_Color: {r: 0.30980393, g: 0.27450982, b: 0.26666668, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1929189402, guid: 5451949fec164cf4d9efcc4839e518b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 415f43fc23c9bfc4faa1c33725347b8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -73218,6 +74286,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 810893540}
+        m_TargetAssemblyTypeName: RoomTrigger, Assembly-CSharp
+        m_MethodName: RaiseCollider
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   dialogueElements:
   - characterName: Thorwald
     dialogue: Ah...
@@ -73281,6 +74361,18 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 438741504}
+        m_TargetAssemblyTypeName: RoomTrigger, Assembly-CSharp
+        m_MethodName: RaiseCollider
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -10
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 395934671}
         m_TargetAssemblyTypeName: RoomTrigger, Assembly-CSharp
         m_MethodName: RaiseCollider
         m_Mode: 4
@@ -73992,6 +75084,266 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017506579}
   m_Mesh: {fileID: 3066694786998463124, guid: 66bed84e67f863540bdce2e42b26a822, type: 3}
+--- !u!1 &2019493880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019493881}
+  - component: {fileID: 2019493882}
+  m_Layer: 0
+  m_Name: Rose2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2019493881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019493880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326297640}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019493882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019493880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1207909674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopSoundEffectLoop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneDial
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: Rose
+    dialogue: "E ai, conseguiu?\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "O meu banheiro est\xE1 uma sujeira\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: Conseguiu??
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: SIM! Uhhh.. Sim!
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Ela est\xE1 daquela forma."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "J\xF3ia! Est\xE1 tudo de acordo com o plano."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Preciso que voc\xEA tome muito cuidado agora.\r\n"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Sei que sem mim voc\xEA n\xE3o tem o f\xF4lego para cuidar das situa\xE7\xF5es
+      mais b\xE1sicas.\r"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Mas agora voc\xEA vai precisar cuidar dela sozinho."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Querida\u2026 eu preciso de um tempo\u2026"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Seja um homem! Fa\xE7a o que precisar!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "S\xF3 enterra essa mulher!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: "Perd\xE3o! Irei fazer de tudo\u2026 por ti!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: ...te amo.
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Se precisar, ligue para aqueles profissionais. Lembra que deixei o
+      n\xFAmero deles contigo?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: "Eles v\xE3o te ajudar a \"fazer a mudan\xE7a\""
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Rose
+    dialogue: '*desliga*'
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 755436440}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2099827120}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 419852812}
+        m_TargetAssemblyTypeName: PlayerAnimationManager, Assembly-CSharp
+        m_MethodName: isSitting
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 484019935}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 500634488}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: CanInteract
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: phoneLeave
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &2020865345
 GameObject:
   m_ObjectHideFlags: 0
@@ -76895,7 +78247,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1 &2129383659
 GameObject:
@@ -91270,7 +92622,7 @@ Transform:
   - {fileID: 1365002788}
   - {fileID: 543701305}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7638379634957357073
 MeshFilter:
