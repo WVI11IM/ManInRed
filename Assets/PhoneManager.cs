@@ -50,7 +50,7 @@ public class PhoneManager : MonoBehaviour
 
     public void CallProfessionals()
     {
-        if(playerStats.progressIds[3].progressIsMade && playerStats.progressIds[6].progressIsMade)
+        if(playerStats.progressIds[3].progressIsMade && playerStats.progressIds[6].progressIsMade && !sentWardrobe && !sentFridge)
         {
             professionalsDialogues[3].StartDialogue();
             sentWardrobe = true;

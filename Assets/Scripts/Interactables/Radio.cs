@@ -7,6 +7,7 @@ public class Radio : MonoBehaviour
 {
     public bool isOn = false;
     bool isPlaying = false;
+    bool playerIsInApartment;
 
     public float pressureToDecrease;
     public float suspicionToIncreaseAtMidnight;
@@ -26,7 +27,11 @@ public class Radio : MonoBehaviour
     {
         if (isOn && !TimeManager.Instance.timerIsPaused)
         {
-            PlayerStats.Instance.ModifyPressurePerFrame(pressureToDecrease);
+            if (playerIsInApartment)
+            {
+                PlayerStats.Instance.ModifyPressurePerFrame(pressureToDecrease);
+            }
+            
             if (!isPlaying)
             {
                 radioText.text = "Desligar rádio";
@@ -73,5 +78,20 @@ public class Radio : MonoBehaviour
 
         isOn = isActive;
         if (isActive) AudioManager.Instance.PlaySoundEffectLoop("radio");
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsInApartment = true;
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerIsInApartment = false;
+        }
     }
 }

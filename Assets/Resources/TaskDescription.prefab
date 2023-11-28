@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4223675539420280913}
   - component: {fileID: 6362819976157011978}
   - component: {fileID: 6216668625889658308}
+  - component: {fileID: 4136849270840144100}
   m_Layer: 5
   m_Name: TaskDescription
   m_TagString: Untagged
@@ -68,11 +69,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 15
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 6
-    m_MaxSize: 20
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 32
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -80,3 +81,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!95 &4136849270840144100
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456365074552129645}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f5a80a9e8e33664d9cf5911c1e01064, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
