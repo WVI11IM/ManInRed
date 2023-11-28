@@ -24,7 +24,7 @@ public class Radio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isOn)
+        if (isOn && !TimeManager.Instance.timerIsPaused)
         {
             PlayerStats.Instance.ModifyPressurePerFrame(pressureToDecrease);
             if (!isPlaying)

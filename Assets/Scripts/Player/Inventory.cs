@@ -339,6 +339,7 @@ public class Inventory : MonoBehaviour
                     playerAnimator.SetTrigger("interacted");
                     Destroy(paraLimpar);
                     AudioManager.Instance.PlaySoundEffect("cleaningBlood");
+                    podeLimpar = false;
                 }
             }
         }

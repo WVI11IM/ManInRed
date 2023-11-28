@@ -12,7 +12,7 @@ public class ItemData : MonoBehaviour
     private GameObject sangue;
     private float contaGotas;   //Contador
     private float gotejar = 6;  //De quanto em quanto tempo vai cair o sangue
-    private bool areBloodPuddlesInstantiated = false;
+    private bool isBloodPuddleInstantiated = false;
 
     private void Start()
     {
@@ -26,6 +26,8 @@ public class ItemData : MonoBehaviour
     3 Maleta + Corpo
     4 Maleta + Jornal + Corpo
     5 Serra Limpa
+    6 Balde
+    7 Corda
     */
 
     private void Update()
@@ -88,25 +90,20 @@ public class ItemData : MonoBehaviour
 
         if (contaGotas >= gotejar)
         {
-            // Instantiate two sangue objects only once
-            if (!areBloodPuddlesInstantiated)
+            if (!isBloodPuddleInstantiated)
             {
-                for (int i = 0; i < 2; i++)
-                {
-                    sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
-                    Debug.Log("Caiu sangue");
-                    Instantiate(sangue, inventario.transform.position, Quaternion.identity);
-                }
+                sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
+                Debug.Log("Caiu sangue");
+                Instantiate(sangue, inventario.transform.position, Quaternion.identity);
 
-                // Set the flag to prevent multiple instantiations in the same frame
-                areBloodPuddlesInstantiated = true;
+                isBloodPuddleInstantiated = true;
             }
 
             contaGotas = 0;
         }
         else
         {
-            areBloodPuddlesInstantiated = false;
+            isBloodPuddleInstantiated = false;
         }
 
         if(!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)

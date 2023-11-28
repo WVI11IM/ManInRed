@@ -98,7 +98,7 @@ public class PlayerStats : MonoBehaviour
             AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
             isPlayingPressureSound = true;
         }
-        else if (isPlayingPressureSound &&pressureDifference == 0)
+        else if (isPlayingPressureSound && pressureDifference <= 0.0f)
         {
             AudioManager.Instance.StopSoundEffectLoop("pressureIncrease");
             isPlayingPressureSound = false;

@@ -2578,6 +2578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &80958501 stripped
@@ -7838,6 +7842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &206737585 stripped
@@ -9423,7 +9431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaf579f060f9cf45a84ff41a16bb187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskDescription: '- Ligue para Rose'
+  taskDescription: '- Avise Rose'
   currentState: 0
   taskId: 5
   descriptionObject: {fileID: 7456365074552129645, guid: 3d3d96aa90e9b8442a463dab6804b550, type: 3}
@@ -15402,6 +15410,11 @@ Transform:
   m_Father: {fileID: 1884389272}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &446075200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 2022240025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &448753535
 GameObject:
   m_ObjectHideFlags: 0
@@ -17646,32 +17659,32 @@ MonoBehaviour:
   ambientList:
   - name: inDay
     clip: {fileID: 8300000, guid: ce8f683de51b60e429e33445f9a85146, type: 3}
-    volume: 0.5
+    volume: 0.35
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: inNight
     clip: {fileID: 8300000, guid: 81e8f0783cd9ebc4f9f6b278136ca089, type: 3}
-    volume: 0.65
+    volume: 0.5
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: outDay
     clip: {fileID: 8300000, guid: 895a436351673a241b7436182fa8e9ad, type: 3}
-    volume: 0.55
+    volume: 0.5
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: outNight
     clip: {fileID: 8300000, guid: 6513907c8577ca7499bc2dd960c5f572, type: 3}
-    volume: 0.75
+    volume: 0.65
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   soundEffectsList:
   - name: stepInside
     clip: {fileID: 8300000, guid: 0cbacec8b91682f439722dbfdf3308bf, type: 3}
-    volume: 0.01
+    volume: 0.05
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -17820,7 +17833,7 @@ MonoBehaviour:
     minDist3D: 0
     maxDist3D: 0
   - name: stashWardrobe
-    clip: {fileID: 8300000, guid: a7ef3556d21191647bc7a1ede4853bc3, type: 3}
+    clip: {fileID: 8300000, guid: 0e29087861f555c4dac4ed06ce017416, type: 3}
     volume: 0.25
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
@@ -17839,9 +17852,9 @@ MonoBehaviour:
     maxDist3D: 0
   - name: washingMachine
     clip: {fileID: 8300000, guid: e8e1b0e7ddd27f44eb75fe10bc16c57a, type: 3}
-    volume: 0.25
+    volume: 0.5
     sourcePosition3D: {fileID: 871489305}
-    minDist3D: 0.1
+    minDist3D: 0.5
     maxDist3D: 2
   - name: hideInSuitcase
     clip: {fileID: 8300000, guid: 6542aa4abc92b1344a61adfee355f0f5, type: 3}
@@ -17856,13 +17869,13 @@ MonoBehaviour:
     minDist3D: 0
     maxDist3D: 0
   - name: radioOff
-    clip: {fileID: 8300000, guid: 12ee2c2e7dbfae840804ee6155ecd45a, type: 3}
+    clip: {fileID: 8300000, guid: 2acceacc53316a247aa30904d1738766, type: 3}
     volume: 0.25
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: layInBed
-    clip: {fileID: 8300000, guid: 2acceacc53316a247aa30904d1738766, type: 3}
+    clip: {fileID: 8300000, guid: 12ee2c2e7dbfae840804ee6155ecd45a, type: 3}
     volume: 0.25
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
@@ -17990,6 +18003,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &507259867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 788891654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &508211341
 GameObject:
   m_ObjectHideFlags: 0
@@ -22925,6 +22943,24 @@ Transform:
   m_Father: {fileID: 149273950}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &666911505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 80958500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &666911508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666911505}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21692626, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639834, y: -0.5241891, z: -0.000000022351738}
 --- !u!1 &667583557
 GameObject:
   m_ObjectHideFlags: 0
@@ -27988,6 +28024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &788891655 stripped
@@ -27995,6 +28035,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
   m_PrefabInstance: {fileID: 788891654}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &788891658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507259867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21692626, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.046398222, y: -0.5241891, z: -0.000000022351738}
 --- !u!1 &791967722
 GameObject:
   m_ObjectHideFlags: 0
@@ -35490,7 +35543,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - characterName: Rose
-    dialogue: "Espero que n\xE3o tenha sido demais para seu cora\xE7\xE3ozinho."
+    dialogue: "Espero que n\xE3o tenha sido demais para o seu cora\xE7\xE3ozinho."
     duringDialogue:
       m_PersistentCalls:
         m_Calls: []
@@ -37873,6 +37926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &1008293543 stripped
@@ -38079,6 +38136,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1024189161}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 248217570}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41174,6 +41243,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1089870929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 1705116815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1090534838
 GameObject:
   m_ObjectHideFlags: 0
@@ -41667,6 +41741,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredTaskIds: 03000000
+--- !u!1 &1101286668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 206737584}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1101286671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101286668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2169263, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639835, y: -0.52419007, z: -0.000000022351738}
 --- !u!1 &1105586492
 GameObject:
   m_ObjectHideFlags: 0
@@ -61182,6 +61274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &1623667874 stripped
@@ -63854,6 +63950,11 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!1 &1703609146 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 2068716982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1704569253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4038176803367831588, guid: 34f3a3f31d05153439653957396fa81c, type: 3}
@@ -63938,6 +64039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &1705116816 stripped
@@ -63945,6 +64050,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
   m_PrefabInstance: {fileID: 1705116815}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1705116819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089870929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2169263, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639835, y: -0.5241891, z: 0.000000037252907}
 --- !u!1001 &1705453313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72870,6 +72988,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921252044}
   m_CullTransparentMesh: 1
+--- !u!1 &1921484870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 1008293542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1921484873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921484870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2169263, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639835, y: -0.52419007, z: -0.000000022351738}
 --- !u!1 &1924079030
 GameObject:
   m_ObjectHideFlags: 0
@@ -76632,6 +76768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &2022240026 stripped
@@ -76639,6 +76779,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
   m_PrefabInstance: {fileID: 2022240025}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2022240029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446075200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21692626, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.046398222, y: -0.5241891, z: -0.000000022351738}
 --- !u!1001 &2023321325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76927,6 +77080,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032416436}
   m_Mesh: {fileID: -920177882971453243, guid: 66bed84e67f863540bdce2e42b26a822, type: 3}
+--- !u!1 &2033811270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+  m_PrefabInstance: {fileID: 1623667873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2033811273
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033811270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2169263, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639835, y: -0.5241891, z: 0.000000037252907}
 --- !u!1 &2036289455
 GameObject:
   m_ObjectHideFlags: 0
@@ -77583,6 +77754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: maquina_lavar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &2068716983 stripped
@@ -77590,6 +77765,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
   m_PrefabInstance: {fileID: 2068716982}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2068716986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703609146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2169263, y: 1.0780332, z: 0.20427234}
+  m_Center: {x: -0.04639847, y: -0.5241891, z: 0.000000037252907}
 --- !u!1 &2069703526
 GameObject:
   m_ObjectHideFlags: 0
