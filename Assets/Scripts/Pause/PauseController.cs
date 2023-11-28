@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class MenuController : MonoBehaviour
+public class PauseController : MonoBehaviour
 {
   [Header("Volume Setting EF")]
   [SerializeField] private TMP_Text volumeTextValue = null;
@@ -20,29 +20,6 @@ public class MenuController : MonoBehaviour
   [Header("Confirmation")]
   [SerializeField] private GameObject comfirmationPrompt = null;
 
-  [Header("Levels To Load")]
-  public string _newGameLevel;
-  public string levelToLoad;
-  [SerializeField] private GameObject noSavedGameDialog = null;
-
-
-    private void Awake()
-    {
-        PlayerPrefs.DeleteAll();
-        QualitySettings.SetQualityLevel(QualitySettings.names.Length - 1);
-        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, Screen.fullScreen);
-    }
-
-   public void PlayGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
-
-  public void ExitButton()
-  {
-    Application.Quit();
-  }
-
   public void SetVolume1(float volume)
   {
    // AudioListener.volume = volume;
@@ -51,7 +28,7 @@ public class MenuController : MonoBehaviour
     
   }
 
-    public void SetVolume2(float volume)
+   public void SetVolume2(float volume)
   {
    // AudioListener.volume = volume;
     volumeTextValueAM.text = volume.ToString("0.0");
@@ -74,9 +51,10 @@ public class MenuController : MonoBehaviour
       AudioListener.volume = defaultVolume;
       volumeSlider.value = defaultVolume;
       volumeTextValue.text = defaultVolume.ToString("0.0");
-      
+
       volumeSliderAM.value = defaultVolumeAM;
       SetVolume2(defaultVolumeAM);
+
 
       VolumeApply();
     }
@@ -85,7 +63,7 @@ public class MenuController : MonoBehaviour
   public IEnumerator ConfirmationBox()
   {
     comfirmationPrompt.SetActive(true);
-    yield return new WaitForSeconds(2);
+    yield return new WaitForSecondsRealtime(1);
     comfirmationPrompt.SetActive(false);
   }
 }

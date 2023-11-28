@@ -1419,6 +1419,9 @@ MonoBehaviour:
   volumeTextValue: {fileID: 318634114}
   volumeSlider: {fileID: 1353564523}
   defaultVolume: 1
+  volumeTextValueAM: {fileID: 0}
+  volumeSliderAM: {fileID: 0}
+  defaultVolumeAM: 0.5
   comfirmationPrompt: {fileID: 237428823}
   _newGameLevel: Game
   levelToLoad: 
@@ -2774,31 +2777,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1111070372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2083237335}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2144907657}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1111070372
 MonoBehaviour:
   m_ObjectHideFlags: 0
