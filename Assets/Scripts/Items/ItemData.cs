@@ -9,11 +9,6 @@ public class ItemData : MonoBehaviour
 
     private Inventory inventario;
 
-    private GameObject sangue;
-    private float contaGotas;   //Contador
-    private float gotejar = 6;  //De quanto em quanto tempo vai cair o sangue
-    private bool isBloodPuddleInstantiated = false;
-
     private void Start()
     {
         inventario = Inventory.Instance;
@@ -50,12 +45,6 @@ public class ItemData : MonoBehaviour
             Maleta();
         }
 
-        if (inventario.HasItem(3))
-        {
-            Debug.Log("Tem Maleta com Parte");
-            MaletaCorpo();
-        }
-
         if (inventario.HasItem(4))
         {
             Debug.Log("Tem Maleta com Parte Embrulhada");
@@ -81,47 +70,11 @@ public class ItemData : MonoBehaviour
 
     }
 
-    void MaletaCorpo()
-    {
-        if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
-        {
-            contaGotas += Time.deltaTime;
-        }
-
-        if (contaGotas >= gotejar)
-        {
-            if (!isBloodPuddleInstantiated)
-            {
-                sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
-                Debug.Log("Caiu sangue");
-                Instantiate(sangue, inventario.transform.position, Quaternion.identity);
-
-                isBloodPuddleInstantiated = true;
-            }
-
-            contaGotas = 0;
-        }
-        else
-        {
-            isBloodPuddleInstantiated = false;
-        }
-
-        if(!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
-        {
-            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
-        }
-    }
-
     void MaletaCorpoJornal()
     {
         if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
             PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
         }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        
     }
 }

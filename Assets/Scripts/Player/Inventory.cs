@@ -43,9 +43,13 @@ public class Inventory : MonoBehaviour
 
     public bool ItemP = false, ItemG = false;
 
+    //Variaveis para o sanguue
+    private GameObject sangue;
+    private float contaGotas;   //Contador
+    private float gotejar = 6;  //De quanto em quanto tempo vai cair o sangue
+
     //private GameObject serraLimpa;
     public GameObject[] allItems;
-
 
     Animator playerAnimator;
 
@@ -103,6 +107,7 @@ public class Inventory : MonoBehaviour
         }
 
         LimparSangue();
+        MaletaCorpo();
     }
 
     public void AddItem(GameObject item)
@@ -343,6 +348,32 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+    }
+
+    void MaletaCorpo()
+    {
+        if (HasItem(3))
+        {
+            if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+            {
+                contaGotas += Time.deltaTime;
+            }
+
+            if (contaGotas >= gotejar)
+            {
+                sangue = Resources.Load<GameObject>("Sangue" + Random.Range(1, 6));
+                Debug.Log("Caiu sangue");
+                Instantiate(sangue, gameObject.transform.position, Quaternion.identity);
+
+                contaGotas = 0;
+            }
+
+            if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+            {
+                PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+            }
+        }
+        
     }
 
 }
