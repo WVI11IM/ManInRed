@@ -93,7 +93,7 @@ public class PlayerStats : MonoBehaviour
     {
         float pressureDifference = mainPressure - previousPressure;
         pressureMeterAnimator.SetFloat("modifier", pressureDifference);
-        if (!isPlayingPressureSound && pressureDifference > 0)
+        if (!isPlayingPressureSound && pressureDifference > 0 && mainPressure > 0.5f)
         {
             AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
             isPlayingPressureSound = true;
@@ -107,7 +107,7 @@ public class PlayerStats : MonoBehaviour
 
         float suspicionDifference = mainSuspicion - previousSuspicion;
         suspicionMeterAnimator.SetFloat("modifier", suspicionDifference);
-        if (!isPlayingSuspicionSound && suspicionDifference > 0)
+        if (!isPlayingSuspicionSound && suspicionDifference > 0 && mainSuspicion > 0.5f)
         {
             AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
             isPlayingSuspicionSound = true;

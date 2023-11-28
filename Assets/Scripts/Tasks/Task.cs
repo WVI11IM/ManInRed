@@ -64,6 +64,7 @@ public class Task : MonoBehaviour
                 break;
             case (2):
                 currentState = States.FINISHED;
+                //AudioManager.Instance.PlaySoundEffect("task");
                 break;
             default:
                 Debug.Log("No state available for int " + state);

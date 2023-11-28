@@ -16,11 +16,11 @@ public class AmbientSoundTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TimeManager.Instance.hour > 18 || TimeManager.Instance.hour < 6)
+        if (TimeManager.Instance.hour >= 6 && TimeManager.Instance.hour <= 18)
         {
-            isDay = false;
+            isDay = true;
         }
-        else isDay = true;
+        else isDay = false;
     }
     private void OnTriggerEnter(Collider other)
     {

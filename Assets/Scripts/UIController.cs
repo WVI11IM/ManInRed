@@ -78,9 +78,9 @@ public class UIController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSecondsRealtime(7);
+            yield return new WaitForSecondsRealtime(6);
             TutorialBox(false);
-            yield return null; // Give a frame for the state to settle before starting again
+            yield return null;
         }
     }
 }

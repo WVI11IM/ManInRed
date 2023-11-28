@@ -54,6 +54,7 @@ public class TaskManager : MonoBehaviour
         {
             taskToComplete.currentState = Task.States.FINISHED;
             Debug.Log("Task " + taskToComplete.taskId + " is now FINISHED.");
+            AudioManager.Instance.PlaySoundEffect("task");
         }
         else
         {
