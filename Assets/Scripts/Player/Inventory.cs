@@ -266,9 +266,11 @@ public class Inventory : MonoBehaviour
         if (HasItem(2) && HasItem(0))
         {
             bigInventoryItem.Remove(bigInventoryItem[0]);
+            playerAnimator.SetTrigger("interacted");
 
             //smallInventoryItems.Remove(allItems[0]);
-            //AudioManager.Instance.PlaySoundEffect("sink");
+            AudioManager.Instance.PlaySoundEffect("hideInSuitcase");
+            AudioManager.Instance.PlaySoundEffect("wrapNewspaper");
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
@@ -279,7 +281,8 @@ public class Inventory : MonoBehaviour
         else if (HasItem(2))
         {
             bigInventoryItem.Remove(bigInventoryItem[0]);
-            //AudioManager.Instance.PlaySoundEffect("sink");
+            playerAnimator.SetTrigger("interacted");
+            AudioManager.Instance.PlaySoundEffect("hideInSuitcase");
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
@@ -294,7 +297,7 @@ public class Inventory : MonoBehaviour
         if (HasItem(3))
         {
             bigInventoryItem.Remove(bigInventoryItem[0]);
-            //AudioManager.Instance.PlaySoundEffect("sink");
+            playerAnimator.SetTrigger("interacted");
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
@@ -305,7 +308,7 @@ public class Inventory : MonoBehaviour
         else if (HasItem(4))
         {
             bigInventoryItem.Remove(bigInventoryItem[0]);
-            //AudioManager.Instance.PlaySoundEffect("sink");
+            playerAnimator.SetTrigger("interacted");
             foreach (Transform child in inventoryItemBig)
             {
                 Destroy(child.gameObject);
@@ -318,6 +321,7 @@ public class Inventory : MonoBehaviour
     {
         if (HasItem(7))
         {
+            playerAnimator.SetTrigger("interacted");
             //smallInventoryItems.Remove(allItems[7]);
             //AudioManager.Instance.PlaySoundEffect("sink");
             RemoveItem(allItems[7]);
@@ -332,6 +336,7 @@ public class Inventory : MonoBehaviour
             {
                 if (podeLimpar)
                 {
+                    playerAnimator.SetTrigger("interacted");
                     Destroy(paraLimpar);
                     AudioManager.Instance.PlaySoundEffect("cleaningBlood");
                 }

@@ -50,8 +50,16 @@ public class Radio : MonoBehaviour
     public void RadioSwitch()
     {
         isOn = !isOn;
-        if(isOn) AudioManager.Instance.PlaySoundEffectLoop("radio");
-        else AudioManager.Instance.StopSoundEffectLoop("radio");
+        if (isOn)
+        {
+            AudioManager.Instance.PlaySoundEffectLoop("radio");
+            AudioManager.Instance.PlaySoundEffect("radioOn");
+        }
+        else
+        {
+            AudioManager.Instance.StopSoundEffectLoop("radio");
+            AudioManager.Instance.PlaySoundEffect("radioOff");
+        }
 
         playerAnimator.SetTrigger("interacted");
     }

@@ -8,7 +8,7 @@ public class LightSwitch : MonoBehaviour
     public GameObject darkVolume;
     public bool isOn = true;
 
-    public Animator playerAnimator;
+    Animator playerAnimator;
 
     // Start is called before the first frame update
     void Start()

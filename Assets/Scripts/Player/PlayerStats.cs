@@ -65,6 +65,7 @@ public class PlayerStats : MonoBehaviour
     public SkinnedMeshRenderer playerSkinnedMeshRenderer;
     public Material cleanMaterial;
     public Material dirtyMaterial;
+    private Animator playerAnimator;
 
     [Header("Cutscene assets")]
     public Dialogue faintDialogue;
@@ -79,6 +80,8 @@ public class PlayerStats : MonoBehaviour
     {
         cleanMaterial = playerSkinnedMeshRenderer.materials[1];
         dirtyMaterial = playerSkinnedMeshRenderer.materials[0];
+
+        playerAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -148,7 +151,6 @@ public class PlayerStats : MonoBehaviour
         {
             ModifyPressure();
             ModifySuspicion();
-            Debug.Log("wdaawdawdawd");
         }
 
         if (mainPressure < 0) mainPressure = 0;
@@ -304,6 +306,10 @@ public class PlayerStats : MonoBehaviour
     public void BloodyClothes(bool isBloody)
     {
         isDirty = isBloody;
+        if (!isBloody)
+        {
+            playerAnimator.SetTrigger("interacted");
+        }
     }
 
     public bool CheckProgressId(int id)

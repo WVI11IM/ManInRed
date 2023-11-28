@@ -5,8 +5,11 @@ using UnityEngine;
 public class PhoneManager : MonoBehaviour
 {
     public Dialogue[] roseDialogues;
+    public Dialogue[] professionalsDialogues;
     PlayerStats playerStats;
     private bool toldAboutCuttingEverything = false;
+    private bool sentFridge = false;
+    private bool sentWardrobe = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,30 @@ public class PhoneManager : MonoBehaviour
         else
         {
             roseDialogues[0].StartDialogue();
+        }
+    }
+
+    public void CallProfessionals()
+    {
+        if(playerStats.progressIds[3].progressIsMade && playerStats.progressIds[6].progressIsMade)
+        {
+            professionalsDialogues[3].StartDialogue();
+            sentWardrobe = true;
+            sentFridge = true;
+        }
+        else if (playerStats.progressIds[6].progressIsMade && !sentWardrobe)
+        {
+            professionalsDialogues[2].StartDialogue();
+            sentWardrobe = true;
+        }
+        else if(playerStats.progressIds[3].progressIsMade && !sentFridge)
+        {
+            professionalsDialogues[1].StartDialogue();
+            sentFridge = true;
+        }
+        else
+        {
+            professionalsDialogues[0].StartDialogue();
         }
     }
 }
