@@ -300,7 +300,7 @@ public class Inventory : MonoBehaviour
                 Destroy(child.gameObject);
             }
             AddItem(allItems[2]);
-            //SPAWNAR BASTANTE SANGUE
+            //SPAWNAR BASTANTE SANGUE, SE POSSIVEL
         }
         else if (HasItem(4))
         {

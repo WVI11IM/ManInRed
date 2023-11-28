@@ -61,12 +61,13 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue()
     {
-        dialogueManager.StopThoughtCountdown();
+        //dialogueManager.StopThoughtCountdown();
         playerMovement.CanMove(false);
         TimeManager.Instance.ClockSwitch(false);
         beforeDialogue.Invoke();
         isActive = true;
         dialogueManager.isThinking = false;
+        dialogueManager.thoughtBox.SetActive(false);
         dialogueManager.isActive = true;
         dialogueIndex = 0;
         NextDialogue();
@@ -87,11 +88,20 @@ public class Dialogue : MonoBehaviour
                     dialogueManager.boxImage.color = dialogueManager.boxColors[1];
                     dialogueManager.dialogueTarget = dialogueManager.roseLocation;
                     break;
+                case "Atendente":
+                    dialogueManager.boxImage.color = dialogueManager.boxColors[2];
+                    dialogueManager.dialogueTarget = dialogueManager.roseLocation;
+                    break;
+                case "Polícia":
+                    dialogueManager.boxImage.color = dialogueManager.boxColors[3];
+                    dialogueManager.dialogueTarget = dialogueManager.policeLocation;
+                    break;
                 default:
                     dialogueManager.dialogueTarget = dialogueManager.defaultLocation;
                     break;
             }
             StartCoroutine(DisplayLine(dialogueElements[dialogueIndex].dialogue));
+            dialogueElements[dialogueIndex].duringDialogue.Invoke();
         }
         else FinishDialogue();
     }
