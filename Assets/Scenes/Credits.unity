@@ -974,8 +974,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1350.4009}
-  m_SizeDelta: {x: 0, y: 891.1981}
+  m_AnchoredPosition: {x: 0, y: -1450.4309}
+  m_SizeDelta: {x: 0, y: 1091.2582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74802894
 MonoBehaviour:
@@ -1015,14 +1015,16 @@ MonoBehaviour:
     Antonio - 12522113425 - [4\xBA]\n\nOtto Tormin - 12522213751 - [3\xBA]\n\nPedro
     Boerner - 125111352878 - [6\xBA]\n\nRafael Bioza - 125111350153 - [6\xBA]\n\nVitor
     Torres - 125111352353 - [6\xBA]\n\nWallace Sales - 125111357886 - [6\xBA]\n\nWilliam
-    Seo - 125111350111 - [6\xBA]\n\n\n\n\nARTE 2D\n\n\nChristian da Luz\n\n\n\n\nMODELAGEM
+    Seo - 125111350111 - [6\xBA]\n\n\n\n\nGAME DESIGN\n\n\nChristian da Luz\n\nRafael
+    Bioza\n\nWilliam Seo\n\n\n\nARTE 2D\n\n\nChristian da Luz\n\n\n\n\nMODELAGEM
     E TEXTURIZA\xC7\xC3O\n\nDE CEN\xC1RIOS\n\n\nChristian da Luz\n\nKaique Junqueira\n\nWilliam
     Seo\n\n\n\n\nMODELAGEM E TEXTURIZA\xC7\xC3O\n\nDE PERSONAGEM\n\n\nKaique Junqueira\n\n\n\n\nCONCEPTS
     DE UI\n\n\nMarco Antonio\n\nVitor Torres\n\n\n\n\nHIST\xD3RIA E NARRATIVA\n\n\nRafael
     Bioza\n\nWilliam Seo\n\n\n\n\nM\xDASICA E EFEITOS SONOROS\n\n\nPedro Boerner\n\nRafael
     Bioza\n\n\n\n\nPROGRAMA\xC7\xC3O\n\n\nCristina Mariana\n\nWallace Sales\n\nWilliam
-    Seo\n\n\n\n\nM\xDASICAS UTILIZADAS\n\n\nTo See You - Bing Crosby\n\nMona Lisa
-    - Nat King Cole\n\nMr Sandman - The Chordettes"
+    Seo\n\n\n\n\nEDI\xC7\xC3O DE VIDEO\n\n\nVitor Torres\n\nWallace Sales\n\n\n\n\nM\xDASICAS
+    UTILIZADAS\n\n\nTo See You - Bing Crosby\n\nMona Lisa - Nat King Cole\n\nMr Sandman
+    - The Chordettes"
 --- !u!222 &74802895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6063,7 +6065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2244}
+  m_AnchoredPosition: {x: 0, y: -2492}
   m_SizeDelta: {x: 0, y: -334.1909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534047501
@@ -10766,7 +10768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &966449081
 MonoBehaviour:
   m_ObjectHideFlags: 0
