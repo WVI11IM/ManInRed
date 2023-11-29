@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 4601424038465437989}
   - component: {fileID: 3007205688168795105}
   - component: {fileID: -8201632488907524685}
+  - component: {fileID: 2098118539267096508}
   m_Layer: 0
   m_Name: Sangue1
   m_TagString: sangue
@@ -421,3 +422,20 @@ MonoBehaviour:
   activateOrDeactivateInteractable: 1
   requiredItemIds: 06000000
   requiredProgressIds: 
+--- !u!114 &2098118539267096508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442501582372455910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11d2d4aca2614f4ba43a786b74bc236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: 1
+  dirtySaw: 0
+  suitcasePart: 0
+  cleanSaw: 0
+  suspicionLevel: 0

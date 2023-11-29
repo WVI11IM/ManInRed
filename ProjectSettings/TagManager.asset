@@ -11,6 +11,10 @@ TagManager:
   - ItemPequeno
   - ItemGrande
   - sangue
+  - suspicion0
+  - suspicion1
+  - suspicion2
+  - suspicion3
   layers:
   - Default
   - TransparentFX

@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
 
     public OnHandItem[] onHandItems;
 
-    public bool ItemP = false, ItemG = false;
+    //public bool ItemP = false, ItemG = false;
 
     //Variaveis para o sanguue
     private GameObject sangue;
@@ -55,6 +55,8 @@ public class Inventory : MonoBehaviour
 
     private bool podeLimpar;
     private GameObject paraLimpar;
+
+    public int suspicionLevel = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +110,12 @@ public class Inventory : MonoBehaviour
 
         LimparSangue();
         MaletaCorpo();
+
+        if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
+        {
+            RaiseSuspicion();
+            Debug.Log("Current suspicionLevel: " + suspicionLevel);
+        }
     }
 
     public void AddItem(GameObject item)
@@ -214,8 +222,17 @@ public class Inventory : MonoBehaviour
         return false; // The item was not found in the inventory
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("suspicion0")) suspicionLevel = 0;
+        else if (other.CompareTag("suspicion1")) suspicionLevel = 1;
+        else if (other.CompareTag("suspicion2")) suspicionLevel = 2;
+        else if (other.CompareTag("suspicion3")) suspicionLevel = 3;
+    }
+
     private void OnTriggerStay(Collider other)
     {
+        /*
         if (other.CompareTag("ItemPequeno"))
         {
             ItemP = true;
@@ -226,21 +243,29 @@ public class Inventory : MonoBehaviour
             ItemP = false;
             ItemG = true;
         }
+        */
 
         if (other.CompareTag("sangue"))
         {
             podeLimpar = true;
             paraLimpar = other.gameObject;
         }
+
+        if (other.CompareTag("suspicion0")) suspicionLevel = 0;
+        else if (other.CompareTag("suspicion1")) suspicionLevel = 1;
+        else if (other.CompareTag("suspicion2")) suspicionLevel = 2;
+        else if (other.CompareTag("suspicion3")) suspicionLevel = 3;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        /*
         if (other.CompareTag("ItemPequeno") || other.CompareTag("ItemGrande"))
         {
             ItemP = false;
             ItemG = false;
         }
+        */
 
         if (other.CompareTag("sangue"))
         {
@@ -249,7 +274,40 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //Chamado nos eventos do gameobject da pia da cozinha, usado somente uma vez
+    public void RaiseSuspicion()
+    {
+        //Segurando serra ensanguentada
+        if (HasItem(1))
+        {
+            PlayerStats.Instance.ModifySuspicionPerFrame(3f * suspicionLevel * PeriodVariation());
+        }
+        //Segurando maleta com sangue
+        else if (HasItem(3))
+        {
+            PlayerStats.Instance.ModifySuspicionPerFrame(2f * suspicionLevel * PeriodVariation());
+        }
+        //Segurando serra limpa
+        else if (HasItem(5))
+        {
+            PlayerStats.Instance.ModifySuspicionPerFrame(1f * suspicionLevel * PeriodVariation());
+        }
+
+        //Roupa com sangue
+        if (PlayerStats.Instance.isDirty)
+        {
+            PlayerStats.Instance.ModifySuspicionPerFrame(0.75f * suspicionLevel * PeriodVariation());
+        }
+    }
+
+    public float PeriodVariation()
+    {
+        if ((TimeManager.Instance.hour >= 6 && TimeManager.Instance.hour < 18))
+        {
+            return 0.5f;
+        }
+        else return 1f;
+    }
+
     public void LimparSerra()
     {
         if (HasItem(1))
@@ -273,7 +331,6 @@ public class Inventory : MonoBehaviour
             bigInventoryItem.Remove(bigInventoryItem[0]);
             playerAnimator.SetTrigger("interacted");
 
-            //smallInventoryItems.Remove(allItems[0]);
             AudioManager.Instance.PlaySoundEffect("hideInSuitcase");
             AudioManager.Instance.PlaySoundEffect("wrapNewspaper");
             foreach (Transform child in inventoryItemBig)
@@ -308,7 +365,6 @@ public class Inventory : MonoBehaviour
                 Destroy(child.gameObject);
             }
             AddItem(allItems[2]);
-            //SPAWNAR BASTANTE SANGUE, SE POSSIVEL
         }
         else if (HasItem(4))
         {
@@ -327,8 +383,6 @@ public class Inventory : MonoBehaviour
         if (HasItem(7))
         {
             playerAnimator.SetTrigger("interacted");
-            //smallInventoryItems.Remove(allItems[7]);
-            //AudioManager.Instance.PlaySoundEffect("sink");
             RemoveItem(allItems[7]);
         }
     }

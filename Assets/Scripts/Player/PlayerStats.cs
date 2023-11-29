@@ -119,30 +119,6 @@ public class PlayerStats : MonoBehaviour
         }
         previousSuspicion = mainSuspicion;
 
-        /*
-        if (pressureMultiplier <= 0)
-        {
-            //pressureMeterAnimator.SetInteger("modifier", 0);
-            if (isPlayingPressureSound)
-            {
-                AudioManager.Instance.StopSoundEffectLoop("pressureIncrease");
-                isPlayingPressureSound = false;
-            }
-            //pressureMultiplier = 0;
-        }
-
-        if (suspicionMultiplier <= 0)
-        {
-            //suspicionMeterAnimator.SetInteger("modifier", 0);
-            if (isPlayingSuspicionSound)
-            {
-                AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
-                isPlayingSuspicionSound = false;
-            }
-            suspicionMultiplier = 0;
-        }
-        */
-
         //Being called by Update(), it updates the player's stats every frame
         pressureMeter.fillAmount = mainPressure / 100;
         suspicionMeter.fillAmount = mainSuspicion / 100;
@@ -189,27 +165,17 @@ public class PlayerStats : MonoBehaviour
     {
         //Continuously modifies pressure by the multiplier while it's being called
         mainPressure += pressureMultiplier * Time.deltaTime;
-        //pressureMeterAnimator.SetInteger("modifier", (int)value);
-        /*
-        if (!isPlayingPressureSound && value > 0)
-        {
-            AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
-            isPlayingPressureSound = true;
-        }
-        */
     }
     public void ModifyPressurePerFrame(float value)
     {
         //Continuously modifies pressure by the value while it's being called
         mainPressure += value * Time.deltaTime;
-        //pressureMeterAnimator.SetInteger("modifier", (int)value);
     }
 
     public void ModifyPressure(int value)
     {
         //Adds/Removes fixed value of pressure through half a second
         StartCoroutine(ModifyPressureOverTime(value, 0.5f));
-        //pressureMeterAnimator.SetInteger("modifier", value);
     }
 
     private IEnumerator ModifyPressureOverTime(int value, float duration)
@@ -218,22 +184,13 @@ public class PlayerStats : MonoBehaviour
         float startPressure = mainPressure;
         float targetPressure = mainPressure + value;
 
-        /*
-        if (value > 0)
-        {
-            AudioManager.Instance.PlaySoundEffectLoop("pressureIncrease");
-        }
-        */
-
         while (elapsedTime < duration)
         {
             mainPressure = Mathf.RoundToInt(Mathf.Lerp(startPressure, targetPressure, elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        //pressureMeterAnimator.SetInteger("modifier", 0);
         mainPressure = targetPressure;
-        //AudioManager.Instance.StopSoundEffectLoop("PressureIncrease");
     }
 
     public void ModifyPressureMultiplier(float valueToAdd)
@@ -245,27 +202,17 @@ public class PlayerStats : MonoBehaviour
     {
         //Continuously modifies suspicion by the multiplier while it's being called
         mainSuspicion += suspicionMultiplier * Time.deltaTime;
-        //suspicionMeterAnimator.SetInteger("modifier", (int)value);
-        /*
-        if (!isPlayingSuspicionSound && value > 0)
-        {
-            AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
-            isPlayingSuspicionSound = true;
-        }
-        */
     }
 
     public void ModifySuspicionPerFrame(float value)
     {
         //Continuously modifies pressure by the value while it's being called
-        mainSuspicion += value * Time.deltaTime;
-        //pressureMeterAnimator.SetInteger("modifier", (int)value);
+        if(value > 0) mainSuspicion += value * Time.deltaTime;
     }
     public void ModifySuspicion(int value)
     {
         //Adds/Removes fixed value of pressure through half a second
         StartCoroutine(ModifySuspicionOverTime(value, 0.5f));
-        //suspicionMeterAnimator.SetInteger("modifier", value);
     }
 
     private IEnumerator ModifySuspicionOverTime(int value, float duration)
@@ -274,22 +221,13 @@ public class PlayerStats : MonoBehaviour
         float startSuspicion = mainSuspicion;
         float targetSuspicion = mainSuspicion + value;
 
-        /*
-        if (value > 0)
-        {
-            AudioManager.Instance.PlaySoundEffectLoop("suspicionIncrease");
-        }
-        */
-
         while (elapsedTime < duration)
         {
             mainPressure = Mathf.RoundToInt(Mathf.Lerp(startSuspicion, targetSuspicion, elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        //suspicionMeterAnimator.SetInteger("modifier", 0);
         mainSuspicion = targetSuspicion;
-        //AudioManager.Instance.StopSoundEffectLoop("suspicionIncrease");
     }
 
     public void ModifySuspicionMultiplier(float valueToAdd)
@@ -300,7 +238,7 @@ public class PlayerStats : MonoBehaviour
     public void ResetMultipliers()
     {
         pressureMultiplier = 0;
-        //suspicionMultiplier = 0;
+        suspicionMultiplier = 0;
     }
 
     public void BloodyClothes(bool isBloody)
