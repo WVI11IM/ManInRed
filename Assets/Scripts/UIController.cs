@@ -59,28 +59,23 @@ public class UIController : MonoBehaviour
 
     public void TutorialBoxText(string text)
     {
-        if (!tutorialBoxActive)
+        if (tutorialBoxCoroutine != null)
         {
-            TutorialBox(true);
-            tutorialBoxText.text = text;
-
-            if (tutorialBoxCoroutine != null)
-            {
-                StopCoroutine(tutorialBoxCoroutine);
-            }
-
-            tutorialBoxCoroutine = StartCoroutine(TutorialBoxCountdown());
-            AudioManager.Instance.PlaySoundEffect("tutorial");
+            StopCoroutine(tutorialBoxCoroutine);
         }
+
+        tutorialBoxCoroutine = StartCoroutine(TutorialBoxSequence(text));
+        AudioManager.Instance.PlaySoundEffect("tutorial");
     }
 
-    IEnumerator TutorialBoxCountdown()
+    IEnumerator TutorialBoxSequence(string text)
     {
-        while (true)
-        {
-            yield return new WaitForSecondsRealtime(6);
-            TutorialBox(false);
-            yield return null;
-        }
+        TutorialBox(true);
+        tutorialBoxText.text = text;
+
+        yield return new WaitForSecondsRealtime(8);
+
+        TutorialBox(false);
+        tutorialBoxCoroutine = null;
     }
 }
