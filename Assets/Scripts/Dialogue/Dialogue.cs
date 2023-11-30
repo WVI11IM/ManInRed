@@ -94,6 +94,10 @@ public class Dialogue : MonoBehaviour
                     break;
                 case "Polícia":
                     dialogueManager.boxImage.color = dialogueManager.boxColors[3];
+                    dialogueManager.dialogueTarget = dialogueManager.defaultLocation;
+                    break;
+                case "Policial":
+                    dialogueManager.boxImage.color = dialogueManager.boxColors[3];
                     dialogueManager.dialogueTarget = dialogueManager.policeLocation;
                     break;
                 default:

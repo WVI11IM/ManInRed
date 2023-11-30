@@ -40,9 +40,9 @@ public class OnFloorSuspicion : MonoBehaviour
     public void RaiseSuspicion()
     {
         if (blood) PlayerStats.Instance.ModifySuspicionPerFrame(0.15f * suspicionLevel * PeriodVariation());
-        else if (dirtySaw) PlayerStats.Instance.ModifySuspicionPerFrame(1.5f * suspicionLevel * PeriodVariation());
-        else if (suitcasePart) PlayerStats.Instance.ModifySuspicionPerFrame(0.5f * suspicionLevel * PeriodVariation());
-        else if(cleanSaw) PlayerStats.Instance.ModifySuspicionPerFrame(0.5f * (suspicionLevel - 1) * PeriodVariation());
+        else if (dirtySaw) PlayerStats.Instance.ModifySuspicionPerFrame(1f * suspicionLevel * PeriodVariation());
+        else if (suitcasePart) PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * suspicionLevel * PeriodVariation());
+        else if(cleanSaw) PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * (suspicionLevel - 1) * PeriodVariation());
     }
 
     public float PeriodVariation()

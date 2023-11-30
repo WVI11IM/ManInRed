@@ -14678,7 +14678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &244274938
 Transform:
   m_ObjectHideFlags: 0
@@ -21014,8 +21014,9 @@ MonoBehaviour:
   cleanMaterial: {fileID: 2100000, guid: 5c6006e81ed950347b93979b677e92a3, type: 2}
   dirtyMaterial: {fileID: 2100000, guid: 1921b4820e3c9494d88bcda2e074c86c, type: 2}
   faintDialogue: {fileID: 1992297331}
-  maxSuspicionCutscene: {fileID: 0}
+  maxSuspicionDialogue: {fileID: 1020543776}
   hasFainted: 0
+  wasCaught: 0
   progressIds:
   - progressDescription: Cortou o corpo
     progressId: 0
@@ -24865,8 +24866,14 @@ MonoBehaviour:
     minDist3D: 0
     maxDist3D: 0
   - name: maxPressure
-    clip: {fileID: 8300000, guid: e09a8ff77f71a584ba438178ca6b6a50, type: 3}
-    volume: 0.075
+    clip: {fileID: 8300000, guid: 2d6a87592d74f2f4c8ebc590841e59de, type: 3}
+    volume: 0.4
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: maxSuspicion
+    clip: {fileID: 8300000, guid: 135a08dc4fd0db342b3dae699990a927, type: 3}
+    volume: 0.2
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -33003,7 +33010,7 @@ Transform:
   m_Children:
   - {fileID: 1532074932}
   m_Father: {fileID: 1736187950}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718111439
 GameObject:
@@ -34338,7 +34345,7 @@ Transform:
   m_Children:
   - {fileID: 1443335806}
   m_Father: {fileID: 1736187950}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &745085164
 MonoBehaviour:
@@ -45837,6 +45844,7 @@ Transform:
   m_Children:
   - {fileID: 2027456414}
   - {fileID: 647067763}
+  - {fileID: 1995463213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.96, y: 45, z: 0}
@@ -47842,6 +47850,182 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1020543774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020543775}
+  - component: {fileID: 1020543776}
+  m_Layer: 0
+  m_Name: CutsceneCaught
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1020543775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020543774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736187950}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020543776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020543774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Inventory
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: TaskList
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1606452800}
+        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
+        m_MethodName: ClockSwitch
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Meters
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: maxSuspicion
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Black
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 259383672}
+        m_TargetAssemblyTypeName: Radio, Assembly-CSharp
+        m_MethodName: RadioSwitch
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 438741504}
+        m_TargetAssemblyTypeName: RoomTrigger, Assembly-CSharp
+        m_MethodName: RaiseCollider
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 395934671}
+        m_TargetAssemblyTypeName: RoomTrigger, Assembly-CSharp
+        m_MethodName: RaiseCollider
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueElements:
+  - characterName: "Pol\xEDcia"
+    dialogue: "POL\xCDCIA DE GREENWICH!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Thorwald
+    dialogue: Merda!
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: "Pol\xEDcia"
+    dialogue: "M\xE3os pra cima! AGORA!!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueIndex: 0
 --- !u!1 &1020768469
 GameObject:
   m_ObjectHideFlags: 0
@@ -49562,7 +49746,7 @@ Transform:
   - {fileID: 676205424}
   - {fileID: 1519898971}
   m_Father: {fileID: 1736187950}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052376530
 GameObject:
@@ -69263,7 +69447,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1736187950}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &1576138694
 PlayableDirector:
@@ -74647,7 +74831,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -325}
+  m_AnchoredPosition: {x: 175, y: -275}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670579183
@@ -76171,14 +76355,14 @@ MonoBehaviour:
   thorwaldLocation: {fileID: 1540575619}
   roseLocation: {fileID: 1085853606}
   policeLocation: {fileID: 0}
-  defaultLocation: {fileID: 1540575619}
+  defaultLocation: {fileID: 1995463212}
   dialogueBox: {fileID: 1388666310}
   boxImage: {fileID: 1850245443}
   boxColors:
   - {r: 0.066278934, g: 0, b: 1, a: 0.7058824}
   - {r: 1, g: 0.011560694, b: 0, a: 0.7058824}
   - {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0.7058824}
-  - {r: 0, g: 0.54116, b: 0.6313726, a: 0.7058824}
+  - {r: 0, g: 0.6698113, b: 0.5972146, a: 0.7058824}
   characterName: {fileID: 819224140}
   dialogueText: {fileID: 278608744}
   thoughtBox: {fileID: 1756808654}
@@ -77730,6 +77914,7 @@ Transform:
   - {fileID: 2044450597}
   - {fileID: 36354768}
   - {fileID: 1992297330}
+  - {fileID: 1020543775}
   - {fileID: 745085163}
   - {fileID: 717004906}
   - {fileID: 1576138693}
@@ -83390,7 +83575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -124.999985}
+  m_AnchoredPosition: {x: 175, y: -174.99998}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1857829832
@@ -89058,6 +89243,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.87, y: 3.1, z: 1.055377}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1995463212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995463213}
+  m_Layer: 0
+  m_Name: defaultLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1995463213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995463212}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999279324
 GameObject:
   m_ObjectHideFlags: 0

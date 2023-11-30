@@ -69,8 +69,9 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Cutscene assets")]
     public Dialogue faintDialogue;
-    public Cutscene maxSuspicionCutscene;
+    public Dialogue maxSuspicionDialogue;
     public bool hasFainted = false;
+    public bool wasCaught = false;
 
     [Header("Progress")]
     public ProgressIds[] progressIds;
@@ -148,7 +149,11 @@ public class PlayerStats : MonoBehaviour
         {
             mainSuspicion = 100;
             Debug.Log("Max Suspicion!!");
-            maxSuspicionCutscene.director.Play();
+            if (!wasCaught)
+            {
+                maxSuspicionDialogue.StartDialogue();
+                wasCaught = true;
+            }
         }
 
         if (!isDirty)
