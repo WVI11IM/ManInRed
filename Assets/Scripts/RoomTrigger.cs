@@ -29,9 +29,9 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Camera.main.cullingMask = roomLayers;
         if (other.CompareTag("Player"))
         {
+            Camera.main.cullingMask = roomLayers;
             onStay.Invoke();
             playerIsInside = true;
         }
