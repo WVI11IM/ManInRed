@@ -279,12 +279,12 @@ public class Inventory : MonoBehaviour
         //Segurando serra ensanguentada
         if (HasItem(1))
         {
-            PlayerStats.Instance.ModifySuspicionPerFrame(2f * suspicionLevel * PeriodVariation());
+            PlayerStats.Instance.ModifySuspicionPerFrame(1.5f * suspicionLevel * PeriodVariation());
         }
         //Segurando maleta com sangue
         else if (HasItem(3))
         {
-            PlayerStats.Instance.ModifySuspicionPerFrame(1.5f * suspicionLevel * PeriodVariation());
+            PlayerStats.Instance.ModifySuspicionPerFrame(0.5f * suspicionLevel * PeriodVariation());
         }
         //Segurando serra limpa
         else if (HasItem(5))
@@ -306,6 +306,11 @@ public class Inventory : MonoBehaviour
             return 0.5f;
         }
         else return 1f;
+    }
+
+    public void WindowIcons()
+    {
+
     }
 
     public void LimparSerra()
