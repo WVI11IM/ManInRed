@@ -25,7 +25,13 @@ public class MenuController : MonoBehaviour
   public string levelToLoad;
   [SerializeField] private GameObject noSavedGameDialog = null;
 
-
+    
+    
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+   
     private void Awake()
     {
         PlayerPrefs.DeleteAll();
@@ -85,7 +91,7 @@ public class MenuController : MonoBehaviour
   public IEnumerator ConfirmationBox()
   {
     comfirmationPrompt.SetActive(true);
-    yield return new WaitForSeconds(2);
+    yield return new WaitForSeconds(1);
     comfirmationPrompt.SetActive(false);
   }
 }
