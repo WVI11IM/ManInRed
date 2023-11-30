@@ -136,7 +136,7 @@ public class PlayerStats : MonoBehaviour
         {
             mainPressure = 100;
             Debug.Log("Max Pressure!!");
-            if (!hasFainted)
+            if (!hasFainted && !TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
             {
                 faintDialogue.StartDialogue();
                 hasFainted = true;
@@ -149,7 +149,7 @@ public class PlayerStats : MonoBehaviour
         {
             mainSuspicion = 100;
             Debug.Log("Max Suspicion!!");
-            if (!wasCaught)
+            if (!wasCaught && !TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
             {
                 maxSuspicionDialogue.StartDialogue();
                 wasCaught = true;
@@ -180,7 +180,7 @@ public class PlayerStats : MonoBehaviour
     public void ModifyPressure(int value)
     {
         //Adds/Removes fixed value of pressure through half a second
-        StartCoroutine(ModifyPressureOverTime(value, 0.5f));
+        StartCoroutine(ModifyPressureOverTime(value, 0.75f));
     }
 
     private IEnumerator ModifyPressureOverTime(int value, float duration)
@@ -217,7 +217,7 @@ public class PlayerStats : MonoBehaviour
     public void ModifySuspicion(int value)
     {
         //Adds/Removes fixed value of pressure through half a second
-        StartCoroutine(ModifySuspicionOverTime(value, 0.5f));
+        StartCoroutine(ModifySuspicionOverTime(value, 0.75f));
     }
 
     private IEnumerator ModifySuspicionOverTime(int value, float duration)

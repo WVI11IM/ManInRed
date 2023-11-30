@@ -52,7 +52,7 @@ public class Dialogue : MonoBehaviour
         }
         else if (dialogueManager.isActive && isActive && !dialogueManager.isThinking && _canContinue)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
             {
                 NextDialogue();
             }

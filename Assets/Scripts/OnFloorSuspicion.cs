@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OnFloorSuspicion : MonoBehaviour
 {
-    public bool blood, dirtySaw, suitcasePart, cleanSaw;
+    public bool blood, dirtySaw, suitcasePart, suitcasePartNewspaper, cleanSaw;
 
     public int suspicionLevel = 0;
     // Start is called before the first frame update
@@ -39,10 +39,10 @@ public class OnFloorSuspicion : MonoBehaviour
 
     public void RaiseSuspicion()
     {
-        if (blood) PlayerStats.Instance.ModifySuspicionPerFrame(0.15f * suspicionLevel * PeriodVariation());
+        if (blood) PlayerStats.Instance.ModifySuspicionPerFrame(0.1f * suspicionLevel * PeriodVariation());
         else if (dirtySaw) PlayerStats.Instance.ModifySuspicionPerFrame(1f * suspicionLevel * PeriodVariation());
-        else if (suitcasePart) PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * suspicionLevel * PeriodVariation());
-        else if(cleanSaw) PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * (suspicionLevel - 1) * PeriodVariation());
+        else if (suitcasePart) PlayerStats.Instance.ModifySuspicionPerFrame(0.25f * suspicionLevel * PeriodVariation());
+        else if(cleanSaw) PlayerStats.Instance.ModifySuspicionPerFrame(0.25f * (suspicionLevel - 1) * PeriodVariation());
     }
 
     public float PeriodVariation()

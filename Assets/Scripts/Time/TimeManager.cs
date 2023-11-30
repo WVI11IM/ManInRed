@@ -60,6 +60,10 @@ public class TimeManager : MonoBehaviour
 
     Animator playerAnimator;
     public UIController uiController;
+
+    [Header("Police Inspection")]
+    public bool policeCame = false;
+
     public enum SkippingTime
     {
         SMOKING,
@@ -187,6 +191,12 @@ public class TimeManager : MonoBehaviour
                 data.wasCalled = true;
             }
         }
+    }
+
+    public void SkipTimeToEnd()
+    {
+        if(timer < 4305)
+        StartCoroutine(SkipMinutes((int)(4320 - timer), 6));
     }
 
     public void SkipTimeForSmoking()

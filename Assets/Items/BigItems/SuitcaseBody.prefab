@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826346634595784416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.570232, y: 6.27911, z: 4.5164337}
+  m_LocalPosition: {x: 11.699849, y: 6.2791104, z: 4.81772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -143,6 +143,7 @@ MonoBehaviour:
   blood: 0
   dirtySaw: 0
   suitcasePart: 1
+  suitcasePartNewspaper: 0
   cleanSaw: 0
   suspicionLevel: 0
 --- !u!54 &2103594974594851680

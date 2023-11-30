@@ -26,6 +26,7 @@ public class CutsceneManager : MonoBehaviour
     public Cutscene[] cutscenes;
     [HideInInspector] public Movement playerMovement;
     public GameObject phoneCanvas;
+    public PoliceInspection policeInspection;
 
     [Tooltip("All the GameObjects that must be hidden during dialogues and cutscenes")]
     public GameObject[] objectsToHide;
@@ -55,10 +56,20 @@ public class CutsceneManager : MonoBehaviour
                 playerMovement.CanMove(false);
                 break;
             }
-            else if (!DialogueManager.Instance.isActive && !phoneCanvas)
+            else if (!DialogueManager.Instance.isActive && !phoneCanvas.activeSelf)
             {
                 TimeManager.Instance.ClockSwitch(true);
                 playerMovement.CanMove(true);
+            }
+            else
+            {
+                if (DialogueManager.Instance.isThinking)
+                {
+                    TimeManager.Instance.ClockSwitch(true);
+                    playerMovement.CanMove(true);
+                }
+                else TimeManager.Instance.ClockSwitch(false);
+                playerMovement.CanMove(false);
             }
         }
     }

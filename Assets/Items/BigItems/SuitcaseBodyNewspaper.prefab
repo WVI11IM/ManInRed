@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1554159373477714260}
   - component: {fileID: 5496100097361293686}
   - component: {fileID: 3434540286868370685}
+  - component: {fileID: 9172385709012851073}
   m_Layer: 0
   m_Name: SuitcaseBodyNewspaper
   m_TagString: ItemGrande
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826346634595784416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.3444967, y: 6.2791085, z: 1.0134505}
+  m_LocalPosition: {x: 2.728179, y: 2.2698512, z: -2.35798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -143,6 +144,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9172385709012851073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826346634595784416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11d2d4aca2614f4ba43a786b74bc236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: 0
+  dirtySaw: 0
+  suitcasePart: 0
+  suitcasePartNewspaper: 1
+  cleanSaw: 0
+  suspicionLevel: 0
 --- !u!1 &6148768309561984252
 GameObject:
   m_ObjectHideFlags: 0

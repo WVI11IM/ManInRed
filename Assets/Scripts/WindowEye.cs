@@ -7,7 +7,7 @@ public class WindowEye : MonoBehaviour
     public GameObject redWindow;
     public GameObject eyeIconCanvas;
     public bool playerIsInside;
-    public bool suspiciousItemOnFloor;
+    public CheckFloorItems checkFloorItems;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class WindowEye : MonoBehaviour
     {
         eyeIconCanvas.transform.rotation = Camera.main.transform.rotation;
 
-        if (suspiciousItemOnFloor)
+        if (checkFloorItems.suspiciousItemOnFloor)
         {
             redWindow.SetActive(true);
         }
         else if (playerIsInside && Inventory.Instance.suspicionLevel != 0)
         {
-            if (Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || suspiciousItemOnFloor)
+            if (Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || checkFloorItems.suspiciousItemOnFloor)
             {
                 redWindow.SetActive(true);
             }
@@ -38,7 +38,7 @@ public class WindowEye : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        suspiciousItemOnFloor = false;
+        //suspiciousItemOnFloor = false;
         //playerIsInside = false;
 
         if (other.CompareTag("Player"))
@@ -46,6 +46,7 @@ public class WindowEye : MonoBehaviour
             playerIsInside = true;
         }
 
+        /*
         if (other.CompareTag("ItemGrande") || other.CompareTag("sangue"))
         {
             OnFloorSuspicion onFloorSuspicion = other.GetComponent<OnFloorSuspicion>();
@@ -59,6 +60,7 @@ public class WindowEye : MonoBehaviour
             }
             else suspiciousItemOnFloor = false;
         }
+        */
     }
 
     private void OnTriggerExit(Collider other)

@@ -284,12 +284,12 @@ public class Inventory : MonoBehaviour
         //Segurando maleta com sangue
         else if (HasItem(3))
         {
-            PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * suspicionLevel * PeriodVariation());
+            PlayerStats.Instance.ModifySuspicionPerFrame(0.25f * suspicionLevel * PeriodVariation());
         }
         //Segurando serra limpa
         else if (HasItem(5))
         {
-            PlayerStats.Instance.ModifySuspicionPerFrame(0.3f * suspicionLevel * PeriodVariation());
+            PlayerStats.Instance.ModifySuspicionPerFrame(0.25f * suspicionLevel * PeriodVariation());
         }
 
         //Roupa com sangue
