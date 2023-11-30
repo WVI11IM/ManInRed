@@ -61,7 +61,7 @@ public class ItemData : MonoBehaviour
     {
         if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
-            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+            PlayerStats.Instance.ModifyPressurePerFrame(0.25f);
         }
     }
 
@@ -74,7 +74,7 @@ public class ItemData : MonoBehaviour
     {
         if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
-            PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+            PlayerStats.Instance.ModifyPressurePerFrame(0.5f);
         }
     }
 }

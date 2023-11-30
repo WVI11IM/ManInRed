@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
     //Variaveis para o sanguue
     private GameObject sangue;
     private float contaGotas;   //Contador
-    private float gotejar = 6;  //De quanto em quanto tempo vai cair o sangue
+    private float gotejar = 7;  //De quanto em quanto tempo vai cair o sangue
 
     //private GameObject serraLimpa;
     public GameObject[] allItems;
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
             GameObject itemToDrop = bigInventoryItem[0];
             itemToDrop.transform.position = gameObject.transform.position;
@@ -429,7 +429,7 @@ public class Inventory : MonoBehaviour
 
             if (!TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
             {
-                PlayerStats.Instance.ModifyPressurePerFrame(0.2f);
+                PlayerStats.Instance.ModifyPressurePerFrame(0.5f);
             }
         }
         
