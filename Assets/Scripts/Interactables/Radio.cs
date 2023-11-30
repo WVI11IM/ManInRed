@@ -9,6 +9,8 @@ public class Radio : MonoBehaviour
     bool isPlaying = false;
     bool playerIsInApartment;
 
+    public GameObject particles;
+
     public float pressureToDecrease;
     public float suspicionToIncreaseAtMidnight;
 
@@ -50,6 +52,9 @@ public class Radio : MonoBehaviour
                 isPlaying = false;
             }
         }
+
+        if (isOn) particles.SetActive(true);
+        else particles.SetActive(false);
     }
 
     public void RadioSwitch()
