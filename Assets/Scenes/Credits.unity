@@ -974,8 +974,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1450.4309}
-  m_SizeDelta: {x: 0, y: 1091.2582}
+  m_AnchoredPosition: {x: 0, y: -1556.9}
+  m_SizeDelta: {x: 0, y: 1304.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74802894
 MonoBehaviour:
@@ -1019,12 +1019,12 @@ MonoBehaviour:
     Bioza\n\nWilliam Seo\n\n\n\nARTE 2D\n\n\nChristian da Luz\n\n\n\n\nMODELAGEM
     E TEXTURIZA\xC7\xC3O\n\nDE CEN\xC1RIOS\n\n\nChristian da Luz\n\nKaique Junqueira\n\nWilliam
     Seo\n\n\n\n\nMODELAGEM E TEXTURIZA\xC7\xC3O\n\nDE PERSONAGEM\n\n\nKaique Junqueira\n\n\n\n\nCONCEPTS
-    DE UI\n\n\nMarco Antonio\n\nVitor Torres\n\n\n\n\nHIST\xD3RIA E NARRATIVA\n\n\nRafael
-    Bioza\n\nWilliam Seo\n\n\n\n\nM\xDASICA E EFEITOS SONOROS\n\n\nPedro Boerner\n\nRafael
-    Bioza\n\n\n\n\nPROGRAMA\xC7\xC3O\n\n\nCristina Mariana\n\nWallace Sales\n\nWilliam
-    Seo\n\n\n\n\nEDI\xC7\xC3O DE VIDEO\n\n\nVitor Torres\n\nWallace Sales\n\n\n\n\nM\xDASICAS
-    UTILIZADAS\n\n\nTo See You - Bing Crosby\n\nMona Lisa - Nat King Cole\n\nMr Sandman
-    - The Chordettes"
+    DE UI\n\n\nMarco Antonio\n\nVitor Torres\n\n\n\n\nANIMA\xC7\xD5ES DE UI\n\n\nWilliam
+    Seo\n\n\n\n\nHIST\xD3RIA E NARRATIVA\n\n\nRafael Bioza\n\nWilliam Seo\n\n\n\n\nM\xDASICA\n\n\nRafael
+    Bioza\n\n\n\n\nEFEITOS SONOROS\n\n\nPedro Boerner\n\nRafael Bioza\n\n\n\n\nPROGRAMA\xC7\xC3O\n\n\nCristina
+    Mariana\n\nWallace Sales\n\nWilliam Seo\n\n\n\n\nEDI\xC7\xC3O DE VIDEO\n\n\nVitor
+    Torres\n\nWallace Sales\n\n\n\n\nM\xDASICAS UTILIZADAS\n\n\nTo See You - Bing
+    Crosby\n\nMona Lisa - Nat King Cole\n\nMr Sandman - The Chordettes"
 --- !u!222 &74802895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6065,8 +6065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2492}
-  m_SizeDelta: {x: 0, y: -334.1909}
+  m_AnchoredPosition: {x: 0, y: -2805}
+  m_SizeDelta: {x: 0, y: -320.00006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534047501
 MonoBehaviour:
