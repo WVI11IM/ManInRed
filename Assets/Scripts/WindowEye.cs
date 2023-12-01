@@ -8,6 +8,7 @@ public class WindowEye : MonoBehaviour
     public GameObject eyeIconCanvas;
     public bool playerIsInside;
     public CheckFloorItems checkFloorItems;
+    public int roomItemsSuspicionLevel = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,17 @@ public class WindowEye : MonoBehaviour
     {
         eyeIconCanvas.transform.rotation = Camera.main.transform.rotation;
 
-        if (checkFloorItems.suspiciousItemOnFloor)
+        if (checkFloorItems.suspiciousItemOnFloor && roomItemsSuspicionLevel > 0)
         {
             redWindow.SetActive(true);
         }
+        else if (Inventory.Instance.suspicionLevel == 0)
+        {
+            redWindow.SetActive(false);
+        }
         else if (playerIsInside && Inventory.Instance.suspicionLevel != 0)
         {
-            if (Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || checkFloorItems.suspiciousItemOnFloor)
+            if ((Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || checkFloorItems.suspiciousItemOnFloor) && Inventory.Instance.suspicionLevel > 0)
             {
                 redWindow.SetActive(true);
             }
@@ -38,29 +43,34 @@ public class WindowEye : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        //suspiciousItemOnFloor = false;
-        //playerIsInside = false;
+        roomItemsSuspicionLevel = 0;
 
         if (other.CompareTag("Player"))
         {
             playerIsInside = true;
         }
 
-        /*
         if (other.CompareTag("ItemGrande") || other.CompareTag("sangue"))
         {
             OnFloorSuspicion onFloorSuspicion = other.GetComponent<OnFloorSuspicion>();
 
             if (onFloorSuspicion != null && other.enabled == true)
             {
-                if (!onFloorSuspicion.cleanSaw)
+                if (onFloorSuspicion.suspicionLevel >= 3)
                 {
-                    suspiciousItemOnFloor = true;
+                    roomItemsSuspicionLevel = 3;
                 }
+                else if (onFloorSuspicion.suspicionLevel == 2)
+                {
+                    roomItemsSuspicionLevel = 2;
+                }
+                else if (onFloorSuspicion.suspicionLevel == 1)
+                {
+                    roomItemsSuspicionLevel = 1;
+                }
+                else roomItemsSuspicionLevel = 0;
             }
-            else suspiciousItemOnFloor = false;
         }
-        */
     }
 
     private void OnTriggerExit(Collider other)

@@ -16,6 +16,7 @@ public class PoliceInspection : MonoBehaviour
     public CheckFloorItems[] checkFloorItems;
 
     [Header("Dialogues")]
+    public Dialogue suspiciousItemOnHandDialogue;
     public Dialogue dirtyClothesDialogue;
     public Dialogue lowSuspicionLowPressureDialogue;
     public Dialogue lowSuspicionHighPressureDialogue;
@@ -38,6 +39,13 @@ public class PoliceInspection : MonoBehaviour
     public Dialogue arrestDialogue;
     public Dialogue leaveDialogue;
 
+    bool hasBodyInBathtubCheck = false;
+    bool hasBloodInCheck = false;
+    bool hasBloodySawCheck = false;
+    bool hasSuitcaseBodyCheck = false;
+    bool hasBloodOutCheck = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +58,6 @@ public class PoliceInspection : MonoBehaviour
         if (!policeCame && TimeManager.Instance.timer >= 4320)
         {
             CutsceneManager.Instance.PlayCutscene(7);
-
             policeCame = true;
         }
 
@@ -66,6 +73,10 @@ public class PoliceInspection : MonoBehaviour
         if (PlayerStats.Instance.isDirty)
         {
             dirtyClothesDialogue.StartDialogue();
+        }
+        else if(Inventory.Instance.HasItem(1)|| Inventory.Instance.HasItem(3)|| Inventory.Instance.HasItem(4))
+        {
+            suspiciousItemOnHandDialogue.StartDialogue();
         }
         else if (PlayerStats.Instance.mainPressure >= 60)
         {
@@ -107,13 +118,17 @@ public class PoliceInspection : MonoBehaviour
     {
         for(int i = 0; i < bodyInBathtub.Length; i++)
         {
-            if(bodyInBathtub[i].activeSelf == true)
+            if(bodyInBathtub[i].activeSelf == true && !hasBodyInBathtubCheck)
             {
-                hasBodyInBathtubDialogue.StartDialogue();
+                hasBodyInBathtubCheck = true;
                 break;
             }
-            else HasBodyInFridgeNoRope();
         }
+        if (hasBodyInBathtubCheck)
+        {
+            hasBodyInBathtubDialogue.StartDialogue();
+        }
+        else HasBodyInFridgeNoRope();
     }
 
     public void HasBodyInFridgeNoRope()
@@ -140,40 +155,52 @@ public class PoliceInspection : MonoBehaviour
         {
             if (i <= 3)
             {
-                if (checkFloorItems[i].hasBlood)
+                if (checkFloorItems[i].hasBlood && !hasBloodInCheck)
                 {
-                    hasBloodInDialogue.StartDialogue();
+                    hasBloodInCheck = true;
                     break;
                 }
-                else HasBloodySaw();
             }
         }
+        if (hasBloodInCheck)
+        {
+            hasBloodInDialogue.StartDialogue();
+        }
+        else HasBloodySaw();
     }
 
     public void HasBloodySaw()
     {
         for (int i = 0; i < checkFloorItems.Length; i++)
         {
-            if (checkFloorItems[i].hasDirtySaw)
+            if (checkFloorItems[i].hasDirtySaw && !hasBloodySawCheck)
             {
-                hasBloodySawDialogue.StartDialogue();
+                hasBloodySawCheck = true;
                 break;
             }
-            else HasSuitcaseBody();
         }
+        if (hasBloodySawCheck)
+        {
+            hasBloodySawDialogue.StartDialogue();
+        }
+        else HasSuitcaseBody();
     }
 
     public void HasSuitcaseBody()
     {
         for (int i = 0; i < checkFloorItems.Length; i++)
         {
-            if (checkFloorItems[i].hasSuitcasePart || checkFloorItems[i].hasSuitcasePartNewspaper)
+            if (checkFloorItems[i].hasSuitcasePart || checkFloorItems[i].hasSuitcasePartNewspaper && !hasSuitcaseBodyCheck)
             {
-                hasSuitcaseBodyDialogue.StartDialogue();
+                hasSuitcaseBodyCheck = true;
                 break;
             }
-            else HasBloodOut();
         }
+        if (hasSuitcaseBodyCheck)
+        {
+            hasSuitcaseBodyDialogue.StartDialogue();
+        }
+        else HasBloodOut();
     }
 
     /// <summary>
@@ -187,14 +214,18 @@ public class PoliceInspection : MonoBehaviour
         {
             if (i > 3)
             {
-                if (checkFloorItems[i].hasBlood)
+                if (checkFloorItems[i].hasBlood && !hasBloodOutCheck)
                 {
-                    hasBloodOutDialogue.StartDialogue();
+                    hasBloodOutCheck = true;
                     break;
                 }
-                else HasBodyInFridgeWithRope();
             }
         }
+        if (hasBloodOutCheck)
+        {
+            hasBloodOutDialogue.StartDialogue();
+        }
+        else HasBodyInFridgeWithRope();
     }
 
     public void HasBodyInFridgeWithRope()

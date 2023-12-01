@@ -2207,7 +2207,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &63229184 stripped
 Transform:
@@ -4551,7 +4551,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106675006
 GameObject:
@@ -11889,6 +11889,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 64394780}
+  - {fileID: 1021588676}
   - {fileID: 1888293074}
   m_Father: {fileID: 543701305}
   m_RootOrder: 2
@@ -12435,6 +12436,7 @@ MonoBehaviour:
   - {fileID: 579530327}
   darkVolume: {fileID: 1808818090}
   isOn: 1
+  redWindow: {fileID: 838649842}
 --- !u!114 &183900943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14012,7 +14014,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214173174
 GameObject:
@@ -14450,7 +14452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221033477
 MonoBehaviour:
@@ -15740,7 +15742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   particles: {fileID: 167820534}
-  pressureToDecrease: -1.25
+  pressureToDecrease: -1.1
   suspicionToIncreaseAtMidnight: 1
   radioText: {fileID: 1377876476}
   playerAnimator: {fileID: 419852810}
@@ -20729,7 +20731,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &394034922
 GameObject:
@@ -21942,7 +21944,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419852803}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 275010942a5a7bc43908a8c93b99b40d, type: 3}
   m_Name: 
@@ -25529,10 +25531,10 @@ MonoBehaviour:
     maxDist3D: 0
   - name: radio
     clip: {fileID: 8300000, guid: 100b72e40e716fe4caa9b078cf4badb5, type: 3}
-    volume: 0.7
+    volume: 0.5
     sourcePosition3D: {fileID: 1806657135}
-    minDist3D: 0.2
-    maxDist3D: 3.5
+    minDist3D: 0.1
+    maxDist3D: 2.5
   - name: cleaningBlood
     clip: {fileID: 8300000, guid: 87cf222cc1016b2418dce97ff4af5991, type: 3}
     volume: 0.55
@@ -26509,15 +26511,51 @@ MonoBehaviour:
     dialogue: Phew...
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 816126201}
+          m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+          m_MethodName: AllUI
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: Agora posso focar em arrumar meus pertences.
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 816126201}
+          m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+          m_MethodName: AllUI
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: Clock
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1606452800}
         m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
         m_MethodName: SkipTimeToEnd
@@ -26629,7 +26667,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &542187036
 GameObject:
@@ -27723,7 +27761,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &563371545
 PrefabInstance:
@@ -28090,6 +28128,132 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad6a5f326a918cb4a951ee9ef4da81ba, type: 3}
   m_PrefabInstance: {fileID: 1282331771}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &567846760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567846761}
+  - component: {fileID: 567846762}
+  m_Layer: 0
+  m_Name: suspiciousItemOnHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567846761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567846760}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2004916014}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567846762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567846760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21dc9d58f39460d4d87ed07d54334d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startImmediatelyWithActivation: 0
+  beforeDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueElements:
+  - characterName: Thorwald
+    dialogue: "Boa noite, senhores\u2026 Eu n\xE3o esperava visita a essa hora!"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Policial
+    dialogue: ...
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Policial
+    dialogue: "Senhor, o que \xE9 isso na sua m\xE3o?"
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 419852806}
+          m_TargetAssemblyTypeName: PlayerStats, Assembly-CSharp
+          m_MethodName: ModifySuspicion
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 816126201}
+          m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+          m_MethodName: Meters
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - characterName: Thorwald
+    dialogue: ... ... ...
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls: []
+  - characterName: Policial
+    dialogue: "M\xE3os pra cima. O Senhor precisa nos responder algumas perguntas..."
+    duringDialogue:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: maxSuspicion
+            m_BoolArgument: 0
+          m_CallState: 2
+  afterDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueIndex: 0
 --- !u!1 &570074942
 GameObject:
   m_ObjectHideFlags: 0
@@ -28586,6 +28750,7 @@ MonoBehaviour:
   eyeIconCanvas: {fileID: 583964155}
   playerIsInside: 0
   checkFloorItems: {fileID: 579530331}
+  roomItemsSuspicionLevel: 0
 --- !u!114 &579530331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30798,7 +30963,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647067761
 GameObject:
@@ -37648,7 +37813,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &788891654
 PrefabInstance:
@@ -43189,7 +43354,19 @@ MonoBehaviour:
   startImmediatelyWithActivation: 0
   beforeDialogue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   dialogueElements:
   - characterName: Thorwald
     dialogue: "Vou levar um ba\xFA cheio pra ela, com tudo que ela gosta!"
@@ -45411,6 +45588,7 @@ MonoBehaviour:
   eyeIconCanvas: {fileID: 707888111}
   playerIsInside: 0
   checkFloorItems: {fileID: 923750020}
+  roomItemsSuspicionLevel: 0
 --- !u!114 &923750020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45835,7 +46013,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &930937189 stripped
 Transform:
@@ -46107,7 +46285,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &936237818
 GameObject:
@@ -46281,6 +46459,7 @@ MonoBehaviour:
   - {fileID: 1567755975}
   darkVolume: {fileID: 637579710}
   isOn: 1
+  redWindow: {fileID: 37398567}
 --- !u!114 &940605119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50101,6 +50280,104 @@ Transform:
   m_Father: {fileID: 67802722}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021588675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021588676}
+  - component: {fileID: 1021588679}
+  - component: {fileID: 1021588678}
+  - component: {fileID: 1021588677}
+  m_Layer: 7
+  m_Name: Cylinder.014
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1021588676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021588675}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 33.02865, y: 33.028625, z: 33.028625}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 174105801}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1021588677
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021588675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.014
+  m_Height: 0.05
+  m_Direction: 2
+  m_Center: {x: -0.000000011175871, y: 1.6883799e-17, z: 0.002376183}
+--- !u!23 &1021588678
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021588675}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 4657424261050310501, guid: 66bed84e67f863540bdce2e42b26a822, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1021588679
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021588675}
+  m_Mesh: {fileID: -8367231247473855917, guid: 66bed84e67f863540bdce2e42b26a822, type: 3}
 --- !u!1 &1024189161
 GameObject:
   m_ObjectHideFlags: 0
@@ -55285,18 +55562,6 @@ MonoBehaviour:
   noMoreCigars:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1137519555}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1415432740}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -55308,6 +55573,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1137519555}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1138068700
 GameObject:
@@ -58576,7 +58853,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1238389171
 GameObject:
@@ -64410,7 +64687,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -68648,7 +68925,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1476142236
 GameObject:
@@ -71597,6 +71874,7 @@ MonoBehaviour:
   eyeIconCanvas: {fileID: 957220781}
   playerIsInside: 0
   checkFloorItems: {fileID: 1567755979}
+  roomItemsSuspicionLevel: 0
 --- !u!114 &1567755979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77382,6 +77660,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652632850}
   m_CullTransparentMesh: 1
+--- !u!1 &1652908533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652908534}
+  m_Layer: 12
+  m_Name: empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652908534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652908533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1930490172}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1655394543
 GameObject:
   m_ObjectHideFlags: 0
@@ -81932,7 +82241,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1756808654
 GameObject:
@@ -85251,7 +85560,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832495205
 GameObject:
@@ -88305,7 +88614,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1888293073
 GameObject:
@@ -88340,7 +88649,7 @@ RectTransform:
   m_Children:
   - {fileID: 781119392}
   m_Father: {fileID: 174105801}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 20, y: 45, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -89485,7 +89794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressMeter: {fileID: 122401847}
-  progressPercentage: 0
+  progressPercentage: 90
   progressText: {fileID: 1321642918}
   progressSpeed: 3.5
   whenFinished:
@@ -90502,6 +90811,7 @@ Transform:
   - {fileID: 732258446}
   - {fileID: 942869752}
   - {fileID: 1736385900}
+  - {fileID: 1652908534}
   m_Father: {fileID: 1454841803}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90523,6 +90833,7 @@ MonoBehaviour:
   - {fileID: 662938155}
   darkVolume: {fileID: 1736385899}
   isOn: 1
+  redWindow: {fileID: 1652908533}
 --- !u!114 &1930490174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92685,6 +92996,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1038570703}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -93904,6 +94227,7 @@ MonoBehaviour:
   - {fileID: 1198275599}
   - {fileID: 2108880056}
   - {fileID: 1566745000}
+  suspiciousItemOnHandDialogue: {fileID: 567846762}
   dirtyClothesDialogue: {fileID: 2146302453}
   lowSuspicionLowPressureDialogue: {fileID: 935630732}
   lowSuspicionHighPressureDialogue: {fileID: 563004251}
@@ -93935,6 +94259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 567846761}
   - {fileID: 2146302454}
   - {fileID: 935630733}
   - {fileID: 563004252}
@@ -94245,6 +94570,7 @@ MonoBehaviour:
   - {fileID: 923750016}
   darkVolume: {fileID: 325837773}
   isOn: 1
+  redWindow: {fileID: 1293983640}
 --- !u!114 &2013771965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95373,7 +95699,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038071770
 GameObject:
@@ -96781,7 +97107,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084791022
 GameObject:
@@ -99438,7 +99764,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2004916014}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5029195970616143
 Transform:

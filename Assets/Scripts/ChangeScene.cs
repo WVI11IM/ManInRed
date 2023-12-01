@@ -12,7 +12,7 @@ public class ChangeScene : MonoBehaviour
 
     public void MainEnding()
     {
-        if(PlayerStats.Instance.mainSuspicion < 50)
+        if(PlayerStats.Instance.mainSuspicion > 50)
         {
             SceneManager.LoadScene("Ending2");
         }

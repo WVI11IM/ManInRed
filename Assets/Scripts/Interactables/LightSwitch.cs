@@ -7,6 +7,7 @@ public class LightSwitch : MonoBehaviour
     public GameObject[] roomLight;
     public GameObject darkVolume;
     public bool isOn = true;
+    public GameObject redWindow;
 
     Animator playerAnimator;
 
@@ -35,6 +36,7 @@ public class LightSwitch : MonoBehaviour
             {
                 roomLight[i].SetActive(false);
                 darkVolume.SetActive(true);
+                redWindow.SetActive(false);
             }
         }
     }

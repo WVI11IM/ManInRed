@@ -228,7 +228,7 @@ public class PlayerStats : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            mainPressure = Mathf.RoundToInt(Mathf.Lerp(startSuspicion, targetSuspicion, elapsedTime / duration));
+            mainSuspicion = Mathf.RoundToInt(Mathf.Lerp(startSuspicion, targetSuspicion, elapsedTime / duration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
