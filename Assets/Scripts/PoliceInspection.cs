@@ -54,9 +54,10 @@ public class PoliceInspection : MonoBehaviour
             policeCame = true;
         }
 
-        if(AreAllTasksFinished() && TimeManager.Instance.timer < 4320)
+        if(!finishedAllTasks && AreAllTasksFinished() && TimeManager.Instance.timer < 4320)
         {
             skipToEnd.StartDialogue();
+            finishedAllTasks = true;
         }
     }
 

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 44394e4636bc9c24bb7880a6cef99c66, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 82a628105d1e985469353f525cf8522d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2977,6 +2977,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
@@ -13552,6 +13556,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &206737585 stripped
@@ -21927,6 +21935,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419852803}
   m_Enabled: 1
+--- !u!114 &419852816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419852803}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275010942a5a7bc43908a8c93b99b40d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &422380576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26462,7 +26482,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: Inventory
+        m_MethodName: AllUI
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26471,42 +26491,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816126201}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: TaskList
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1606452800}
-        m_TargetAssemblyTypeName: TimeManager, Assembly-CSharp
-        m_MethodName: ClockSwitch
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 816126201}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: Meters
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 259383672}
         m_TargetAssemblyTypeName: Radio, Assembly-CSharp
@@ -37749,6 +37733,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &788891655 stripped
@@ -40381,6 +40369,18 @@ MonoBehaviour:
         - m_Target: {fileID: 816126201}
           m_TargetAssemblyTypeName: UIController, Assembly-CSharp
           m_MethodName: Black
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 816126201}
+          m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+          m_MethodName: AllUI
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -49274,6 +49274,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
@@ -76693,6 +76697,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &1623667874 stripped
@@ -79730,6 +79738,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
@@ -89473,7 +89485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressMeter: {fileID: 122401847}
-  progressPercentage: 90
+  progressPercentage: 0
   progressText: {fileID: 1321642918}
   progressSpeed: 3.5
   whenFinished:
@@ -94921,6 +94933,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
 --- !u!4 &2022240026 stripped
@@ -96047,6 +96063,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2b2c814cae5d3c458bbac28a7e8386a, type: 3}
