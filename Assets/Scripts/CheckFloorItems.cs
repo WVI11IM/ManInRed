@@ -29,18 +29,28 @@ public class CheckFloorItems : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        // Reset boolean values
+        hasBlood = false;
+        hasDirtySaw = false;
+        hasSuitcasePart = false;
+        hasSuitcasePartNewspaper = false;
+
+        if (!other.CompareTag("Player"))
+        {
+            // Reset boolean values if the collider is not the player
+            hasBlood = false;
+            hasDirtySaw = false;
+            hasSuitcasePart = false;
+            hasSuitcasePartNewspaper = false;
+        }
+
         if (other.CompareTag("ItemGrande") || other.CompareTag("sangue"))
         {
             OnFloorSuspicion onFloorSuspicion = other.GetComponent<OnFloorSuspicion>();
 
-            if (onFloorSuspicion != null && other.enabled == true)
+            if (onFloorSuspicion != null && other.enabled)
             {
-                // Reset all flags
-                hasBlood = false;
-                hasDirtySaw = false;
-                hasSuitcasePart = false;
-                hasSuitcasePartNewspaper = false;
-
+                // Update boolean values based on the item type
                 if (onFloorSuspicion.blood)
                 {
                     hasBlood = true;
@@ -57,10 +67,13 @@ public class CheckFloorItems : MonoBehaviour
                 {
                     hasDirtySaw = true;
                 }
-
-                // Check if there are any suspicious items on the floor
-                suspiciousItemOnFloor = hasBlood || hasDirtySaw || hasSuitcasePart || hasSuitcasePartNewspaper;
             }
         }
+        UpdateSuspiciousItemState();
+    }
+
+    public void UpdateSuspiciousItemState()
+    {
+        suspiciousItemOnFloor = hasBlood || hasDirtySaw || hasSuitcasePart || hasSuitcasePartNewspaper;
     }
 }

@@ -21616,6 +21616,11 @@ MonoBehaviour:
   - name: rope
     id: 7
     onHandItemToActivate: {fileID: 1652016768}
+  checkFloorItemsTriggers:
+  - {fileID: 923750020}
+  - {fileID: 1567755979}
+  - {fileID: 579530331}
+  - {fileID: 662938158}
   allItems:
   - {fileID: 5706799575053677495, guid: 48e2d1fb28898494786a65181e1d08b8, type: 3}
   - {fileID: 1559418573571358474, guid: 6476643b074c5b34491f17e7a4b97e69, type: 3}

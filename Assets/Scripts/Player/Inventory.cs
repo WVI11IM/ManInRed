@@ -41,6 +41,8 @@ public class Inventory : MonoBehaviour
 
     public OnHandItem[] onHandItems;
 
+    public CheckFloorItems[] checkFloorItemsTriggers;
+
     //public bool ItemP = false, ItemG = false;
 
     //Variaveis para o sanguue
@@ -80,6 +82,13 @@ public class Inventory : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
+
+            /*
+            for (int i = 0; i < checkFloorItemsTriggers.Length; i++)
+            {
+                checkFloorItemsTriggers[i].UpdateSuspiciousItemState();
+            }
+            */
         }
         else if (bigInventoryItem.Count > 1)
         {
@@ -90,6 +99,12 @@ public class Inventory : MonoBehaviour
             bigInventoryItem.Remove(bigInventoryItem[0]);
 
             AudioManager.Instance.PlaySoundEffect("dropItem");
+            /*
+            for (int i = 0; i < checkFloorItemsTriggers.Length; i++)
+            {
+                checkFloorItemsTriggers[i].UpdateSuspiciousItemState();
+            }
+            */
         }
 
         for (int i = 0; i < onHandItems.Length; i++)
