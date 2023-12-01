@@ -47,7 +47,7 @@ public class PoliceInspection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!policeCame && !finishedAllTasks && TimeManager.Instance.timer >= 4320)
+        if (!policeCame && TimeManager.Instance.timer >= 4320)
         {
             CutsceneManager.Instance.PlayCutscene(7);
 
