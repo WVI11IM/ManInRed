@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4784151859492344923}
   - component: {fileID: 5326007535911078889}
   - component: {fileID: 6254839714146255642}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1441714920600070873}
   - component: {fileID: 7582983058354046075}
   - component: {fileID: -2166210099235511109}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: CleanSaw
   m_TagString: ItemGrande
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 2420151149973119245}
   - component: {fileID: 1153793915822606000}
   - component: {fileID: 130451783786451657}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -31,8 +31,8 @@ public class PlayerAnimationManager : MonoBehaviour
         playerAnimator.SetBool("isCutting", isActive);
     }
 
-    public void Anna(int index)
+    public void isDigging(bool isActive)
     {
-        playerAnimator.SetInteger("state", index);
+        playerAnimator.SetBool("isDigging", isActive);
     }
 }
