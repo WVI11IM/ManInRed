@@ -90175,7 +90175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressMeter: {fileID: 122401847}
-  progressPercentage: 90
+  progressPercentage: 0
   progressText: {fileID: 1321642918}
   progressSpeed: 3.5
   whenFinished:
