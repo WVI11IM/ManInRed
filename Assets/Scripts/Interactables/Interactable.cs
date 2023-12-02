@@ -44,7 +44,7 @@ public class Interactable : MonoBehaviour
         {
             iconCanvas.SetActive(false);
         }
-        else if (isInteractable && isShowingIcon && isClosest && enabled)
+        else if (isInteractable && isShowingIcon && isClosest && enabled && !TimeManager.Instance.timerIsPaused && !TimeManager.Instance.skippingTime)
         {
             iconCanvas.SetActive(true);
 
