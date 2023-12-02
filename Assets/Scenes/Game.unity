@@ -25112,7 +25112,7 @@ Transform:
   - {fileID: 853877403}
   - {fileID: 907428764}
   m_Father: {fileID: 503379489}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500634486
 GameObject:
@@ -25458,7 +25458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ambientSource: {fileID: 647067762}
-  soundEffectVolume: 1
+  soundEffectVolume: 0.7
   ambientVolume: 0.7
   ambientList:
   - name: inDay
@@ -25738,6 +25738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 647067763}
   - {fileID: 496636027}
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -31154,13 +31155,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647067761}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.19286104, y: 0.35535192, z: -0.075185634, w: 0.9115245}
+  m_LocalPosition: {x: -2.15, y: 10.3, z: -2.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 963194228}
-  m_RootOrder: 1
+  m_Father: {fileID: 503379489}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647517364
 GameObject:
@@ -48235,7 +48236,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2027456414}
-  - {fileID: 647067763}
   - {fileID: 1995463213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52398,7 +52398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052376530}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.11, y: 9.67, z: 6.22}
+  m_LocalPosition: {x: 1.11, y: 8.79, z: 6.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94436,7 +94436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 963194228}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999279324
 GameObject:

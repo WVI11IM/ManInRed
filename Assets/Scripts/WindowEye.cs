@@ -21,7 +21,7 @@ public class WindowEye : MonoBehaviour
     {
         eyeIconCanvas.transform.rotation = Camera.main.transform.rotation;
 
-        if (checkFloorItems.suspiciousItemOnFloor && roomItemsSuspicionLevel > 0)
+        if (checkFloorItems.suspiciousItemOnFloor && !checkFloorItems.hasSuitcasePartNewspaper && roomItemsSuspicionLevel > 0)
         {
             redWindow.SetActive(true);
         }
@@ -31,7 +31,7 @@ public class WindowEye : MonoBehaviour
         }
         else if (playerIsInside && Inventory.Instance.suspicionLevel != 0)
         {
-            if ((Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || checkFloorItems.suspiciousItemOnFloor) && Inventory.Instance.suspicionLevel > 0)
+            if ((Inventory.Instance.HasItem(1) || Inventory.Instance.HasItem(3) || Inventory.Instance.HasItem(5) || PlayerStats.Instance.isDirty || (checkFloorItems.suspiciousItemOnFloor && !checkFloorItems.hasSuitcasePartNewspaper)) && Inventory.Instance.suspicionLevel > 0)
             {
                 redWindow.SetActive(true);
             }
