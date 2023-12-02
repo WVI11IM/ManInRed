@@ -447,7 +447,19 @@ MonoBehaviour:
     dialogue: "Tudo mesmo? N\xE3o deixou nenhum rastro?"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Tenho certeza de que ningu\xE9m aqui est\xE1 suspeitando.\r"
     duringDialogue:
@@ -498,7 +510,19 @@ MonoBehaviour:
       E muuuita divers\xE3o! Nada como aquela megera fazia por voc\xEA, meu lindo!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFlirty
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Oh! Hehehe\r..."
     duringDialogue:
@@ -513,13 +537,37 @@ MonoBehaviour:
     dialogue: Como o mais perfeito parceiro!
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Ali\xE1s, querido, uma coisa que deixaria tudo isso melhor ainda seria
       se eu ficasse com os pertences da Anna."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "S\xE3o lindas roupas e acess\xF3rios. Seria uma pena se eles fossem
       desperdi\xE7ados\u2026\r\n"
@@ -536,7 +584,19 @@ MonoBehaviour:
       a esta\xE7\xE3o de trem!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFlirty
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Hehehe\u2026 Seria meu prazer!\r"
     duringDialogue:
@@ -547,7 +607,19 @@ MonoBehaviour:
       irei partir para Monticello primeiro."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: Mas e a minha ida?
     duringDialogue:
@@ -558,7 +630,19 @@ MonoBehaviour:
       ser\xE1 o seu sinal."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Querida\u2026"
     duringDialogue:
@@ -578,7 +662,19 @@ MonoBehaviour:
     dialogue: "Eu tamb\xE9m te amo."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: '*desliga*'
     duringDialogue:
@@ -13975,18 +14071,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -13997,6 +14081,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -25726,6 +25834,60 @@ MonoBehaviour:
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
+  - name: roseNeutral
+    clip: {fileID: 8300000, guid: 9171571ab58a2aa4ea846b0777990e85, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseQuestion1
+    clip: {fileID: 8300000, guid: a7fc12d1fa10b0d479fbcc2d9fcc53e0, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseQuestion2
+    clip: {fileID: 8300000, guid: 72818552bcf35a84f9d63c68ec92cc87, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseLaugh1
+    clip: {fileID: 8300000, guid: 088af4ede6d0d174bab3e40c540b1a92, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseLaugh2
+    clip: {fileID: 8300000, guid: 139368d8bf4cb044692665569c0d435b, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseFlirty
+    clip: {fileID: 8300000, guid: c9ecbf86a4e5d644cb619bec73ccd1f9, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseAngry
+    clip: {fileID: 8300000, guid: ca677cbe13861d6429612d5ec6c2af4d, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseFrustrated1
+    clip: {fileID: 8300000, guid: 4e6eef15670ea634fbd801336c528fd8, type: 3}
+    volume: 0.15
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: roseFrustrated2
+    clip: {fileID: 8300000, guid: 74261403b85605c4fba0d3fde315f648, type: 3}
+    volume: 0.2
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
 --- !u!4 &503379489
 Transform:
   m_ObjectHideFlags: 0
@@ -26707,6 +26869,30 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 816126201}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: AllUI
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1155820656}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
@@ -28321,6 +28507,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -30995,18 +31205,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -31017,6 +31215,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -36628,7 +36850,19 @@ MonoBehaviour:
     dialogue: "Diga, queridinho? \r"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Ser\xE1 que voc\xEA me poderia dar uma dica sobre como uhh\u2026 como\u2026\r\n"
     duringDialogue:
@@ -36639,7 +36873,19 @@ MonoBehaviour:
       o apartamento \xE9 seu\u2026 S\xF3 seu agora."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Tudo \xE9 jogo, descartar, esconder, mandar pra longe\u2026 S\xF3
       n\xE3o deixe rastros de sangue fora do seu apartamento."
@@ -36651,7 +36897,19 @@ MonoBehaviour:
       t\xE3o distante deles."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseLaugh2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Haha\u2026 hehehe\u2026 Ok querida!\r\n"
     duringDialogue:
@@ -44324,7 +44582,19 @@ MonoBehaviour:
     dialogue: "Tudo mesmo? N\xE3o deixou nenhum rastro?"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Bom, eu n\xE3o sei se nenhum escapou\u2026 Veja bem\u2026"
     duringDialogue:
@@ -44368,7 +44638,19 @@ MonoBehaviour:
     dialogue: "VOC\xCA TEM IDEIA DOS RISCOS??"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseAngry
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: '!!!'
     duringDialogue:
@@ -44379,12 +44661,36 @@ MonoBehaviour:
       est\xE1 resolvendo seus \"probleminhas\"??"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "EU N\xC3O POSSO VOLTAR PARA A PRIS\xC3O!!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseAngry
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Q-querida, voc\xEA est\xE1 entendendo errado! Tudo foi escondido da
       melhor forma que eu consegui!"
@@ -44395,7 +44701,19 @@ MonoBehaviour:
     dialogue: "Humpf! SEU TONTO! Se eu estivesse a\xED.. Bom."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Agora \xE9 mais importante do que nunca voc\xEA fazer o que eu mandar."
     duringDialogue:
@@ -44405,7 +44723,19 @@ MonoBehaviour:
     dialogue: "Voc\xEA quer compensar por sua\u2026 Impot\xEAncia, n\xE3o?"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseLaugh2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Claro! \xC9 Claro! "
     duringDialogue:
@@ -44415,7 +44745,19 @@ MonoBehaviour:
     dialogue: "Voc\xEA vai me levar at\xE9 a esta\xE7\xE3o de trem, agora mesmo."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: ...vamos.
     duringDialogue:
@@ -44426,13 +44768,37 @@ MonoBehaviour:
       resolver seus estragos."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Ah, e os pertences da Anna\u2026 s\xE3o meus a partir de agora. Vou
       chegar em Monticello uma nova mulher!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: Mas e a minha ida?
     duringDialogue:
@@ -44443,7 +44809,19 @@ MonoBehaviour:
       ser\xE1 o seu sinal."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: '*desliga*'
     duringDialogue:
@@ -46947,12 +47325,36 @@ MonoBehaviour:
     dialogue: Excelente querido!
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Espero que n\xE3o tenha sido demais para o seu cora\xE7\xE3ozinho."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Agora n\xF3s precisamos lidar com ela."
     duringDialogue:
@@ -46967,7 +47369,19 @@ MonoBehaviour:
     dialogue: "N\xE3o tens escolha, meu amor."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Eu acredito em voc\xEA."
     duringDialogue:
@@ -50400,6 +50814,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 259383672}
         m_TargetAssemblyTypeName: Radio, Assembly-CSharp
@@ -58396,7 +58822,19 @@ MonoBehaviour:
     dialogue: "E ai, conseguiu?\r"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "Eu\u2026 ainda estou trabalhando nisso."
     duringDialogue:
@@ -58406,7 +58844,19 @@ MonoBehaviour:
     dialogue: "Ai Thorwald, sei que voc\xEA gosta de ouvir a minha voz\u2026"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Mas eu preciso que voc\xEA ande logo com isso."
     duringDialogue:
@@ -59049,18 +59499,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -59071,6 +59509,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -82583,18 +83045,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -82605,6 +83055,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -88957,18 +89431,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -88979,6 +89441,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -95347,7 +95833,19 @@ MonoBehaviour:
     dialogue: "E ai, conseguiu?\r"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: "O meu banheiro est\xE1 uma sujeira\u2026"
     duringDialogue:
@@ -95357,7 +95855,19 @@ MonoBehaviour:
     dialogue: Conseguiu??
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: SIM! Uhhh.. Sim!
     duringDialogue:
@@ -95372,7 +95882,19 @@ MonoBehaviour:
     dialogue: "J\xF3ia! Est\xE1 tudo de acordo com o plano."
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseLaugh1
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Preciso que voc\xEA tome muito cuidado agora.\r\n"
     duringDialogue:
@@ -95383,7 +95905,19 @@ MonoBehaviour:
       mais b\xE1sicas.\r"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseQuestion2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Mas agora voc\xEA vai precisar cuidar dela sozinho."
     duringDialogue:
@@ -95398,7 +95932,19 @@ MonoBehaviour:
     dialogue: "Seja um homem! Fa\xE7a o que precisar!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseFrustrated2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "S\xF3 enterra essa mulher!"
     duringDialogue:
@@ -95419,7 +95965,19 @@ MonoBehaviour:
       n\xFAmero deles contigo?"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: roseNeutral
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Rose
     dialogue: "Eles v\xE3o te ajudar a \"fazer a mudan\xE7a\""
     duringDialogue:
@@ -97575,18 +98133,6 @@ MonoBehaviour:
   afterDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1155820656}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Ending1
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 816126201}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: AllUI
@@ -97597,6 +98143,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
@@ -97856,7 +98426,19 @@ MonoBehaviour:
     dialogue: ...
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: StopAmbient
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: ... Heheheh
     duringDialogue:
@@ -100267,6 +100849,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopAmbient
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1155820656}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ending1
           m_BoolArgument: 0
         m_CallState: 2
   dialogueIndex: 0
