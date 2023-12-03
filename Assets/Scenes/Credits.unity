@@ -10836,6 +10836,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a5aa1e82c1e959343ba99a3d97600f00, type: 2}
     - {fileID: 11400000, guid: 0535fceb0a8f8d44bbcdc6d36563bc6e, type: 2}
     - {fileID: 11400000, guid: fa6118a994f4b154d94a8971d42d0438, type: 2}
+    - {fileID: 11400000, guid: c330ec4392bd89a4da78bd21996c8762, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -10925,14 +10926,28 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1134990325}
           m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-          m_MethodName: PlayAmbient
+          m_MethodName: PlayAmbientFromStart
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: outNight
+            m_StringArgument: credits
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1134990325}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: StopAmbient
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1134990325
@@ -10989,6 +11004,12 @@ MonoBehaviour:
     maxDist3D: 0
   - name: goodEnding
     clip: {fileID: 8300000, guid: f0f1605ca45f2724f9e2fbc530c6918a, type: 3}
+    volume: 0.5
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
+  - name: credits
+    clip: {fileID: 8300000, guid: c61176ba3dfa7e641aa17264f2477282, type: 3}
     volume: 0.5
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
