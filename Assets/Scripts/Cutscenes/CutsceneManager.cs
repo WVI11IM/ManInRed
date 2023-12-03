@@ -26,7 +26,6 @@ public class CutsceneManager : MonoBehaviour
     public Cutscene[] cutscenes;
     [HideInInspector] public Movement playerMovement;
     public GameObject phoneCanvas;
-    public PoliceInspection policeInspection;
 
     [Tooltip("All the GameObjects that must be hidden during dialogues and cutscenes")]
     public GameObject[] objectsToHide;

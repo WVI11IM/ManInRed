@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 9241095}
   - component: {fileID: 9241094}
   - component: {fileID: 9241093}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12771,6 +12771,7 @@ GameObject:
   - component: {fileID: 183900942}
   - component: {fileID: 183900944}
   - component: {fileID: 183900945}
+  - component: {fileID: 183900946}
   m_Layer: 11
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -12878,6 +12879,36 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &183900946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183900940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 9e44495044f8896489f7076f027ddce6, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 183900942}
+          m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+          m_MethodName: ChangeState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!4 &184372678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93e6acde8846e3348b08077a4faf2602, type: 3}
@@ -13459,7 +13490,7 @@ GameObject:
   - component: {fileID: 197768933}
   - component: {fileID: 197768935}
   - component: {fileID: 197768934}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22128,7 +22159,7 @@ GameObject:
   - component: {fileID: 408888465}
   - component: {fileID: 408888464}
   - component: {fileID: 408888463}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23655,7 +23686,7 @@ GameObject:
   - component: {fileID: 439059220}
   - component: {fileID: 439059219}
   - component: {fileID: 439059218}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26506,14 +26537,14 @@ MonoBehaviour:
     minDist3D: 0
     maxDist3D: 0
   - name: atendant3
-    clip: {fileID: 8300000, guid: aaca4e3470accf14a9564c8199c5dfd1, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 382ca37b3c3adc54492dbac38ee5f30f, type: 3}
+    volume: 0.9
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
   - name: atendant4
-    clip: {fileID: 8300000, guid: 1bfa8a1b7fe1ece45ac3980fd9ec2223, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: cf40e7d720b64ae42bec7534a150f651, type: 3}
+    volume: 0.9
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
@@ -26752,7 +26783,7 @@ MonoBehaviour:
     minDist3D: 0
     maxDist3D: 0
   - name: policeHandsUp
-    clip: {fileID: 8300000, guid: 406422f55cc10b24395c42fcd95ca1cf, type: 3}
+    clip: {fileID: 8300000, guid: 5ed341933ab06254d8042215786cc04a, type: 3}
     volume: 0.65
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
@@ -27539,7 +27570,7 @@ GameObject:
   - component: {fileID: 537421668}
   - component: {fileID: 537421667}
   - component: {fileID: 537421666}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31443,7 +31474,7 @@ GameObject:
   - component: {fileID: 620988829}
   - component: {fileID: 620988831}
   - component: {fileID: 620988830}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32186,7 +32217,7 @@ GameObject:
   - component: {fileID: 644387698}
   - component: {fileID: 644387700}
   - component: {fileID: 644387699}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34864,7 +34895,7 @@ GameObject:
   - component: {fileID: 696870382}
   - component: {fileID: 696870381}
   - component: {fileID: 696870380}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36578,6 +36609,14 @@ PlayableDirector:
     value: {fileID: 1807810302}
   - key: {fileID: 856804493628805816, guid: 2b70dbfd860f5a24f9f07ef821f63ff5, type: 2}
     value: {fileID: 503379490}
+  - key: {fileID: 2504620218431426806, guid: 2b70dbfd860f5a24f9f07ef821f63ff5, type: 2}
+    value: {fileID: 2013771968}
+  - key: {fileID: -3114728622798704955, guid: 2b70dbfd860f5a24f9f07ef821f63ff5, type: 2}
+    value: {fileID: 940605122}
+  - key: {fileID: -6523219263007344372, guid: 2b70dbfd860f5a24f9f07ef821f63ff5, type: 2}
+    value: {fileID: 183900946}
+  - key: {fileID: -2829523162029970878, guid: 2b70dbfd860f5a24f9f07ef821f63ff5, type: 2}
+    value: {fileID: 1930490177}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &724005115
@@ -37603,7 +37642,7 @@ GameObject:
   - component: {fileID: 734697975}
   - component: {fileID: 734697974}
   - component: {fileID: 734697973}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44720,7 +44759,7 @@ GameObject:
   - component: {fileID: 868842391}
   - component: {fileID: 868842390}
   - component: {fileID: 868842389}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49233,6 +49272,7 @@ GameObject:
   - component: {fileID: 940605118}
   - component: {fileID: 940605120}
   - component: {fileID: 940605121}
+  - component: {fileID: 940605122}
   m_Layer: 10
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -49340,6 +49380,36 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &940605122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940605116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 61e4e6754e2ad954db15313df39d47b9, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 940605118}
+          m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+          m_MethodName: ChangeState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &942869751
 GameObject:
   m_ObjectHideFlags: 0
@@ -59308,7 +59378,7 @@ GameObject:
   - component: {fileID: 1172331900}
   - component: {fileID: 1172331899}
   - component: {fileID: 1172331898}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71127,7 +71197,7 @@ GameObject:
   - component: {fileID: 1415131099}
   - component: {fileID: 1415131101}
   - component: {fileID: 1415131100}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86291,7 +86361,7 @@ GameObject:
   - component: {fileID: 1730491540}
   - component: {fileID: 1730491542}
   - component: {fileID: 1730491541}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86729,7 +86799,6 @@ MonoBehaviour:
   - {fileID: 1325524171}
   playerMovement: {fileID: 0}
   phoneCanvas: {fileID: 1207909674}
-  policeInspection: {fileID: 0}
   objectsToHide:
   - {fileID: 161708010}
   - {fileID: 1890851970}
@@ -88849,7 +88918,7 @@ GameObject:
   - component: {fileID: 1787656635}
   - component: {fileID: 1787656637}
   - component: {fileID: 1787656636}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96567,6 +96636,7 @@ GameObject:
   - component: {fileID: 1930490173}
   - component: {fileID: 1930490175}
   - component: {fileID: 1930490176}
+  - component: {fileID: 1930490177}
   m_Layer: 12
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -96675,6 +96745,36 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1930490177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930490171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 068721d74e907f84c8a60d083f8e443a, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1930490173}
+          m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+          m_MethodName: ChangeState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &1930942043
 GameObject:
   m_ObjectHideFlags: 0
@@ -101978,6 +102078,7 @@ GameObject:
   - component: {fileID: 2013771964}
   - component: {fileID: 2013771966}
   - component: {fileID: 2013771967}
+  - component: {fileID: 2013771968}
   m_Layer: 9
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -102085,6 +102186,36 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2013771968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013771962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: d2a5082a0d23d17428960245c6d856de, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2013771964}
+          m_TargetAssemblyTypeName: LightSwitch, Assembly-CSharp
+          m_MethodName: ChangeState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &2014062868
 GameObject:
   m_ObjectHideFlags: 0
@@ -109619,7 +109750,7 @@ GameObject:
   - component: {fileID: 2537233404674511234}
   - component: {fileID: 6332239155806459211}
   - component: {fileID: 5750681143540996270}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124373,7 +124504,7 @@ GameObject:
   - component: {fileID: 392369884259761597}
   - component: {fileID: 2049715646229970159}
   - component: {fileID: 356145019868481064}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ItemCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
