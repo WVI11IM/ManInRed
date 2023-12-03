@@ -26751,6 +26751,12 @@ MonoBehaviour:
     sourcePosition3D: {fileID: 0}
     minDist3D: 0
     maxDist3D: 0
+  - name: policeHandsUp
+    clip: {fileID: 8300000, guid: 406422f55cc10b24395c42fcd95ca1cf, type: 3}
+    volume: 0.65
+    sourcePosition3D: {fileID: 0}
+    minDist3D: 0
+    maxDist3D: 0
   - name: dropBody
     clip: {fileID: 8300000, guid: feb1dab72965140409b2be62da073f81, type: 3}
     volume: 0.75
