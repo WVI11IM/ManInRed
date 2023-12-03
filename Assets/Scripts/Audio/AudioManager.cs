@@ -54,6 +54,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayAmbientFromStart(string ambientName)
+    {
+        AudioData ambient = ambientList.Find(audio => audio.name == ambientName);
+        if (ambient.clip != null)
+        {
+            ambientSource.clip = ambient.clip;
+            currentAmbientSoundVolume = ambient.volume;
+            ambientSource.volume = ambientVolume * ambient.volume;
+
+            ambientSource.loop = true;
+            ambientSource.Play();
+        }
+    }
+
     public void StopAmbient()
     {
         ambientSource.Stop();
