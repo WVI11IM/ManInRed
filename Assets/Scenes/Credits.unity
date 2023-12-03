@@ -4593,6 +4593,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1134990325}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickNeg
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1557519473}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: LoadScene
@@ -10822,6 +10834,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6f482e7aad5048248a25951fe7a0bfb3, type: 2}
     - {fileID: 11400000, guid: 87b6989a179abaf418379acdef1c17a0, type: 2}
     - {fileID: 11400000, guid: a5aa1e82c1e959343ba99a3d97600f00, type: 2}
+    - {fileID: 11400000, guid: 0535fceb0a8f8d44bbcdc6d36563bc6e, type: 2}
+    - {fileID: 11400000, guid: fa6118a994f4b154d94a8971d42d0438, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -10891,6 +10905,34 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: dropBody
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1134990325}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: menu
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1134990325}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlayAmbientFromStart
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: menu
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1134990325
@@ -14308,6 +14350,8 @@ PlayableDirector:
     value: {fileID: 966449084}
   - key: {fileID: 2141480052963695192, guid: 327a75723a4abb44cb2162e09da93c95, type: 2}
     value: {fileID: 417012752}
+  - key: {fileID: 2759100513620454467, guid: 327a75723a4abb44cb2162e09da93c95, type: 2}
+    value: {fileID: 1134990324}
   m_ExposedReferences:
     m_References:
     - 2fd5cc337f72cae47bf31fbd25119bec: {fileID: 649098124}

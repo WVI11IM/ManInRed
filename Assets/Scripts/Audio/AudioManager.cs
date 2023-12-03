@@ -5,7 +5,23 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
+    private static AudioManager _instance;
+    public static AudioManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<AudioManager>();
+                if (_instance == null)
+                {
+                    GameObject singleton = new GameObject("AudioManager");
+                    _instance = singleton.AddComponent<AudioManager>();
+                }
+            }
+            return _instance;
+        }
+    }
 
     public AudioSource ambientSource;
     float currentAmbientSoundVolume;
@@ -18,18 +34,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        DontDestroyOnLoad(gameObject);
-
         AudioListener.volume = 1.0f;
     }
 

@@ -22959,6 +22959,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickNeg
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &424333783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26799,6 +26811,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6f482e7aad5048248a25951fe7a0bfb3, type: 2}
     - {fileID: 11400000, guid: 87b6989a179abaf418379acdef1c17a0, type: 2}
     - {fileID: 11400000, guid: a5aa1e82c1e959343ba99a3d97600f00, type: 2}
+    - {fileID: 11400000, guid: fab45a3dcba9dc244b2401dc96e88286, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -26868,6 +26881,20 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: dropBody
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: movingOut
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &506893999
@@ -31640,6 +31667,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &627812233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36336,6 +36375,8 @@ PlayableDirector:
     value: {fileID: 851263951}
   - key: {fileID: 4535535794306674622, guid: a36f7ccf2a88d064d892edd1b566d38a, type: 2}
     value: {fileID: 1606452802}
+  - key: {fileID: -2221490238917760747, guid: a36f7ccf2a88d064d892edd1b566d38a, type: 2}
+    value: {fileID: 503379490}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &717004906
@@ -37940,6 +37981,8 @@ PlayableDirector:
     value: {fileID: 1025136190}
   - key: {fileID: -9002602089948302191, guid: 9207df39c01b07a41a15d6c68480ee91, type: 2}
     value: {fileID: 1606452802}
+  - key: {fileID: -3605710340115626531, guid: 9207df39c01b07a41a15d6c68480ee91, type: 2}
+    value: {fileID: 503379490}
   m_ExposedReferences:
     m_References:
     - cbf61a1072dbc5d4ca3c367fd5c1c3a7: {fileID: 1044983403}
@@ -62849,6 +62892,7 @@ GameObject:
   - component: {fileID: 1260579525}
   - component: {fileID: 1260579527}
   - component: {fileID: 1260579526}
+  - component: {fileID: 1260579528}
   m_Layer: 5
   m_Name: ConfirmationImage
   m_TagString: Untagged
@@ -62896,7 +62940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1130026611, guid: b9f41d36c731c4149908e3a2f91abd2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -62914,6 +62958,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260579524}
   m_CullTransparentMesh: 1
+--- !u!95 &1260579528
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260579524}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9827f52d9b316c543a2246930d72d920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1264199184
 GameObject:
   m_ObjectHideFlags: 0
@@ -63844,6 +63908,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1278360547
@@ -76043,6 +76119,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1550974201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77883,6 +77971,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1572425611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77983,6 +78083,8 @@ PlayableDirector:
     value: {fileID: 851263951}
   - key: {fileID: 5135765827560719426, guid: 1892f50ded86350458e33708b7cf3c42, type: 2}
     value: {fileID: 1606452802}
+  - key: {fileID: 7386867368157708944, guid: 1892f50ded86350458e33708b7cf3c42, type: 2}
+    value: {fileID: 503379490}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1576138695
@@ -83721,6 +83823,18 @@ MonoBehaviour:
           m_StringArgument: phoneDial
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickNeg
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1670579184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88219,6 +88333,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1769432390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89644,7 +89770,19 @@ MonoBehaviour:
     dialogue: "Pol\xEDcia de Greenwich, abra a porta!"
     duringDialogue:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 503379488}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: policeHey2
+            m_BoolArgument: 0
+          m_CallState: 2
   - characterName: Thorwald
     dialogue: '!!!'
     duringDialogue:
@@ -92006,6 +92144,18 @@ MonoBehaviour:
           m_StringArgument: Audio
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1845722104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93102,6 +93252,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickPos
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1857829833
@@ -96071,6 +96233,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 503379488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: clickNeg
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1921252047

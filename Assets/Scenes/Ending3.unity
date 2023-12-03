@@ -2168,6 +2168,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 87b6989a179abaf418379acdef1c17a0, type: 2}
     - {fileID: 11400000, guid: a5aa1e82c1e959343ba99a3d97600f00, type: 2}
     - {fileID: 11400000, guid: 2f26f486dce132c43a0f097e7c67478a, type: 2}
+    - {fileID: 11400000, guid: 4ac48150d43bc77499147f454e593cac, type: 2}
+    - {fileID: 11400000, guid: 2cdc828266efbf84caeb9b12eecb92c8, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2251,6 +2253,34 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: goodEnding
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1289882725}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: womanLaugh2
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1289882725}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: womanLaugh1
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1289882725

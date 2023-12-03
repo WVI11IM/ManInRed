@@ -3320,6 +3320,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 87b6989a179abaf418379acdef1c17a0, type: 2}
     - {fileID: 11400000, guid: a5aa1e82c1e959343ba99a3d97600f00, type: 2}
     - {fileID: 11400000, guid: 0535fceb0a8f8d44bbcdc6d36563bc6e, type: 2}
+    - {fileID: 11400000, guid: b329f6ea4e8a3494f9e9c885d32665bd, type: 2}
+    - {fileID: 11400000, guid: ccbcf010b2326bb449bdc6e6e0f762de, type: 2}
+    - {fileID: 11400000, guid: c02d634378400554c840304ef77947c0, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -3403,6 +3406,48 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: menu
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010164903}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: handcuffs
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010164903}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: gatesClosing
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2010164903}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySoundEffect
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: dripping
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &2010164903
