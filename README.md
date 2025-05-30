@@ -1,9 +1,6 @@
 After murdering his wife, Lars Thorwald must dispose of the evidence before the police catch him in the act. This isometric 3D story-driven systemic game is based on Alfred Hitchcock's Rear Window (1954) and puts players in the main antagonist's shoes to show his side of the story.
 
-In a time period of 3 in-game days, the player has to chop up the body, find a way to
-hide or dispose all of the body parts through the map and get rid of all the tools of the crime
-while managing their stress level and without raising suspicion. All of the player's actions
-affect the game's pacing, narrative and ending:
+In a time period of 3 in-game days, the player has to chop up the body, find a way to hide or dispose all of the body parts through the map and get rid of all the tools of the crime while managing their stress level and without raising suspicion. All of the player's actions affect the game's pacing, narrative and ending:
 - carrying body parts inside a suitcase can increase Thorwald's stress
 - leaving traces of blood around the vicinity can alert neighbours
 - having a beer, smoking or sleeping in the bed can alleviate stress
