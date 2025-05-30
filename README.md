@@ -9,9 +9,7 @@ In a time period of 3 in-game days, the player has to chop up the body, find a w
 and so on... the actions and consequences in the narrative are just as extensive.
 
 Contributions:
-- Story: Branching narratives and different endings that depend on the player's choices and stats
-throughout the gameplay.
+- Story: Branching narratives and different endings that depend on the player's choices and stats throughout the gameplay.
 - Inventory: Use of Lists for small and big items which can be carried around or dropped.
 - Animation implementation: 3D rigged characters with animation transitions between states.
-- In-game clock: Day and night cycles with timed events and a directional light that ajusts itself to
-the time to imitate the sun's trajectory.
+- In-game clock: Day and night cycles with timed events and a directional light that ajusts itself to the time to imitate the sun's trajectory.
